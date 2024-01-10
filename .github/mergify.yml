@@ -20,7 +20,7 @@ pull_request_rules:
   - name: Automatically merge when GitHub Actions jobs succeed
     conditions:
       - check-success=build
-      - '#approved-reviews-by>=1'
+      - "#approved-reviews-by>=1"
     actions:
       merge:
         method: merge

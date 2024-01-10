@@ -17,14 +17,9 @@
       }
     ],
     "paths": {
-      "~/components/*": [
-        "./next-portfolio/components/*"
-      ]
+      "~/components/*": ["./next-portfolio/components/*"]
     },
-    "types": [
-      "jest",
-      "node"
-    ]
+    "types": ["jest", "node"]
   },
   "include": [
     "**/*.ts",
