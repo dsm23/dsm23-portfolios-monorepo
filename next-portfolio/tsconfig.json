@@ -17,7 +17,7 @@
       }
     ],
     "paths": {
-      "~/components/*": ["./next-portfolio/components/*"]
+      "~/*": ["./next-portfolio/*"]
     },
     "types": ["jest", "node"]
   },
