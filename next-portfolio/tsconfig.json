@@ -17,7 +17,8 @@
       }
     ],
     "paths": {
-      "~/*": ["./next-portfolio/*"]
+      "~/*": ["./next-portfolio/*"],
+      "@/shared-styles": ["shared-styles/src/index.ts"]
     },
     "types": ["jest", "node"]
   },
