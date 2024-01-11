@@ -4,7 +4,7 @@ import type { LinkProps } from "next/link";
 import { GoBack } from "~/components/svgs";
 import { cn } from "~/utils";
 
-import styles from "./styles.module.css";
+import { goBackStyles as styles } from "@/shared-styles";
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & LinkProps;
 

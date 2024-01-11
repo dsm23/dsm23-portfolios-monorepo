@@ -3,28 +3,34 @@
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "shared-styles/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/shared-styles",
-        "main": "shared-styles/src/index.ts",
-        "tsConfig": "shared-styles/tsconfig.lib.json",
-        "assets": ["shared-styles/*.md"]
-      }
-    },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "jestConfig": "shared-styles/jest.config.ts"
+        "outputPath": "dist/shared-styles"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../coverage/shared-styles"
       }
     }
-  },
-  "tags": []
+  }
 }
