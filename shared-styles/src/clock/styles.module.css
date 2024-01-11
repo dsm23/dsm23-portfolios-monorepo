@@ -1,0 +1,28 @@
+.svg {
+  height: 50vmin;
+  width: 50vmin;
+  aspect-ratio: 1;
+}
+
+.clockFace {
+  stroke: #333;
+  fill: white;
+}
+
+.minor {
+  stroke: #999;
+  stroke-width: 0.5;
+}
+
+.major {
+  stroke: #333;
+  stroke-width: 1;
+}
+
+.hour {
+  stroke: #333;
+}
+
+.minute {
+  stroke: #666;
+}
