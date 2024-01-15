@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import Layout from "~/components/layout";
 import ThemeProvider from "~/components/theme-provider";
@@ -12,15 +12,12 @@ export const metadata: Metadata = {
     "A portfolio showing off the experience and projects of David Murdoch",
 };
 
-// export const viewport = {
-//   colorScheme: "light dark",
-// };
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+};
 
 const RootLayout = ({ children }: { children: ReactNode }) => (
   <html lang="en">
-    <head>
-      <meta name="color-scheme" content="light dark" />
-    </head>
     <body>
       <ThemeProvider
         attribute="class"
