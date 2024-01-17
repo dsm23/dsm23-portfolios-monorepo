@@ -2,4 +2,5 @@
 /dist
 /coverage
 /.nx/cache
+/generated/src
 pnpm-lock.yaml
