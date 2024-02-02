@@ -31,3 +31,8 @@ jobs:
 
       - run: pnpm nx format:check
       - run: pnpm nx affected -t lint,test,build --parallel=3
+        env:
+          BROWSERLESS_TOKEN: ${{ vars.BROWSERLESS_TOKEN }}
+          CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ vars.CONTENTFUL_ACCESS_TOKEN }}
+          CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ vars.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
