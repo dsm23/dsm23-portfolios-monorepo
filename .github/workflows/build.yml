@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     env:
-      node-version: 21.5.0
+      node-version: 21.6.1
     steps:
       - uses: actions/checkout@v4
         with:
