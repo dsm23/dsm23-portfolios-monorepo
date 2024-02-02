@@ -18,4 +18,5 @@ export { default as Textarea } from "./textarea";
 export { default as Toaster } from "./toast";
 
 export * from "./form";
+export * from "./sections";
 export * from "./svgs";
