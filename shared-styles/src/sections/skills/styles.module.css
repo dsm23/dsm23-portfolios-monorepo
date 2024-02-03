@@ -1,0 +1,10 @@
+.iconWrapper svg {
+  fill: currentColor;
+  transition-duration: theme(transitionDuration.300);
+  transition-property: color;
+  transition-timing-function: theme(transitionTimingFunction.in-out);
+}
+
+.iconWrapper path {
+  fill: currentColor;
+}
