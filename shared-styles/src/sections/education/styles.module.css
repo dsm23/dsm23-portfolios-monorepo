@@ -1,0 +1,53 @@
+.container {
+  margin-top: theme(margin.6);
+}
+
+.city {
+  grid-area: city;
+  margin-top: theme(margin.px);
+  margin-left: theme(margin.2);
+}
+
+.school {
+  grid-area: school;
+  margin-top: theme(margin.4);
+  font-size: theme(fontSize.3xl);
+}
+
+.dates {
+  --tw-text-opacity: 1;
+  grid-area: dates;
+  margin-top: theme(margin.2);
+  color: theme(colors.sky.900);
+  font-weight: theme(fontWeight.semibold);
+}
+
+.description {
+  --tw-text-opacity: 1;
+  grid-area: description;
+  margin-top: theme(margin.4);
+  color: theme(colors.gray.900);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dates {
+    color: theme(colors.sky.300);
+  }
+
+  .description {
+    color: theme(colors.white);
+  }
+}
+@screen lg {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-areas:
+      "school dates"
+      "description dates";
+  }
+
+  .dates {
+    margin-top: 0;
+  }
+}
