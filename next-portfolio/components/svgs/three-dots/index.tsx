@@ -1,0 +1,38 @@
+import type { FunctionComponent, SVGAttributes } from "react";
+import { cn } from "~/utils";
+
+type Props = SVGAttributes<SVGSVGElement>;
+
+const ThreeDots: FunctionComponent<Props> = ({ className, ...props }) => (
+  <svg
+    {...props}
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    className={cn("h-6 w-6", className)}
+  >
+    <circle
+      className="animate-threeDotsOne"
+      fill="currentColor"
+      cx="4"
+      cy="12"
+      r="3"
+    />
+    <circle
+      className="animate-threeDotsTwo"
+      fill="currentColor"
+      cx="12"
+      cy="12"
+      r="3"
+    />
+    <circle
+      className="animate-threeDotsThree"
+      fill="currentColor"
+      cx="20"
+      cy="12"
+      r="3"
+    />
+  </svg>
+);
+
+export default ThreeDots;

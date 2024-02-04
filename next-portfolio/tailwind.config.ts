@@ -66,10 +66,18 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        threeDotsKey: {
+          "93.75%, 100%": {
+            opacity: "0.2",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        threeDotsOne: "threeDotsKey 0.8s linear infinite",
+        threeDotsTwo: "threeDotsKey 0.8s linear 0.15s infinite",
+        threeDotsThree: "threeDotsKey 0.8s linear 0.3s infinite",
       },
     },
   },
