@@ -1,3 +1,4 @@
+export { default as Download } from "./download";
 export { default as Education } from "./education";
 export { default as Experience } from "./experience";
 export { default as Home } from "./home";

@@ -1,6 +1,7 @@
 import { Maybe, Skill } from "@/generated";
 import {
   Divisor,
+  Download,
   Education,
   Experience,
   Home,
@@ -56,6 +57,9 @@ const Page = async () => {
 
       <Divisor />
       <Interests id="interests" interests={interests} />
+
+      <Divisor />
+      <Download id="download" />
     </Main>
   );
 };
