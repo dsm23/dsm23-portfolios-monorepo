@@ -33,12 +33,12 @@ const projects: Project[] = [
   //   description:
   //     "The tutorial example from the reactjs.org docs in tailwindcss stylings with TypeScript typings",
   // },
-  // {
-  //   title: "FizzBuzz",
-  //   to: "/fizz-buzz",
-  //   description:
-  //     'Numbers 1 to 100 where any number divisible by three is replaced with the word "fizz", and any number divisible by five is replaced with the word "buzz"',
-  // },
+  {
+    title: "FizzBuzz",
+    to: "/fizz-buzz",
+    description:
+      'Numbers 1 to 100 where any number divisible by three is replaced with the word "fizz", and any number divisible by five is replaced with the word "buzz"',
+  },
   {
     title: "Clock",
     to: "/clock",
