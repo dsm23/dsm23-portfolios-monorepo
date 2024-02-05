@@ -27,12 +27,12 @@ const projects: Project[] = [
     description:
       "A website for my parent's company. Built with Tailwind and Next.js and uses Contentful as a CMS",
   },
-  // {
-  //   title: "Noughts and Crosses",
-  //   to: "/noughts-and-crosses",
-  //   description:
-  //     "The tutorial example from the reactjs.org docs in tailwindcss stylings with TypeScript typings",
-  // },
+  {
+    title: "Noughts and Crosses",
+    to: "/noughts-and-crosses",
+    description:
+      "The tutorial example from the reactjs.org docs in tailwindcss stylings with TypeScript typings",
+  },
   {
     title: "FizzBuzz",
     to: "/fizz-buzz",
