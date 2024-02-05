@@ -7,6 +7,7 @@ import {
   Home,
   Interests,
   Main,
+  Projects,
   Skills,
 } from "~/components";
 import { getHomePageQuery } from "~/utils/api";
@@ -54,6 +55,9 @@ const Page = async () => {
 
       <Divisor />
       <Skills id="skills" skills={skills} />
+
+      <Divisor />
+      <Projects id="projects" />
 
       <Divisor />
       <Interests id="interests" interests={interests} />

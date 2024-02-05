@@ -1,0 +1,11 @@
+.imgContainer {
+  position: relative;
+  aspect-ratio: 5 / 6;
+  isolation: auto;
+}
+
+@media print {
+  .imgContainer {
+    display: none;
+  }
+}
