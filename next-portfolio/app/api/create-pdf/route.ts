@@ -5,7 +5,6 @@ export async function GET() {
     process.env.NODE_ENV === "development"
       ? await puppeteer.launch({
           executablePath: process.env.CHROME_EXECUTABLE_PATH,
-          headless: "new",
         })
       : await puppeteer.connect({
           browserWSEndpoint: `wss://chrome.browserless.io?token=${process.env.BROWSERLESS_TOKEN}`,
