@@ -30,7 +30,7 @@ jobs:
       - run: git branch --track main origin/main
 
       - run: pnpm nx format:check
-      - run: pnpm nx affected -t lint,test,build --parallel=3
+      - run: pnpm nx affected -t lint,test,e2e,build --parallel=3
         env:
           BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
