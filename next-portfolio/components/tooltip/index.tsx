@@ -13,7 +13,7 @@ const Tooltip: FunctionComponent<Props> = ({
   <div
     data-tip-position="top"
     {...props}
-    {...{ inert: true }}
+    {...{ inert: "true" }}
     role="tooltip"
     className={cn(styles.tooltip, className)}
   >
