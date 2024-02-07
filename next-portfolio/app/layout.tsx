@@ -1,11 +1,16 @@
-import type { ReactNode } from "react";
+import type { FunctionComponent, ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import dynamic from "next/dynamic";
 import Layout from "~/components/layout";
 import ThemeProvider from "~/components/theme-provider";
+import { getProfilePic } from "~/utils/api";
 import { PHProvider } from "./providers";
 
 import "./global.css";
+
+type Props = {
+  children: ReactNode;
+};
 
 export const metadata: Metadata = {
   title: "David Murdoch Portfolio - Next.js",
@@ -21,23 +26,27 @@ const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
   ssr: false,
 });
 
-const RootLayout = ({ children }: { children: ReactNode }) => (
-  <html lang="en">
-    <body>
-      <PHProvider>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <PostHogPageView />
+const RootLayout: FunctionComponent<Props> = async ({ children }) => {
+  const profilePic = await getProfilePic();
 
-          <Layout>{children}</Layout>
-        </ThemeProvider>
-      </PHProvider>
-    </body>
-  </html>
-);
+  return (
+    <html lang="en">
+      <body>
+        <PHProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <PostHogPageView />
+
+            <Layout profilePic={profilePic}>{children}</Layout>
+          </ThemeProvider>
+        </PHProvider>
+      </body>
+    </html>
+  );
+};
 
 export default RootLayout;
