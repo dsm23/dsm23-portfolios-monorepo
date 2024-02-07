@@ -5,14 +5,16 @@ import type { FunctionComponent, ReactNode } from "react";
 import Link from "next/link";
 import Nav from "~/components/nav";
 import { cn } from "~/utils";
+import { Person } from "@/generated";
 
 import { layoutStyles as styles } from "@/shared-styles";
 
 type Props = {
   children: ReactNode;
+  profilePic: Person;
 };
 
-const Layout: FunctionComponent<Props> = ({ children }) => {
+const Layout: FunctionComponent<Props> = ({ children, profilePic }) => {
   const [open, setOpen] = useState(false);
 
   const handleToggle = () => {
@@ -36,7 +38,12 @@ const Layout: FunctionComponent<Props> = ({ children }) => {
   return (
     <div className="flex w-full flex-col font-sans lg:flex-row">
       <header className="contents">
-        <Nav open={open} onToggle={handleToggle} onClose={handleClose}>
+        <Nav
+          open={open}
+          profilePic={profilePic}
+          onToggle={handleToggle}
+          onClose={handleClose}
+        >
           <div className="block w-full text-gray-400 md:ml-auto md:flex md:w-auto md:items-start lg:block lg:h-auto lg:items-center">
             {items.map((label) => (
               <Link

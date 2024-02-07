@@ -7,16 +7,19 @@ import type {
   HTMLAttributes,
   ReactNode,
 } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
 import Hamburger from "~/components/hamburger";
 import useClickOutside from "~/hooks/use-click-outside";
+import { Person } from "@/generated";
 
 import { navStyles as styles } from "@/shared-styles";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   open: boolean;
+  profilePic: Person;
   onClose: () => void;
   onToggle: ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
 }
@@ -24,6 +27,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 const Nav: FunctionComponent<Props> = ({
   children,
   open,
+  profilePic,
   onClose,
   onToggle,
   ...props
@@ -41,11 +45,13 @@ const Nav: FunctionComponent<Props> = ({
         href="/#home"
         className="inline-flex items-center border-2 border-transparent shadow-sm outline-none focus:border-yellow-500 lg:mb-4 lg:mr-0 lg:rounded-full lg:border-8 lg:border-sky-700"
       >
-        {/* <img
-          src={profilePic()?.image?.url}
+        <Image
+          src={profilePic?.image?.url as string}
           className="aspect-square w-10 rounded-full object-cover lg:w-48"
-          alt={profilePic()?.image?.description}
-        /> */}
+          height={192}
+          width={192}
+          alt={profilePic?.image?.description as string}
+        />
 
         <span className="ml-3 hidden text-xl font-bold tracking-wide text-white md:inline lg:hidden print:inline">
           David Murdoch
