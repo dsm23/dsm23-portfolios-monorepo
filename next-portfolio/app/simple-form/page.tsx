@@ -1,9 +1,11 @@
 "use client";
 
+import type { ChangeEvent } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
 import type { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { AsYouType } from "libphonenumber-js/min";
 import { toast } from "sonner";
 import {
   Button,
@@ -40,6 +42,7 @@ const Page = () => {
       employed: false,
       toppings: [],
       sauces: [],
+      phoneNumber: "",
     },
     mode: "onChange",
     resolver: zodResolver(schema),
@@ -295,6 +298,33 @@ const Page = () => {
                       </FormItem>
                     </RadioGroup>
                   </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            {/* https://viclafouch.github.io/mui-tel-input/ */}
+
+            <FormField
+              control={control}
+              name="phoneNumber"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone Number</FormLabel>
+                  <FormControl>
+                    <Input
+                      {...field}
+                      type="tel"
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        field.onChange(e.target.value.replace(/\s/g, ""))
+                      }
+                      value={new AsYouType("GB").input(field.value)}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Enter a telephone number, like 01632 960001, 020 7946 0001
+                    or +44 808 157 0192
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}

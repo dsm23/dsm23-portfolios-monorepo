@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { isValidPhoneNumber } from "libphonenumber-js/min";
 
 const schema = z.object({
   firstName: z.string().min(1, {
@@ -33,6 +34,18 @@ const schema = z.object({
     )
     .min(1),
   stooge: z.literal("larry").or(z.literal("moe")).or(z.literal("curly")),
+  phoneNumber: z.string().transform((value, ctx) => {
+    if (isValidPhoneNumber(value, "GB")) {
+      return value;
+    }
+
+    // when it's not
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "Invalid phone number",
+    });
+    return z.NEVER;
+  }),
   notes: z.string(),
 });
 
