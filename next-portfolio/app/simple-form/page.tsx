@@ -18,6 +18,11 @@ import {
   Main,
   RadioGroup,
   RadioGroupItem,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
   StyledGoBack,
   Textarea,
   Toaster,
@@ -150,13 +155,21 @@ const Page = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Favourite Colour</FormLabel>
-                  <FormControl>
-                    <select {...field}>
-                      <option value="#ff0000">❤️ Red</option>
-                      <option value="#00ff00">💚 Green</option>
-                      <option value="#0000ff">💙 Blue</option>
-                    </select>
-                  </FormControl>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a colour" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="#ff0000">❤️ Red</SelectItem>
+                      <SelectItem value="#00ff00">💚 Green</SelectItem>
+                      <SelectItem value="#0000ff">💙 Blue</SelectItem>
+                    </SelectContent>
+                  </Select>
                   <FormDescription>
                     This is just a description for test purposes.
                   </FormDescription>
