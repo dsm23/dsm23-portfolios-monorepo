@@ -1,5 +1,7 @@
-import type { FunctionComponent, HTMLAttributes } from "react";
+import { useState, type FunctionComponent, type HTMLAttributes } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import urlMetadata from "url-metadata";
 import Anchor from "~/components/anchor";
 import Section from "~/components/section";
 import { Help, NavRight } from "~/components/svgs";
@@ -81,41 +83,74 @@ const projects: Project[] = [
   },
 ];
 
-const Projects: FunctionComponent<Props> = (props) => (
-  <Section {...props}>
-    <h2 className="text-5xl">Projects</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
-      {projects.map(({ title, to, description }) => (
-        <div key={`project-${title}`}>
-          <div className={styles.imgContainer}>
-            <Help className="absolute h-full w-full rounded-lg object-cover shadow-md" />
-          </div>
-          <div className="isolate -mt-16 px-4 print:mt-0">
-            <div className="rounded-lg bg-white p-6 shadow-lg">
-              <div className="flex items-baseline">
-                <div className="text-xs font-semibold uppercase tracking-wide text-gray-600">
-                  {internal(to) ? "internal" : "external"}
+const Projects: FunctionComponent<Props> = async (props) => {
+  const projectsWithMetadata = (await Promise.all(
+    projects.map(async ({ to, ...rest }) => {
+      if (!to.includes("http")) {
+        return {
+          ...rest,
+          to,
+        };
+      }
+      const metadata = await urlMetadata(to);
+
+      return {
+        ...rest,
+        to,
+        ogImage: metadata["og:image"] ?? metadata["twitter:image"],
+        alt: metadata["og:image:alt"],
+      };
+    }),
+  )) as (Project & { ogImage?: string; alt?: string })[];
+
+  return (
+    <Section {...props}>
+      <h2 className="text-5xl">Projects</h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+        {projectsWithMetadata.map(
+          ({ title, to, description, ogImage, alt }) => (
+            <div key={`project-${title}`}>
+              <div className={styles.imgContainer}>
+                {ogImage ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={ogImage}
+                    className="absolute h-full w-full rounded-lg object-contain shadow-md"
+                    alt={alt ?? "open graph image"}
+                  />
+                ) : (
+                  <Help className="absolute h-full w-full rounded-lg object-cover shadow-md" />
+                )}
+              </div>
+              <div className="isolate -mt-16 px-4 print:mt-0">
+                <div className="rounded-lg bg-white p-6 shadow-lg">
+                  <div className="flex items-baseline">
+                    <div className="text-xs font-semibold uppercase tracking-wide text-gray-600">
+                      {internal(to) ? "internal" : "external"}
+                    </div>
+                  </div>
+                  <Anchor
+                    as={Link}
+                    href={to}
+                    className="mt-2 flex items-center gap-x-2"
+                  >
+                    <NavRight className="h-6 w-6" />
+                    <h3 className="truncate text-lg font-semibold leading-tight">
+                      {title}
+                    </h3>
+                  </Anchor>
+                  <div className="mt-3">
+                    <p className="text-sm text-gray-900">{description}</p>
+                  </div>
                 </div>
               </div>
-              <Anchor
-                as={Link}
-                href={to}
-                className="mt-2 flex items-center gap-x-2"
-              >
-                <NavRight className="h-6 w-6" />
-                <h3 className="truncate text-lg font-semibold leading-tight">
-                  {title}
-                </h3>
-              </Anchor>
-              <div className="mt-3">
-                <p className="text-sm text-gray-900">{description}</p>
-              </div>
             </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </Section>
-);
+          ),
+        )}
+      </div>
+    </Section>
+  );
+};
 
 export default Projects;
