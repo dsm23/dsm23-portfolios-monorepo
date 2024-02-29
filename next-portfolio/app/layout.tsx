@@ -33,12 +33,7 @@ const RootLayout: FunctionComponent<Props> = async ({ children }) => {
     <html lang="en">
       <body>
         <PHProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <PostHogPageView />
 
             <Layout profilePic={profilePic}>{children}</Layout>

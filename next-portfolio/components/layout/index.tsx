@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { FunctionComponent, ReactNode } from "react";
 import Link from "next/link";
-import Nav from "~/components/nav";
+import { DarkMode, Nav } from "~/components";
 import { cn } from "~/utils";
 import { Person } from "@/generated";
 
@@ -65,6 +65,10 @@ const Layout: FunctionComponent<Props> = ({ children, profilePic }) => {
                 </span>
               </Link>
             ))}
+
+            <div className="grid place-items-center">
+              <DarkMode />
+            </div>
           </div>
         </Nav>
       </header>
