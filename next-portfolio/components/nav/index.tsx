@@ -10,8 +10,9 @@ import type {
 import Image from "next/image";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
-import Hamburger from "~/components/hamburger";
+import { DarkMode, Hamburger } from "~/components";
 import useClickOutside from "~/hooks/use-click-outside";
+import { cn } from "~/utils";
 import { Person } from "@/generated";
 
 import { navStyles as styles } from "@/shared-styles";
@@ -62,7 +63,9 @@ const Nav: FunctionComponent<Props> = ({
           DSM
         </span>
       </Link>
-      <div className={styles.icon}>
+
+      <div className={cn(styles.icon, "flex text-white")}>
+        <DarkMode align="end" />
         <button
           aria-label="Open the navigation menu"
           onClick={onToggle}
