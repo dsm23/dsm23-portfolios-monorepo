@@ -1,7 +1,5 @@
-import { useState, type FunctionComponent, type HTMLAttributes } from "react";
+import type { FunctionComponent, HTMLAttributes } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import urlMetadata from "url-metadata";
 import Anchor from "~/components/anchor";
 import Section from "~/components/section";
 import { Help, NavRight } from "~/components/svgs";
@@ -84,6 +82,9 @@ const projects: Project[] = [
 ];
 
 const Projects: FunctionComponent<Props> = async (props) => {
+  // server-only
+  const { default: urlMetadata } = await import("url-metadata");
+
   const projectsWithMetadata = (await Promise.all(
     projects.map(async ({ to, ...rest }) => {
       if (!to.includes("http")) {
