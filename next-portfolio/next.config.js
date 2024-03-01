@@ -22,6 +22,7 @@ const nextConfig = {
       },
     ],
   },
+  productionBrowserSourceMaps: true,
   experimental: {
     serverComponentsExternalPackages: ["puppeteer-core"],
   },
