@@ -3,7 +3,7 @@ export { default as Button } from "./button";
 export * from "./button";
 export { default as Checkbox } from "./checkbox";
 export { default as ClockFace } from "./clock";
-export { default as DarkMode } from "./dark-mode";
+export { default as DarkModeToggle } from "./dark-mode-toggle";
 export { default as Divisor } from "./divisor";
 export * from "./dropdown";
 export { default as Hamburger } from "./hamburger";

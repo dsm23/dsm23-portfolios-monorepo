@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { FunctionComponent, ReactNode } from "react";
 import Link from "next/link";
-import { DarkMode, Nav } from "~/components";
+import { DarkModeToggle, Nav } from "~/components";
 import { cn } from "~/utils";
 import { Person } from "@/generated";
 
@@ -44,7 +44,7 @@ const Layout: FunctionComponent<Props> = ({ children, profilePic }) => {
           onToggle={handleToggle}
           onClose={handleClose}
         >
-          <div className="block w-full text-gray-400 md:ml-auto md:flex md:w-auto md:items-start lg:block lg:h-auto lg:items-center">
+          <div className="block w-full text-gray-400 md:ml-auto md:flex md:w-auto md:items-center lg:block ">
             {items.map((label) => (
               <Link
                 href={`/#${label}`}
@@ -66,8 +66,8 @@ const Layout: FunctionComponent<Props> = ({ children, profilePic }) => {
               </Link>
             ))}
 
-            <div className="grid place-items-center">
-              <DarkMode />
+            <div className="hidden w-full items-center rounded md:flex md:py-2 lg:justify-center ">
+              <DarkModeToggle />
             </div>
           </div>
         </Nav>

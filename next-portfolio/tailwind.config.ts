@@ -12,9 +12,6 @@ const config = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
     },
     extend: {
       colors: {
@@ -78,6 +75,10 @@ const config = {
         threeDotsOne: "threeDotsKey 0.8s linear infinite",
         threeDotsTwo: "threeDotsKey 0.8s linear 0.15s infinite",
         threeDotsThree: "threeDotsKey 0.8s linear 0.3s infinite",
+      },
+      screens: {
+        md: "950px",
+        "2xl": "1400px",
       },
     },
   },
