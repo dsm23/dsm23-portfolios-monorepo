@@ -44,7 +44,11 @@ const projects: Project[] = [
     to: "/clock",
     description: "A SVG clock example cloned from svelte.dev",
   },
-
+  {
+    title: "Divisibles",
+    to: "/divisibles",
+    description: "Hover over numbers to show their divisors",
+  },
   {
     title: "MathML",
     to: "/mathml",
