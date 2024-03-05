@@ -5,7 +5,7 @@ import type { FunctionComponent } from "react";
 import { generateProgrammingLanguageStats } from "@nivo/generators";
 import { ResponsivePie } from "@nivo/pie";
 
-import { Main, StyledGoBack } from "~/components";
+import { Main, StyledGoBack, ViewSource } from "~/components";
 
 const generateData = () =>
   generateProgrammingLanguageStats(true, 5).map((d) => ({
@@ -23,6 +23,7 @@ const PieChart: FunctionComponent = () => {
   return (
     <Main className="w-full px-6 py-8">
       <StyledGoBack className="mb-4" href="/#projects" />
+      <ViewSource pathname="app/pie-chart/page.tsx" />
 
       <h1 className="text-4xl uppercase tracking-widest text-sky-600">
         Pie Chart

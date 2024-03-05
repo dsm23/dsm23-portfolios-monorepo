@@ -9,6 +9,7 @@ import {
   Main,
   Projects,
   Skills,
+  ViewSource,
 } from "~/components";
 import { getHomePageQuery } from "~/utils/api";
 
@@ -43,6 +44,8 @@ const Page = async () => {
 
   return (
     <Main className="w-full px-6 py-8">
+      <ViewSource pathname="app/page.tsx" />
+
       <h1 className="sr-only">David Murdoch{"'"}s Portfolio</h1>
 
       <Home author={author} />

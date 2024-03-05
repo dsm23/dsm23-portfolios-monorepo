@@ -1,8 +1,15 @@
-import { Anchor, ClockFace, Main, StyledGoBack } from "~/components";
+import {
+  Anchor,
+  ClockFace,
+  Main,
+  StyledGoBack,
+  ViewSource,
+} from "~/components";
 
 const Page = () => (
   <Main className="w-full px-6 py-8">
     <StyledGoBack className="mb-4" href="/#projects" />
+    <ViewSource pathname="app/clock/page.tsx" />
 
     <h1 className="text-4xl uppercase tracking-widest text-sky-600">Clock</h1>
     <p>

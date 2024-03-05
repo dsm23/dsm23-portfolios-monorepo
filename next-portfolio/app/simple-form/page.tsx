@@ -28,6 +28,7 @@ import {
   StyledGoBack,
   Textarea,
   Toaster,
+  ViewSource,
 } from "~/components";
 import schema from "~/utils/schema";
 import sleep from "~/utils/sleep";
@@ -88,6 +89,7 @@ const Page = () => {
   return (
     <Main className="w-full px-6 py-8">
       <StyledGoBack className="mb-4" href="/#projects" />
+      <ViewSource pathname="app/simple-form/page.tsx" />
 
       <h1 className="text-4xl uppercase tracking-widest text-sky-600">
         Simple form example
