@@ -20,7 +20,11 @@ const Clock = () => {
   const seconds = time.getSeconds();
 
   return (
-    <svg viewBox="-50 -50 100 100" className={styles.svg}>
+    <svg
+      viewBox="-50 -50 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className={styles.svg}
+    >
       <circle className={styles.clockFace} r="48" />
 
       {Array.from<unknown, [boolean, number]>({ length: 60 }, (_, i) => [
@@ -57,7 +61,7 @@ const Clock = () => {
           y1="10"
           y2="2"
           stroke="currentColor"
-          stroke-width="3"
+          strokeWidth="3"
         />
       </g>
     </svg>
