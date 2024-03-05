@@ -1,8 +1,12 @@
-.svg {
+.container {
   position: fixed;
   right: 0;
   bottom: 0;
+}
+
+.svg {
   transform: rotate(90deg);
+  color: theme(colors.background);
 }
 
 .arm {
@@ -36,10 +40,13 @@
 }
 
 @screen lg {
-  .svg {
+  .container {
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  .svg {
     transform: none;
   }
 
