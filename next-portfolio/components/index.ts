@@ -19,6 +19,7 @@ export * from "./select";
 export { default as StyledGoBack } from "./styled-go-back";
 export { default as Textarea } from "./textarea";
 export { default as Toaster } from "./toast";
+export { default as ViewSource } from "./view-source";
 
 export * from "./form";
 export * from "./sections";

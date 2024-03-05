@@ -1,9 +1,9 @@
-import Main from "~/components/main";
-import StyledGoBack from "~/components/styled-go-back";
+import { Main, StyledGoBack, ViewSource } from "~/components";
 
 const MathML = () => (
   <Main className="w-full px-6 py-8">
     <StyledGoBack className="mb-4" href="/#projects" />
+    <ViewSource pathname="app/mathml/page.tsx" />
 
     <h1 className="text-4xl uppercase tracking-widest text-sky-600">
       MathML Core example
