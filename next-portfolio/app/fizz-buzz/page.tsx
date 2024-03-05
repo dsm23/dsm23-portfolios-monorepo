@@ -1,6 +1,6 @@
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
-import { Main, StyledGoBack } from "~/components";
+import { Main, StyledGoBack, ViewSource } from "~/components";
 
 import "highlight.js/styles/github-dark-dimmed.min.css";
 
@@ -27,6 +27,7 @@ const listItems = Array.from({ length: 100 }, (_, i) => {
 const Page = () => (
   <Main className="w-full px-6 py-8">
     <StyledGoBack className="mb-4" href="/#projects" />
+    <ViewSource pathname="app/fizz-buzz/page.tsx" />
 
     <h1 className="text-4xl uppercase tracking-widest text-sky-600">
       FizzBuzz
