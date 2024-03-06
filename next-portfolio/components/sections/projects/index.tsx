@@ -86,27 +86,32 @@ const projects: Project[] = [
 ];
 
 const Projects: FunctionComponent<Props> = async (props) => {
-  // server-only
-  const { default: urlMetadata } = await import("url-metadata");
+  let projectsWithMetadata: (Project & { ogImage?: string; alt?: string })[] =
+    [];
+  try {
+    // server-only
+    const { default: urlMetadata } = await import("url-metadata");
 
-  const projectsWithMetadata = (await Promise.all(
-    projects.map(async ({ to, ...rest }) => {
-      if (!to.includes("http")) {
+    projectsWithMetadata = (await Promise.all(
+      projects.map(async ({ to, ...rest }) => {
+        const metadata = await urlMetadata(
+          internal(to) ? process.env.NEXT_PUBLIC_VERCEL_URL + to : to,
+          {
+            mode: internal(to) ? "same-origin" : "cors",
+          },
+        );
+
         return {
           ...rest,
           to,
+          ogImage: metadata["og:image"] ?? metadata["twitter:image"],
+          alt: metadata["og:image:alt"],
         };
-      }
-      const metadata = await urlMetadata(to);
-
-      return {
-        ...rest,
-        to,
-        ogImage: metadata["og:image"] ?? metadata["twitter:image"],
-        alt: metadata["og:image:alt"],
-      };
-    }),
-  )) as (Project & { ogImage?: string; alt?: string })[];
+      }),
+    )) as (Project & { ogImage?: string; alt?: string })[];
+  } catch (err) {
+    console.error(err);
+  }
 
   return (
     <Section {...props}>
@@ -121,7 +126,7 @@ const Projects: FunctionComponent<Props> = async (props) => {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={ogImage}
-                    className="absolute h-full w-full rounded-lg object-contain shadow-md"
+                    className="absolute h-full w-full rounded-lg object-contain p-4 shadow-md"
                     alt={alt ?? "open graph image"}
                   />
                 ) : (

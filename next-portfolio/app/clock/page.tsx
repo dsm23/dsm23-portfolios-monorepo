@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Anchor,
   ClockFace,
@@ -5,6 +6,15 @@ import {
   StyledGoBack,
   ViewSource,
 } from "~/components";
+
+export const metadata: Metadata = {
+  title: "David Murdoch Portfolio - Next.js | Clock",
+  description: "svelte.dev clock example in Next.js",
+  openGraph: {
+    title: "David Murdoch Portfolio - Next.js | Clock",
+    description: "svelte.dev clock example in Next.js",
+  },
+};
 
 const Page = () => (
   <Main className="w-full px-6 py-8">
