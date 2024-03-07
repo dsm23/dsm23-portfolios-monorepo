@@ -12,7 +12,7 @@ export async function GET() {
 
   const page = await browser.newPage();
 
-  const websiteUrl = `http${process.env.NODE_ENV === "production" ? "s" : ""}://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+  const websiteUrl = `http${process.env.NODE_ENV === "development" ? "" : "s"}://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
   await page.goto(websiteUrl, { waitUntil: "networkidle0" });
 
