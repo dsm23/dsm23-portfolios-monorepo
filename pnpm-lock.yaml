@@ -17,6 +17,9 @@ dependencies:
   '@hookform/resolvers':
     specifier: ^3.3.4
     version: 3.3.4(react-hook-form@7.50.0)
+  '@neoconfetti/react':
+    specifier: ^0.1.1
+    version: 0.1.1
   '@nivo/core':
     specifier: ^0.80.0
     version: 0.80.0(@nivo/tooltip@0.80.0)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
@@ -3024,6 +3027,10 @@ packages:
   /@microsoft/tsdoc@0.14.2:
     resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
     dev: true
+
+  /@neoconfetti/react@0.1.1:
+    resolution: {integrity: sha512-OqKn/QZYkrCaMBg/a1JTjG1Th0n7YPopIHctqgBi3C34bTV2wbrKJPCIDuNSltsaEpVWjQPbhLYwRpNUMnqhnQ==}
+    dev: false
 
   /@next/env@14.1.0:
     resolution: {integrity: sha512-Py8zIo+02ht82brwwhTg36iogzFqGLPXlRGKQw5s+qP/kMNc4MAyDeEwBKDijk6zTIbegEgu8Qy7C1LboslQAw==}
