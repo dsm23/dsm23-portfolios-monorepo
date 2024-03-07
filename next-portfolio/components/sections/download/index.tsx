@@ -1,10 +1,12 @@
 "use client";
 
+import { Transition } from "@headlessui/react";
 import type { FunctionComponent, HTMLAttributes } from "react";
 import { useAsyncFn } from "react-use";
 import Section from "~/components/section";
 import { ArrowDownTray, ThreeDots } from "~/components/svgs";
-import { cn } from "~/utils";
+import { cn, sleep } from "~/utils";
+
 type Props = HTMLAttributes<HTMLElement>;
 
 const fetcher = async () => {
@@ -28,7 +30,10 @@ const fetcher = async () => {
 };
 
 const Download: FunctionComponent<Props> = ({ className, ...props }) => {
-  const [{ loading }, handleClick] = useAsyncFn(fetcher, []);
+  const [{ loading }, handleClick] = useAsyncFn(
+    () => Promise.all([fetcher(), sleep(300)]),
+    [],
+  );
 
   return (
     <Section {...props} className={cn("print:hidden", className)}>
@@ -41,8 +46,22 @@ const Download: FunctionComponent<Props> = ({ className, ...props }) => {
       >
         <ArrowDownTray className="h-5 w-5" />
         Download this page as .pdf
-        {loading && <ThreeDots />}
+        <Transition
+          show={loading}
+          className="grid"
+          enter="transition-[grid-template-columns] motion-reduce:transition-none duration-150"
+          enterFrom="grid-cols-[0fr]"
+          enterTo="grid-cols-[1fr]"
+          leave="transition-[grid-template-columns] motion-reduce:transition-none duration-150"
+          leaveFrom="grid-cols-[1fr]"
+          leaveTo="grid-cols-[0fr]"
+        >
+          <div className="overflow-hidden">
+            <ThreeDots className="h-5 w-5" />
+          </div>
+        </Transition>
       </button>
+
       <pre className="mt-4 whitespace-pre-wrap break-normal font-mono">
         gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen
         -dNOPAUSE -dQUIET -dBATCH
