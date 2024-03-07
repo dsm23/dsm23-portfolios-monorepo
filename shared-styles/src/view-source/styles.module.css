@@ -58,3 +58,9 @@
     animation: wave 560ms ease-in-out;
   }
 }
+
+@media print {
+  .container {
+    display: none;
+  }
+}
