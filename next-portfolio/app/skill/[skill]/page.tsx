@@ -8,7 +8,7 @@ import {
   ViewSource,
 } from "~/components";
 import { getSkillBySlug } from "~/utils/api";
-import { contentfulOptions } from "~/utils";
+import { contentfulOptions, sleep } from "~/utils";
 
 type Props = {
   params: {
@@ -17,7 +17,7 @@ type Props = {
 };
 
 const Page: FunctionComponent<Props> = async ({ params }) => {
-  const skill = await getSkillBySlug(params.skill);
+  const [skill] = await Promise.all([getSkillBySlug(params.skill), sleep(300)]);
 
   const skillName = skill?.skillName;
   const content = skill?.content;
