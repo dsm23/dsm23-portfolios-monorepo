@@ -1,6 +1,8 @@
 import type { FunctionComponent, SVGAttributes } from "react";
 import { cn } from "~/utils";
 
+import { threeDotsStyles as styles } from "@/shared-styles";
+
 type Props = SVGAttributes<SVGSVGElement>;
 
 const ThreeDots: FunctionComponent<Props> = ({ className, ...props }) => (
@@ -11,22 +13,16 @@ const ThreeDots: FunctionComponent<Props> = ({ className, ...props }) => (
     fill="currentColor"
     className={cn("h-6 w-6", className)}
   >
+    <circle className={styles.dots} fill="currentColor" cx="4" cy="12" r="3" />
     <circle
-      className="animate-threeDotsOne"
-      fill="currentColor"
-      cx="4"
-      cy="12"
-      r="3"
-    />
-    <circle
-      className="animate-threeDotsTwo"
+      className={cn(styles.dots, styles.dotTwo)}
       fill="currentColor"
       cx="12"
       cy="12"
       r="3"
     />
     <circle
-      className="animate-threeDotsThree"
+      className={cn(styles.dots, styles.dotThree)}
       fill="currentColor"
       cx="20"
       cy="12"
