@@ -1,6 +1,7 @@
 export { default as ArrowDownTray } from "./arrow-down-tray";
 export { default as ArrowTopRightOnSquare } from "./arrow-top-right-on-square";
 export { default as CodeSandbox } from "./code-sandbox";
+export { default as DragHandle } from "./drag-handle";
 export { default as EmptyStar } from "./empty-star";
 export { default as FilledStar } from "./filled-star";
 export { default as Gatsby } from "./gatsby";
