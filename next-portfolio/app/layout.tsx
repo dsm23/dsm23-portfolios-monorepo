@@ -13,6 +13,7 @@ type Props = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.ORIGIN_URL as string),
   title: "David Murdoch Portfolio - Next.js",
   description:
     "A portfolio showing off the experience and projects of David Murdoch",

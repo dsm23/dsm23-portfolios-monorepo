@@ -92,11 +92,13 @@ const Projects: FunctionComponent<Props> = async (props) => {
   const projectsWithMetadata = (await Promise.all(
     projects.map(async ({ to, ...rest }) => {
       try {
-        const websiteUrl = `http${process.env.NODE_ENV === "development" ? "" : "s"}://${process.env.VERCEL_SITE_URL}`;
+        const websiteUrl = process.env.ORIGIN_URL as string;
 
         const url = internal(to) ? websiteUrl + to : to;
 
-        const metadata = await urlMetadata(url);
+        const metadata = await urlMetadata(url, {
+          mode: "same-origin",
+        });
 
         return {
           ...rest,

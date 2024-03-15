@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 // export const runtime = "edge";
 
 // Image metadata
-export const alt = "Placeholder";
+export const alt = "2, Fizz, 4, Buzz";
 export const size = {
   width: 1200,
   height: 630,
