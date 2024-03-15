@@ -1,12 +1,9 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
-import Image from "next/image";
-import type { StaticImageData } from "next/image";
 import Link from "next/link";
 import Anchor from "~/components/anchor";
 import Section from "~/components/section";
 import { Help, NavRight } from "~/components/svgs";
 import { internal } from "~/utils";
-import clockRef from "../../../app/clock/opengraph-image.jpg";
 
 import { projectsStyles as styles } from "@/shared-styles";
 
@@ -14,8 +11,6 @@ interface Project {
   title: string;
   to: string;
   description: string;
-  staticImage?: StaticImageData;
-  alt?: string;
 }
 
 type Props = HTMLAttributes<HTMLElement>;
@@ -48,8 +43,6 @@ const projects: Project[] = [
     title: "Clock",
     to: "/clock",
     description: "A SVG clock example cloned from svelte.dev",
-    staticImage: clockRef,
-    alt: "A clock face copied from svelte.dev",
   },
   {
     title: "Divisibles",
@@ -98,22 +91,27 @@ const Projects: FunctionComponent<Props> = async (props) => {
 
   const projectsWithMetadata = (await Promise.all(
     projects.map(async ({ to, ...rest }) => {
-      if (internal(to)) {
+      try {
+        const websiteUrl = `http${process.env.NODE_ENV === "development" ? "" : "s"}://${process.env.VERCEL_SITE_URL}`;
+
+        const url = internal(to) ? websiteUrl + to : to;
+
+        const metadata = await urlMetadata(url);
+
+        return {
+          ...rest,
+          to,
+          ogImage: metadata["og:image"] ?? metadata["twitter:image"],
+          alt: metadata["og:image:alt"],
+        };
+      } catch (err) {
         return {
           ...rest,
           to,
         };
       }
-      const metadata = await urlMetadata(to);
-
-      return {
-        ...rest,
-        to,
-        ogImage: metadata["og:image"] ?? metadata["twitter:image"],
-        alt: metadata["og:image:alt"],
-      };
     }),
-  )) as (Project & { ogImage?: string })[];
+  )) as (Project & { ogImage?: string; alt?: string })[];
 
   return (
     <Section {...props}>
@@ -121,16 +119,10 @@ const Projects: FunctionComponent<Props> = async (props) => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
         {projectsWithMetadata.map(
-          ({ title, to, description, ogImage, staticImage, alt }) => (
+          ({ title, to, description, ogImage, alt }) => (
             <div key={`project-${title}`}>
               <div className={styles.imgContainer}>
-                {staticImage ? (
-                  <Image
-                    src={staticImage}
-                    className="absolute h-full w-full rounded-lg object-contain p-4 shadow-md"
-                    alt={alt ?? "open graph image"}
-                  />
-                ) : ogImage ? (
+                {ogImage ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={ogImage}
