@@ -79,6 +79,12 @@ const projects: Project[] = [
       "The redux Todomvc example is quite old and states that it no longer uses recommended patterns. An example that converts to redux toolkit and uses open-props for styles",
   },
   {
+    title: "GitHub search from redux",
+    to: "https://github-search-from-redux-example.netlify.app/",
+    description:
+      "The redux real world example is quite old and states that it no longer uses recommended patterns. An example that converts to redux toolkit (working but incomplete)",
+  },
+  {
     title: "Simple form",
     to: "/simple-form",
     description: "A simple form example using react-hook-form",
