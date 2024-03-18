@@ -10,6 +10,7 @@ import { toast } from "sonner";
 import {
   Button,
   Checkbox,
+  DatePicker,
   FormControl,
   FormDescription,
   FormField,
@@ -326,6 +327,30 @@ const Page = () => {
                   <FormDescription>
                     Enter a telephone number, like 01632 960001, 020 7946 0001
                     or +44 808 157 0192
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="dob"
+              render={({ field }) => (
+                <FormItem className="flex flex-col">
+                  <FormLabel>Date of birth</FormLabel>
+
+                  <DatePicker
+                    selected={field.value}
+                    onDayClick={field.onChange}
+                    disabled={(date: Date) =>
+                      date > new Date() || date < new Date("1900-01-01")
+                    }
+                    initialFocus
+                  />
+
+                  <FormDescription>
+                    Your date of birth is used to calculate your age.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
