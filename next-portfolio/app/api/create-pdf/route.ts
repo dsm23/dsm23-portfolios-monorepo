@@ -17,22 +17,6 @@ export async function GET() {
   try {
     await page.goto(websiteUrl, { waitUntil: "networkidle0" });
 
-    await page.evaluate(async () => {
-      // Wait for all remaining lazy loading images to load
-      await Promise.all(
-        Array.from(document.getElementsByTagName("img"), (image) => {
-          if (image.complete) {
-            return;
-          }
-
-          return new Promise((resolve, reject) => {
-            image.addEventListener("load", resolve);
-            image.addEventListener("error", reject);
-          });
-        }),
-      );
-    });
-
     const pdf = await page.pdf({
       displayHeaderFooter: true,
       margin: { top: "50px", right: "50px", bottom: "50px", left: "50px" },
