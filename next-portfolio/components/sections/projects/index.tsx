@@ -2,7 +2,8 @@ import type { FunctionComponent, HTMLAttributes } from "react";
 import Link from "next/link";
 import Anchor from "~/components/anchor";
 import Section from "~/components/section";
-import { Help, NavRight } from "~/components/svgs";
+import Help from "~/components/svgs/help";
+import NavRight from "~/components/svgs/nav-right";
 import { internal } from "~/utils";
 
 import { projectsStyles as styles } from "@/shared-styles";

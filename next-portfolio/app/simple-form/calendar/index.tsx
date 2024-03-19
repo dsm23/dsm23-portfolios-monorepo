@@ -3,7 +3,8 @@
 import type { ComponentProps, FunctionComponent } from "react";
 import { DayPicker } from "react-day-picker";
 import { buttonVariants } from "~/components/button";
-import { ChevronLeft, ChevronRight } from "~/components/svgs";
+import ChevronLeft from "~/components/svgs/chevron-left";
+import ChevronRight from "~/components/svgs/chevron-right";
 import { cn } from "~/utils";
 
 export type Props = ComponentProps<typeof DayPicker>;

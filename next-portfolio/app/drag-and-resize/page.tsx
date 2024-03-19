@@ -1,4 +1,6 @@
-import { Main, StyledGoBack, ViewSource } from "~/components";
+import Main from "~/components/main";
+import GoBack from "~/components/styled-go-back";
+import ViewSource from "~/components/view-source";
 import Counter from "./counter";
 import {
   ResizableHandle,
@@ -10,7 +12,7 @@ import Timer from "./timer";
 const Page = () => {
   return (
     <Main className="w-full px-6 py-8">
-      <StyledGoBack className="mb-4" href="/#projects" />
+      <GoBack className="mb-4" href="/#projects" />
       <ViewSource pathname="app/drag-and-resize/page.tsx" />
 
       <h1 className="text-4xl uppercase tracking-widest text-sky-600">

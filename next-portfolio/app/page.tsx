@@ -1,16 +1,16 @@
 import { Maybe, Skill } from "@/generated";
+import Divisor from "~/components/divisor";
+import Main from "~/components/main";
 import {
-  Divisor,
   Download,
   Education,
   Experience,
   Home,
   Interests,
-  Main,
   Projects,
   Skills,
-  ViewSource,
-} from "~/components";
+} from "~/components/sections";
+import ViewSource from "~/components/view-source";
 import { getHomePageQuery } from "~/utils/api";
 
 const fetchSvg = async (url: string) => {

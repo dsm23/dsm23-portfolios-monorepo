@@ -3,15 +3,15 @@
 import type { ComponentPropsWithoutRef, FunctionComponent } from "react";
 import { useTheme } from "next-themes";
 import { Content, Root } from "@radix-ui/react-dropdown-menu";
+import Button from "~/components/button";
 import {
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-  Moon,
-  Sun,
-} from "~/components";
+} from "~/components/dropdown";
+import Moon from "~/components/svgs/moon";
+import Sun from "~/components/svgs/sun";
 
 type Props = Omit<ComponentPropsWithoutRef<typeof Root>, "children"> & {
   align?: ComponentPropsWithoutRef<typeof Content>["align"];

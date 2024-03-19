@@ -2,9 +2,11 @@
 
 import { useId, useMemo, useState } from "react";
 import type { ChangeEventHandler } from "react";
-import { Main, StyledGoBack, ViewSource } from "~/components";
 import Label from "~/components/label";
 import Input from "~/components/input";
+import Main from "~/components/main";
+import GoBack from "~/components/styled-go-back";
+import ViewSource from "~/components/view-source";
 import { cn } from "~/utils";
 
 const Page = () => {
@@ -38,7 +40,7 @@ const Page = () => {
 
   return (
     <Main className="w-full px-6 py-8">
-      <StyledGoBack className="mb-4" href="/#projects" />
+      <GoBack className="mb-4" href="/#projects" />
       <ViewSource pathname="app/divisibles/page.tsx" />
 
       <h1 className="text-4xl uppercase tracking-widest text-sky-600">

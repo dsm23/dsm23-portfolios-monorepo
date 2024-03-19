@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from "react";
 import * as ResizablePrimitive from "react-resizable-panels";
-import { DragHandle } from "~/components/svgs";
+import DragHandle from "~/components/svgs/drag-handle";
 import { cn } from "~/utils";
 
 const ResizablePanelGroup = ({

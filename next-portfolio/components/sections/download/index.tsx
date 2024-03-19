@@ -4,7 +4,8 @@ import { Transition } from "@headlessui/react";
 import type { FunctionComponent, HTMLAttributes } from "react";
 import { useAsyncFn } from "react-use";
 import Section from "~/components/section";
-import { ArrowDownTray, ThreeDots } from "~/components/svgs";
+import ArrowDownTray from "~/components/svgs/arrow-down-tray";
+import ThreeDots from "~/components/svgs/three-dots";
 import { cn, sleep } from "~/utils";
 
 type Props = HTMLAttributes<HTMLElement>;
