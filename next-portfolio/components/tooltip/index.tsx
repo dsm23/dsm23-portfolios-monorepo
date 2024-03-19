@@ -13,7 +13,8 @@ const Tooltip: FunctionComponent<Props> = ({
   <div
     data-tip-position="top"
     {...props}
-    {...{ inert: true }}
+    // @ts-expect-error react ts suggests inert to be boolean, but that doesn't pass through to the dom
+    inert=""
     role="tooltip"
     className={cn(styles.tooltip, className)}
   >
