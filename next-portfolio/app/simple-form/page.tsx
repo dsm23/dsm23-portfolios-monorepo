@@ -10,7 +10,6 @@ import { toast } from "sonner";
 import {
   Button,
   Checkbox,
-  DatePicker,
   FormControl,
   FormDescription,
   FormField,
@@ -29,6 +28,7 @@ import {
   Textarea,
   ViewSource,
 } from "~/components";
+import DatePicker from "./date-picker";
 import schema from "~/utils/schema";
 import sleep from "~/utils/sleep";
 
