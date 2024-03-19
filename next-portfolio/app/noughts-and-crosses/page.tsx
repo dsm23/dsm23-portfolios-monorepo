@@ -1,9 +1,12 @@
-import { Anchor, Main, StyledGoBack, ViewSource } from "~/components";
+import Anchor from "~/components/anchor";
+import Main from "~/components/main";
+import GoBack from "~/components/styled-go-back";
+import ViewSource from "~/components/view-source";
 import Game from "./game";
 
 const NoughtsAndCrosses = () => (
   <Main className="w-full px-6 py-8">
-    <StyledGoBack className="mb-4" href="/#projects" />
+    <GoBack className="mb-4" href="/#projects" />
     <ViewSource pathname="app/noughts-and-crosses/page.tsx" />
 
     <h1 className="text-4xl uppercase tracking-widest text-sky-600">

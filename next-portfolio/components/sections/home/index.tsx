@@ -1,16 +1,14 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
 import Anchor from "~/components/anchor";
 import Section from "~/components/section";
-import {
-  ArrowTopRightOnSquare,
-  CodeSandbox,
-  Gatsby,
-  GitHub,
-  Nuxt,
-  Solid,
-} from "~/components/svgs";
-import type { Maybe, Person } from "@/generated";
 import SectionHeader from "~/components/section-header";
+import ArrowTopRightOnSquare from "~/components/svgs/arrow-top-right-on-square";
+import CodeSandbox from "~/components/svgs/code-sandbox";
+import Gatsby from "~/components/svgs/gatsby";
+import GitHub from "~/components/svgs/github";
+import Nuxt from "~/components/svgs/nuxt";
+import Solid from "~/components/svgs/solid";
+import type { Maybe, Person } from "@/generated";
 
 interface Props extends HTMLAttributes<HTMLElement> {
   author?: Maybe<Person>;

@@ -1,12 +1,10 @@
 import type { FunctionComponent } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import {
-  EmptyStar,
-  FilledStar,
-  Main,
-  StyledGoBack,
-  ViewSource,
-} from "~/components";
+import Main from "~/components/main";
+import GoBack from "~/components/styled-go-back";
+import EmptyStar from "~/components/svgs/empty-star";
+import FilledStar from "~/components/svgs/filled-star";
+import ViewSource from "~/components/view-source";
 import { getSkillBySlug } from "~/utils/api";
 import { contentfulOptions, sleep } from "~/utils";
 
@@ -25,7 +23,7 @@ const Page: FunctionComponent<Props> = async ({ params }) => {
 
   return (
     <Main className="w-full px-6 py-8">
-      <StyledGoBack className="mb-4" href="/#skills" />
+      <GoBack className="mb-4" href="/#skills" />
       <ViewSource pathname="app/skill/[skill]/page.tsx" />
 
       <h1 className="text-4xl text-sky-700">{skillName}</h1>

@@ -10,7 +10,8 @@ import type {
 import Image from "next/image";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
-import { DarkModeToggle, Hamburger } from "~/components";
+import DarkModeToggle from "~/components/dark-mode-toggle";
+import Hamburger from "~/components/hamburger";
 import useClickOutside from "~/hooks/use-click-outside";
 import { cn } from "~/utils";
 import { Person } from "@/generated";

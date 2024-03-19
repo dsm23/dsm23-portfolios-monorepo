@@ -6,7 +6,7 @@ import type { DayPickerSingleProps } from "react-day-picker";
 import Button from "~/components/button";
 import Calendar from "../calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "../popover";
-import { CalendarDays } from "~/components/svgs";
+import CalendarDays from "~/components/svgs/calendar-days";
 import { cn } from "~/utils";
 
 type Props = Omit<DayPickerSingleProps, "selected" | "mode"> & {

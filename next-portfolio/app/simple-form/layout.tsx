@@ -3,7 +3,7 @@
 import type { ComponentProps, FunctionComponent, ReactNode } from "react";
 import { useTheme } from "next-themes";
 import { Toaster as Sonner } from "sonner";
-import { Main } from "~/components";
+import Main from "~/components/main";
 
 type ToasterProps = ComponentProps<typeof Sonner>;
 

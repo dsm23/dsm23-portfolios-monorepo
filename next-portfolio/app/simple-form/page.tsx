@@ -7,7 +7,7 @@ import type { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AsYouType } from "libphonenumber-js/min";
 import { toast } from "sonner";
-import { Button, StyledGoBack, ViewSource } from "~/components";
+import Button from "~/components/button";
 import Checkbox from "~/components/checkbox";
 import {
   FormControl,
@@ -26,7 +26,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "~/components/select";
+import GoBack from "~/components/styled-go-back";
 import Textarea from "~/components/textarea";
+import ViewSource from "~/components/view-source";
 import DatePicker from "./date-picker";
 import schema from "~/utils/schema";
 import sleep from "~/utils/sleep";
@@ -86,7 +88,7 @@ const Page = () => {
 
   return (
     <>
-      <StyledGoBack className="mb-4" href="/#projects" />
+      <GoBack className="mb-4" href="/#projects" />
       <ViewSource pathname="app/simple-form/page.tsx" />
 
       <h1 className="text-4xl uppercase tracking-widest text-sky-600">
