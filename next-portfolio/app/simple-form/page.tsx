@@ -7,27 +7,26 @@ import type { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AsYouType } from "libphonenumber-js/min";
 import { toast } from "sonner";
+import { Button, StyledGoBack, ViewSource } from "~/components";
+import Checkbox from "~/components/checkbox";
 import {
-  Button,
-  Checkbox,
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-  Input,
-  RadioGroup,
-  RadioGroupItem,
+} from "~/components/form";
+import Input from "~/components/input";
+import { RadioGroup, RadioGroupItem } from "~/components/radio";
+import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-  StyledGoBack,
-  Textarea,
-  ViewSource,
-} from "~/components";
+} from "~/components/select";
+import Textarea from "~/components/textarea";
 import DatePicker from "./date-picker";
 import schema from "~/utils/schema";
 import sleep from "~/utils/sleep";
