@@ -137,6 +137,18 @@ const PieChart: FunctionComponent = () => {
               id: "lines",
             },
           ]}
+          tooltip={({ datum: { id, value, color } }) => (
+            <div
+              className="rounded-lg bg-slate-700 p-3"
+              style={{
+                color,
+              }}
+            >
+              <strong>
+                {id}: {value}
+              </strong>
+            </div>
+          )}
           legends={[
             {
               anchor: "bottom",
@@ -156,7 +168,7 @@ const PieChart: FunctionComponent = () => {
                 {
                   on: "hover",
                   style: {
-                    itemTextColor: "#000",
+                    itemTextColor: "blue",
                   },
                 },
               ],
