@@ -10,7 +10,7 @@ const NoughtsAndCrosses = () => (
     <ViewSource pathname="app/noughts-and-crosses/page.tsx" />
 
     <h1 className="text-4xl uppercase tracking-widest text-sky-600">
-      MathML Core example
+      Noughts and Crosses
     </h1>
 
     <p>
