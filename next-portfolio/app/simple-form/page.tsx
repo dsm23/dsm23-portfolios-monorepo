@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from "~/components/form";
 import Input from "~/components/input";
+import Main from "~/components/main";
 import { RadioGroup, RadioGroupItem } from "~/components/radio";
 import {
   Select,
@@ -28,6 +29,7 @@ import {
 } from "~/components/select";
 import GoBack from "~/components/styled-go-back";
 import Textarea from "~/components/textarea";
+import Toaster from "~/components/toast";
 import ViewSource from "~/components/view-source";
 import DatePicker from "./date-picker";
 import schema from "~/utils/schema";
@@ -87,7 +89,7 @@ const Page = () => {
   ] as const;
 
   return (
-    <>
+    <Main className="w-full px-6 py-8">
       <GoBack className="mb-4" href="/#projects" />
       <ViewSource pathname="app/simple-form/page.tsx" />
 
@@ -388,7 +390,8 @@ const Page = () => {
           </form>
         </FormProvider>
       </div>
-    </>
+      <Toaster richColors />
+    </Main>
   );
 };
 
