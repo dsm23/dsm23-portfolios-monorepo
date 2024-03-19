@@ -4,8 +4,8 @@ import type { FunctionComponent } from "react";
 import { format } from "date-fns";
 import type { DayPickerSingleProps } from "react-day-picker";
 import Button from "~/components/button";
-import Calendar from "~/components/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "~/components/popover";
+import Calendar from "../calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "../popover";
 import { CalendarDays } from "~/components/svgs";
 import { cn } from "~/utils";
 
