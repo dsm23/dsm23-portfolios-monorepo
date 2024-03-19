@@ -19,7 +19,7 @@ const Anchor = forwardRef(
   ) => (
     <Component
       className={cn(
-        "-mx-1 px-1 text-sky-900 outline-none hover:underline focus:rounded focus:bg-yellow-500 dark:text-sky-300 print:underline",
+        "-mx-1 px-1 text-sky-900 underline underline-offset-2 outline-none hover:text-sky-600 focus:rounded focus:bg-yellow-500 dark:text-sky-300 dark:hover:text-sky-500",
         className,
       )}
       ref={ref}
