@@ -2,7 +2,9 @@
 
 import { useId, useMemo, useState } from "react";
 import type { ChangeEventHandler } from "react";
-import { Input, Label, Main, StyledGoBack, ViewSource } from "~/components";
+import { Main, StyledGoBack, ViewSource } from "~/components";
+import Label from "~/components/label";
+import Input from "~/components/input";
 import { cn } from "~/utils";
 
 const Page = () => {
