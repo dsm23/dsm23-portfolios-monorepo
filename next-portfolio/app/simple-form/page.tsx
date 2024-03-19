@@ -18,7 +18,6 @@ import {
   FormLabel,
   FormMessage,
   Input,
-  Main,
   RadioGroup,
   RadioGroupItem,
   Select,
@@ -28,7 +27,6 @@ import {
   SelectValue,
   StyledGoBack,
   Textarea,
-  Toaster,
   ViewSource,
 } from "~/components";
 import schema from "~/utils/schema";
@@ -88,7 +86,7 @@ const Page = () => {
   ] as const;
 
   return (
-    <Main className="w-full px-6 py-8">
+    <>
       <StyledGoBack className="mb-4" href="/#projects" />
       <ViewSource pathname="app/simple-form/page.tsx" />
 
@@ -389,8 +387,7 @@ const Page = () => {
           </form>
         </FormProvider>
       </div>
-      <Toaster richColors />
-    </Main>
+    </>
   );
 };
 
