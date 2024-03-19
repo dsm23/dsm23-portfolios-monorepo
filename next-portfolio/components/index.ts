@@ -15,7 +15,6 @@ export { default as Layout } from "./layout";
 export { default as Main } from "./main";
 export { default as Nav } from "./nav";
 export * from "./radio";
-export * from "./resizable";
 export * from "./select";
 export { default as StyledGoBack } from "./styled-go-back";
 export { default as Textarea } from "./textarea";

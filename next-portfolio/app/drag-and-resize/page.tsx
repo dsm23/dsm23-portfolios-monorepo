@@ -1,12 +1,10 @@
+import { Main, StyledGoBack, ViewSource } from "~/components";
+import Counter from "./counter";
 import {
-  Main,
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-  StyledGoBack,
-  ViewSource,
-} from "~/components";
-import Counter from "./counter";
+} from "./resizable";
 import Timer from "./timer";
 
 const Page = () => {
