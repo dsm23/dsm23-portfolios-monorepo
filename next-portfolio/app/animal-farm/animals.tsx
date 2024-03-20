@@ -1,7 +1,7 @@
 "use client";
 
-import { ChangeEventHandler } from "react";
-import { useAsync, useLocalStorage } from "react-use";
+import { ChangeEventHandler, useState } from "react";
+import { useAsync, useDebounce, useLocalStorage } from "react-use";
 import Input from "~/components/input";
 import {
   Card,
@@ -23,7 +23,7 @@ type Animal = {
   name: string;
 };
 
-const fetcher = async (query: string | undefined) => {
+const fetcher = async (query?: string) => {
   const response = await fetch(
     query ? "/api/animals?" + new URLSearchParams({ query }) : "/api/animals",
   );
@@ -35,10 +35,19 @@ const fetcher = async (query: string | undefined) => {
 const Animals = () => {
   const id = useId();
   const [query, setQuery] = useLocalStorage<string>("lastQuery");
+  const [debouncedQuery, setDebouncedQuery] = useState(query);
+
+  useDebounce(
+    () => {
+      setDebouncedQuery(query);
+    },
+    300,
+    [query],
+  );
 
   const { value: [animals] = [], loading } = useAsync(
-    () => Promise.all([fetcher(query), sleep(250)]),
-    [query],
+    () => Promise.all([fetcher(debouncedQuery), sleep(250)]),
+    [debouncedQuery],
   );
 
   const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
