@@ -152,7 +152,7 @@ const Projects: FunctionComponent<Props> = async (props) => {
                   <Anchor
                     as={Link}
                     href={to}
-                    className="mt-2 flex items-center gap-x-2"
+                    className="dar:hover:text-sky-600 mt-2 flex items-center gap-x-2 dark:text-sky-900"
                   >
                     <NavRight className="h-6 w-6" />
                     <h3 className="truncate text-lg font-semibold leading-tight">

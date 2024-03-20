@@ -1,7 +1,7 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Section from "~/components/section";
-import { contentfulOptions, formatYears } from "~/utils";
+import { cn, contentfulOptions, formatYears } from "~/utils";
 import type { ExperienceCompany, Maybe } from "@/generated";
 
 import { experienceStyles as styles } from "@/shared-styles";
@@ -33,7 +33,7 @@ const Experience: FunctionComponent<Props> = ({
           </div>
         )}
 
-        <div className={styles.dates}>
+        <div className={cn(styles.dates, "text-sky-900 dark:text-sky-300")}>
           {formatYears(
             company?.startDate as string,
             company?.endDate as string,

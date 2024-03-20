@@ -1,7 +1,7 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Section from "~/components/section";
-import { contentfulOptions, formatYears } from "~/utils";
+import { cn, contentfulOptions, formatYears } from "~/utils";
 import type { EducationSchool, Maybe } from "@/generated";
 
 import { educationStyles as styles } from "@/shared-styles";
@@ -26,7 +26,7 @@ const Education: FunctionComponent<Props> = ({ education = [], ...props }) => (
           </div>
         )}
 
-        <div className={styles.dates}>
+        <div className={cn(styles.dates, "text-sky-900 dark:text-sky-300")}>
           {formatYears(school?.startDate as string, school?.endDate as string)}
         </div>
       </div>
