@@ -53,6 +53,9 @@ dependencies:
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.67)(react@18.2.0)
+  chance:
+    specifier: ^1.1.11
+    version: 1.1.11
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -169,6 +172,9 @@ devDependencies:
   '@testing-library/react':
     specifier: 14.2.1
     version: 14.2.1(react-dom@18.2.0)(react@18.2.0)
+  '@types/chance':
+    specifier: ^1.1.6
+    version: 1.1.6
   '@types/jest':
     specifier: ^29.5.12
     version: 29.5.12
@@ -5808,6 +5814,10 @@ packages:
       '@types/node': 20.11.30
     dev: true
 
+  /@types/chance@1.1.6:
+    resolution: {integrity: sha512-V+pm3stv1Mvz8fSKJJod6CglNGVqEQ6OyuqitoDkWywEODM/eJd1eSuIp9xt6DrX8BWZ2eDSIzbw1tPCUTvGbQ==}
+    dev: true
+
   /@types/connect-history-api-fallback@1.5.4:
     resolution: {integrity: sha512-n6Cr2xS1h4uAulPRdlw6Jl6s1oG8KrVilPN2yUITEs+K48EzMJJ3W1xy8K5eWuFvjp3R74AOIGSmp2UfBJ8HFw==}
     dependencies:
@@ -7618,6 +7628,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /chance@1.1.11:
+    resolution: {integrity: sha512-kqTg3WWywappJPqtgrdvbA380VoXO2eu9VCV895JgbyHsaErXdyHK9LOZ911OvAk6L0obK7kDk9CGs8+oBawVA==}
+    dev: false
 
   /change-case-all@1.0.15:
     resolution: {integrity: sha512-3+GIFhk3sNuvFAJKU46o26OdzudQlPNBCu1ZQi3cMeMHhty1bhDxu2WrEilVNYaGvqUtR1VSigFcJOiS13dRhQ==}

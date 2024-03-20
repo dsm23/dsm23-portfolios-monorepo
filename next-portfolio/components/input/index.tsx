@@ -1,20 +1,28 @@
 import { forwardRef } from "react";
-import type { InputHTMLAttributes } from "react";
+import type { InputHTMLAttributes, ReactNode } from "react";
 import { cn } from "~/utils";
 
-export type InputProps = InputHTMLAttributes<HTMLInputElement>;
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
+}
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => (
-    <input
-      type={type}
+  ({ className, startIcon, endIcon, ...props }, ref) => (
+    <div
       className={cn(
-        "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
+        "flex h-9 w-full items-center gap-x-2 rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-within:ring-1 focus-within:ring-ring ",
         className,
       )}
-      ref={ref}
-      {...props}
-    />
+    >
+      {startIcon}
+      <input
+        ref={ref}
+        className="h-full w-full bg-transparent file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+        {...props}
+      />
+      {endIcon}
+    </div>
   ),
 );
 
