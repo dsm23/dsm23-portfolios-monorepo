@@ -1,5 +1,7 @@
 import type { FunctionComponent, ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import Layout from "~/components/layout";
 import ThemeProvider from "~/components/theme-provider";
 import { getProfilePic } from "~/utils/api";
@@ -25,7 +27,7 @@ const RootLayout: FunctionComponent<Props> = async ({ children }) => {
   const profilePic = await getProfilePic();
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Layout profilePic={profilePic}>{children}</Layout>
