@@ -18,7 +18,6 @@
   --tw-text-opacity: 1;
   grid-area: dates;
   margin-top: theme(margin.2);
-  color: theme(colors.sky.900);
   font-weight: theme(fontWeight.semibold);
 }
 
@@ -26,17 +25,6 @@
   --tw-text-opacity: 1;
   grid-area: description;
   margin-top: theme(margin.4);
-  color: theme(colors.gray.900);
-}
-
-@media (prefers-color-scheme: dark) {
-  .dates {
-    color: theme(colors.sky.300);
-  }
-
-  .description {
-    color: theme(colors.white);
-  }
 }
 
 @screen lg {
