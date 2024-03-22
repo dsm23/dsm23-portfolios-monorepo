@@ -1,0 +1,19 @@
+.unselectedGray {
+  transform: rotateX(0deg);
+  transition: transform 200ms ease-in 200ms;
+}
+
+.selectedGray {
+  transform: rotateX(90deg);
+  transition: transform 200ms ease-in 0ms;
+}
+
+.unselectedRed {
+  transform: rotateX(90deg);
+  transition: transform 200ms ease-in 0ms;
+}
+
+.selectedRed {
+  transform: rotateX(0deg);
+  transition: transform 200ms ease-in 200ms;
+}

@@ -9,6 +9,8 @@ import GoBack from "~/components/styled-go-back";
 import ViewSource from "~/components/view-source";
 import { cn } from "~/utils";
 
+import { divisiblesStyles as styles } from "@/shared-styles";
+
 const Page = () => {
   const id = useId();
   const [limit, setLimit] = useState(100);
@@ -73,17 +75,27 @@ const Page = () => {
       <div className="flex flex-wrap text-white">
         {nums.map((num) => (
           <div
-            className={cn(
-              "m-3 bg-slate-700 p-3 transition-colors duration-200",
-              {
-                "bg-red-600": divisibleNumbers.includes(num),
-              },
-            )}
+            className="m-3 grid"
             key={`number-${num}`}
             onMouseOver={handleMouseOver(num)}
             onMouseOut={handleMouseOut}
           >
-            <span className="block min-w-[2ch] text-center">{num}</span>
+            <div
+              className={cn(" col-[1_/_-1] row-[1_/_-1] bg-slate-700 p-3", {
+                [styles.unselectedGray]: !divisibleNumbers.includes(num),
+                [styles.selectedGray]: divisibleNumbers.includes(num),
+              })}
+            >
+              <span className="block min-w-[2ch] text-center">{num}</span>
+            </div>
+            <div
+              className={cn("col-[1_/_-1] row-[1_/_-1] bg-red-600 p-3", {
+                [styles.unselectedRed]: !divisibleNumbers.includes(num),
+                [styles.selectedRed]: divisibleNumbers.includes(num),
+              })}
+            >
+              <span className="block min-w-[2ch] text-center">{num}</span>
+            </div>
           </div>
         ))}
       </div>
