@@ -17,3 +17,21 @@
   transform: rotateX(0deg);
   transition: transform 200ms ease-in 200ms;
 }
+
+@media (prefers-reduced-motion) {
+  .unselectedGray {
+    transition: transform 0ms ease-in 0ms;
+  }
+
+  .selectedGray {
+    transition: transform 0ms ease-in 0ms;
+  }
+
+  .unselectedRed {
+    transition: transform 0ms ease-in 0ms;
+  }
+
+  .selectedRed {
+    transition: transform 0ms ease-in 0ms;
+  }
+}
