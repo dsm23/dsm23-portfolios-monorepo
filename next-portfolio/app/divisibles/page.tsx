@@ -81,7 +81,7 @@ const Page = () => {
             onMouseOut={handleMouseOut}
           >
             <div
-              className={cn(" col-[1_/_-1] row-[1_/_-1] bg-slate-700 p-3", {
+              className={cn("col-[1_/_-1] row-[1_/_-1] bg-slate-700 p-3", {
                 [styles.unselectedGray]: !divisibleNumbers.includes(num),
                 [styles.selectedGray]: divisibleNumbers.includes(num),
               })}
