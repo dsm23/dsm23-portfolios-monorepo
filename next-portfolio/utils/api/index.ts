@@ -197,7 +197,9 @@ export const getProfilePic = async () => {
             height
             width
             description
-            url
+            url(
+              transform: {width: 192, height: 192, resizeStrategy: FILL, resizeFocus: FACE, cornerRadius: -1, format: WEBP, quality: 90}
+            )
           }
         }
       }
