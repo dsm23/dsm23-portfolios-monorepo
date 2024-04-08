@@ -18,15 +18,13 @@ interface Props extends HTMLAttributes<HTMLElement> {
 const Skills: FunctionComponent<Props> = ({ skills = [], ...props }) => (
   <Section {...props}>
     <h2 className="text-5xl">Skills</h2>
-    <div className="flex flex-wrap items-baseline">
+    <div className="flex flex-wrap items-baseline print:gap-2">
       {skills.map((item) => (
         <Link
           href={`/skill/${item?.slug}`}
-          className="group"
+          className="group print:grid print:justify-items-center"
           key={`skills-${item?.skillName}`}
         >
-          <span className="sr-only">{item?.skillName}</span>
-
           <div
             className={cn(
               styles.iconWrapper,
@@ -36,6 +34,8 @@ const Skills: FunctionComponent<Props> = ({ skills = [], ...props }) => (
               __html: item?.svg as string,
             }}
           />
+
+          <div className="sr-only print:block">{item?.skillName}</div>
 
           <Tooltip>{item?.skillName}</Tooltip>
         </Link>
