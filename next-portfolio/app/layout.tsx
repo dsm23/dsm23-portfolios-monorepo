@@ -7,6 +7,7 @@ import ThemeProvider from "~/components/theme-provider";
 import { getProfilePic } from "~/utils/api";
 
 import "./global.css";
+import StoreProvider from "~/components/store-provider";
 
 type Props = {
   children: ReactNode;
@@ -30,7 +31,9 @@ const RootLayout: FunctionComponent<Props> = async ({ children }) => {
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Layout profilePic={profilePic}>{children}</Layout>
+          <StoreProvider>
+            <Layout profilePic={profilePic}>{children}</Layout>
+          </StoreProvider>
         </ThemeProvider>
       </body>
     </html>
