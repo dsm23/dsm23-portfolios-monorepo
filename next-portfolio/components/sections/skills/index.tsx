@@ -35,7 +35,9 @@ const Skills: FunctionComponent<Props> = ({ skills = [], ...props }) => (
             }}
           />
 
-          <div className="sr-only print:block">{item?.skillName}</div>
+          <div className="sr-only print:not-sr-only print:block">
+            {item?.skillName}
+          </div>
 
           <Tooltip>{item?.skillName}</Tooltip>
         </Link>

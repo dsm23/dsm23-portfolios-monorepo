@@ -18,6 +18,7 @@
   --tw-text-opacity: 1;
   grid-area: dates;
   margin-top: theme(margin.2);
+  margin-left: theme(margin.2);
   font-weight: theme(fontWeight.semibold);
 }
 
@@ -38,6 +39,6 @@
   }
 
   .dates {
-    margin-top: 0;
+    margin-left: 0;
   }
 }

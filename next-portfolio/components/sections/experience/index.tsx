@@ -24,6 +24,14 @@ const Experience: FunctionComponent<Props> = ({
       >
         <h3 className={styles.company}>{company?.companyName}</h3>
         <div className={styles.city}>{company?.city}</div>
+
+        <div className={cn(styles.dates, "text-sky-900 dark:text-sky-300")}>
+          {formatYears(
+            company?.startDate as string,
+            company?.endDate as string,
+          )}
+        </div>
+
         {company?.description && (
           <div className={styles.description}>
             {documentToReactComponents(
@@ -32,13 +40,6 @@ const Experience: FunctionComponent<Props> = ({
             )}
           </div>
         )}
-
-        <div className={cn(styles.dates, "text-sky-900 dark:text-sky-300")}>
-          {formatYears(
-            company?.startDate as string,
-            company?.endDate as string,
-          )}
-        </div>
       </div>
     ))}
   </Section>
