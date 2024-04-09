@@ -17,6 +17,11 @@ const Education: FunctionComponent<Props> = ({ education = [], ...props }) => (
     {education.map((school) => (
       <div className={styles.container} key={`education-${school?.schoolName}`}>
         <h3 className={styles.school}>{school?.schoolName}</h3>
+
+        <div className={cn(styles.dates, "text-sky-900 dark:text-sky-300")}>
+          {formatYears(school?.startDate as string, school?.endDate as string)}
+        </div>
+
         {school?.description && (
           <div className={styles.description}>
             {documentToReactComponents(
@@ -25,10 +30,6 @@ const Education: FunctionComponent<Props> = ({ education = [], ...props }) => (
             )}
           </div>
         )}
-
-        <div className={cn(styles.dates, "text-sky-900 dark:text-sky-300")}>
-          {formatYears(school?.startDate as string, school?.endDate as string)}
-        </div>
       </div>
     ))}
   </Section>
