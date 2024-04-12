@@ -7,6 +7,7 @@ import type { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AsYouType } from "libphonenumber-js/min";
 import { toast } from "sonner";
+import Anchor from "~/components/anchor";
 import Button from "~/components/button";
 import Checkbox from "~/components/checkbox";
 import {
@@ -96,7 +97,24 @@ const Page = () => {
       <h1 className="text-4xl uppercase tracking-widest text-sky-600">
         Simple form example
       </h1>
-      <p>An example of a simple form using react-hook-form and shadcn/ui</p>
+      <p>
+        An example of a simple form using{" "}
+        <Anchor
+          href="https://react-hook-form.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          react-hook-form
+        </Anchor>{" "}
+        and{" "}
+        <Anchor
+          href="https://ui.shadcn.com/docs/components/form"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          shadcn/ui
+        </Anchor>
+      </p>
 
       <div className="container mx-auto">
         <FormProvider {...form}>
@@ -275,7 +293,7 @@ const Page = () => {
               name="stooge"
               render={({ field }) => (
                 <FormItem className="space-y-3">
-                  <FormLabel>Notify me about...</FormLabel>
+                  <FormLabel>Best stooge</FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
