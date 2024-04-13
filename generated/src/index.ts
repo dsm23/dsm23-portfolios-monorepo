@@ -496,9 +496,24 @@ export type EducationSchoolDescriptionLinks = {
 
 export type EducationSchoolDescriptionResources = {
   __typename?: 'EducationSchoolDescriptionResources';
-  block: Array<ResourceLink>;
-  hyperlink: Array<ResourceLink>;
-  inline: Array<ResourceLink>;
+  block: Array<EducationSchoolDescriptionResourcesBlock>;
+  hyperlink: Array<EducationSchoolDescriptionResourcesHyperlink>;
+  inline: Array<EducationSchoolDescriptionResourcesInline>;
+};
+
+export type EducationSchoolDescriptionResourcesBlock = ResourceLink & {
+  __typename?: 'EducationSchoolDescriptionResourcesBlock';
+  sys: ResourceSys;
+};
+
+export type EducationSchoolDescriptionResourcesHyperlink = ResourceLink & {
+  __typename?: 'EducationSchoolDescriptionResourcesHyperlink';
+  sys: ResourceSys;
+};
+
+export type EducationSchoolDescriptionResourcesInline = ResourceLink & {
+  __typename?: 'EducationSchoolDescriptionResourcesInline';
+  sys: ResourceSys;
 };
 
 export type EducationSchoolFilter = {
@@ -685,9 +700,24 @@ export type ExperienceCompanyDescriptionLinks = {
 
 export type ExperienceCompanyDescriptionResources = {
   __typename?: 'ExperienceCompanyDescriptionResources';
-  block: Array<ResourceLink>;
-  hyperlink: Array<ResourceLink>;
-  inline: Array<ResourceLink>;
+  block: Array<ExperienceCompanyDescriptionResourcesBlock>;
+  hyperlink: Array<ExperienceCompanyDescriptionResourcesHyperlink>;
+  inline: Array<ExperienceCompanyDescriptionResourcesInline>;
+};
+
+export type ExperienceCompanyDescriptionResourcesBlock = ResourceLink & {
+  __typename?: 'ExperienceCompanyDescriptionResourcesBlock';
+  sys: ResourceSys;
+};
+
+export type ExperienceCompanyDescriptionResourcesHyperlink = ResourceLink & {
+  __typename?: 'ExperienceCompanyDescriptionResourcesHyperlink';
+  sys: ResourceSys;
+};
+
+export type ExperienceCompanyDescriptionResourcesInline = ResourceLink & {
+  __typename?: 'ExperienceCompanyDescriptionResourcesInline';
+  sys: ResourceSys;
 };
 
 export type ExperienceCompanyFilter = {
@@ -944,13 +974,18 @@ export type Person = Entry & {
   email?: Maybe<Scalars['String']['output']>;
   facebook?: Maybe<Scalars['String']['output']>;
   firstName?: Maybe<Scalars['String']['output']>;
+  gatsbyPortfolio?: Maybe<Scalars['String']['output']>;
   github?: Maybe<Scalars['String']['output']>;
   image?: Maybe<Asset>;
   lastName?: Maybe<Scalars['String']['output']>;
   linkedFrom?: Maybe<PersonLinkingCollections>;
   name?: Maybe<Scalars['String']['output']>;
+  nextPortfolio?: Maybe<Scalars['String']['output']>;
+  nuxtPortfolio?: Maybe<Scalars['String']['output']>;
   phone?: Maybe<Scalars['String']['output']>;
+  qwikCityPortfolio?: Maybe<Scalars['String']['output']>;
   shortBio?: Maybe<Scalars['String']['output']>;
+  solidStartPortfolio?: Maybe<Scalars['String']['output']>;
   sys: Sys;
   title?: Maybe<Scalars['String']['output']>;
   twitter?: Maybe<Scalars['String']['output']>;
@@ -988,6 +1023,12 @@ export type PersonFirstNameArgs = {
 
 
 /** [See type definition](https://app.contentful.com/spaces/74rjj85nq0nk/content_types/person) */
+export type PersonGatsbyPortfolioArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/74rjj85nq0nk/content_types/person) */
 export type PersonGithubArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
@@ -1019,13 +1060,37 @@ export type PersonNameArgs = {
 
 
 /** [See type definition](https://app.contentful.com/spaces/74rjj85nq0nk/content_types/person) */
+export type PersonNextPortfolioArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/74rjj85nq0nk/content_types/person) */
+export type PersonNuxtPortfolioArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/74rjj85nq0nk/content_types/person) */
 export type PersonPhoneArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
 /** [See type definition](https://app.contentful.com/spaces/74rjj85nq0nk/content_types/person) */
+export type PersonQwikCityPortfolioArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/74rjj85nq0nk/content_types/person) */
 export type PersonShortBioArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/74rjj85nq0nk/content_types/person) */
+export type PersonSolidStartPortfolioArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1088,6 +1153,13 @@ export type PersonFilter = {
   firstName_not?: InputMaybe<Scalars['String']['input']>;
   firstName_not_contains?: InputMaybe<Scalars['String']['input']>;
   firstName_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  gatsbyPortfolio?: InputMaybe<Scalars['String']['input']>;
+  gatsbyPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  gatsbyPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  gatsbyPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  gatsbyPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  gatsbyPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  gatsbyPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   github?: InputMaybe<Scalars['String']['input']>;
   github_contains?: InputMaybe<Scalars['String']['input']>;
   github_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1110,6 +1182,20 @@ export type PersonFilter = {
   name_not?: InputMaybe<Scalars['String']['input']>;
   name_not_contains?: InputMaybe<Scalars['String']['input']>;
   name_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  nextPortfolio?: InputMaybe<Scalars['String']['input']>;
+  nextPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  nextPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  nextPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  nextPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  nextPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  nextPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  nuxtPortfolio?: InputMaybe<Scalars['String']['input']>;
+  nuxtPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  nuxtPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  nuxtPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  nuxtPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  nuxtPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  nuxtPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   phone?: InputMaybe<Scalars['String']['input']>;
   phone_contains?: InputMaybe<Scalars['String']['input']>;
   phone_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1117,6 +1203,13 @@ export type PersonFilter = {
   phone_not?: InputMaybe<Scalars['String']['input']>;
   phone_not_contains?: InputMaybe<Scalars['String']['input']>;
   phone_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  qwikCityPortfolio?: InputMaybe<Scalars['String']['input']>;
+  qwikCityPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  qwikCityPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  qwikCityPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  qwikCityPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  qwikCityPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  qwikCityPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   shortBio?: InputMaybe<Scalars['String']['input']>;
   shortBio_contains?: InputMaybe<Scalars['String']['input']>;
   shortBio_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1124,6 +1217,13 @@ export type PersonFilter = {
   shortBio_not?: InputMaybe<Scalars['String']['input']>;
   shortBio_not_contains?: InputMaybe<Scalars['String']['input']>;
   shortBio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  solidStartPortfolio?: InputMaybe<Scalars['String']['input']>;
+  solidStartPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  solidStartPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  solidStartPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  solidStartPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  solidStartPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  solidStartPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
   title?: InputMaybe<Scalars['String']['input']>;
   title_contains?: InputMaybe<Scalars['String']['input']>;
@@ -1192,14 +1292,24 @@ export enum PersonOrder {
   FacebookDesc = 'facebook_DESC',
   FirstNameAsc = 'firstName_ASC',
   FirstNameDesc = 'firstName_DESC',
+  GatsbyPortfolioAsc = 'gatsbyPortfolio_ASC',
+  GatsbyPortfolioDesc = 'gatsbyPortfolio_DESC',
   GithubAsc = 'github_ASC',
   GithubDesc = 'github_DESC',
   LastNameAsc = 'lastName_ASC',
   LastNameDesc = 'lastName_DESC',
   NameAsc = 'name_ASC',
   NameDesc = 'name_DESC',
+  NextPortfolioAsc = 'nextPortfolio_ASC',
+  NextPortfolioDesc = 'nextPortfolio_DESC',
+  NuxtPortfolioAsc = 'nuxtPortfolio_ASC',
+  NuxtPortfolioDesc = 'nuxtPortfolio_DESC',
   PhoneAsc = 'phone_ASC',
   PhoneDesc = 'phone_DESC',
+  QwikCityPortfolioAsc = 'qwikCityPortfolio_ASC',
+  QwikCityPortfolioDesc = 'qwikCityPortfolio_DESC',
+  SolidStartPortfolioAsc = 'solidStartPortfolio_ASC',
+  SolidStartPortfolioDesc = 'solidStartPortfolio_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
   SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
   SysIdAsc = 'sys_id_ASC',
@@ -1216,6 +1326,7 @@ export enum PersonOrder {
 
 export type Query = {
   __typename?: 'Query';
+  _node?: Maybe<_Node>;
   asset?: Maybe<Asset>;
   assetCollection?: Maybe<AssetCollection>;
   blogPost?: Maybe<BlogPost>;
@@ -1231,6 +1342,13 @@ export type Query = {
   personCollection?: Maybe<PersonCollection>;
   skill?: Maybe<Skill>;
   skillCollection?: Maybe<SkillCollection>;
+};
+
+
+export type Query_NodeArgs = {
+  id: Scalars['ID']['input'];
+  locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
@@ -1363,14 +1481,12 @@ export type QuerySkillCollectionArgs = {
 };
 
 export type ResourceLink = {
-  __typename?: 'ResourceLink';
   sys: ResourceSys;
 };
 
 export type ResourceSys = {
   __typename?: 'ResourceSys';
   linkType: Scalars['String']['output'];
-  type: Scalars['String']['output'];
   urn: Scalars['String']['output'];
 };
 
@@ -1467,9 +1583,24 @@ export type SkillContentLinks = {
 
 export type SkillContentResources = {
   __typename?: 'SkillContentResources';
-  block: Array<ResourceLink>;
-  hyperlink: Array<ResourceLink>;
-  inline: Array<ResourceLink>;
+  block: Array<SkillContentResourcesBlock>;
+  hyperlink: Array<SkillContentResourcesHyperlink>;
+  inline: Array<SkillContentResourcesInline>;
+};
+
+export type SkillContentResourcesBlock = ResourceLink & {
+  __typename?: 'SkillContentResourcesBlock';
+  sys: ResourceSys;
+};
+
+export type SkillContentResourcesHyperlink = ResourceLink & {
+  __typename?: 'SkillContentResourcesHyperlink';
+  sys: ResourceSys;
+};
+
+export type SkillContentResourcesInline = ResourceLink & {
+  __typename?: 'SkillContentResourcesInline';
+  sys: ResourceSys;
 };
 
 export type SkillFilter = {
@@ -1594,6 +1725,10 @@ export type SysFilter = {
   publishedVersion_not_in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
 };
 
+export type _Node = {
+  _id: Scalars['ID']['output'];
+};
+
 export type CfPersonNestedFilter = {
   AND?: InputMaybe<Array<InputMaybe<CfPersonNestedFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<CfPersonNestedFilter>>>;
@@ -1633,6 +1768,13 @@ export type CfPersonNestedFilter = {
   firstName_not?: InputMaybe<Scalars['String']['input']>;
   firstName_not_contains?: InputMaybe<Scalars['String']['input']>;
   firstName_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  gatsbyPortfolio?: InputMaybe<Scalars['String']['input']>;
+  gatsbyPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  gatsbyPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  gatsbyPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  gatsbyPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  gatsbyPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  gatsbyPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   github?: InputMaybe<Scalars['String']['input']>;
   github_contains?: InputMaybe<Scalars['String']['input']>;
   github_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1655,6 +1797,20 @@ export type CfPersonNestedFilter = {
   name_not?: InputMaybe<Scalars['String']['input']>;
   name_not_contains?: InputMaybe<Scalars['String']['input']>;
   name_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  nextPortfolio?: InputMaybe<Scalars['String']['input']>;
+  nextPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  nextPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  nextPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  nextPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  nextPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  nextPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  nuxtPortfolio?: InputMaybe<Scalars['String']['input']>;
+  nuxtPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  nuxtPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  nuxtPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  nuxtPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  nuxtPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  nuxtPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   phone?: InputMaybe<Scalars['String']['input']>;
   phone_contains?: InputMaybe<Scalars['String']['input']>;
   phone_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1662,6 +1818,13 @@ export type CfPersonNestedFilter = {
   phone_not?: InputMaybe<Scalars['String']['input']>;
   phone_not_contains?: InputMaybe<Scalars['String']['input']>;
   phone_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  qwikCityPortfolio?: InputMaybe<Scalars['String']['input']>;
+  qwikCityPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  qwikCityPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  qwikCityPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  qwikCityPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  qwikCityPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  qwikCityPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   shortBio?: InputMaybe<Scalars['String']['input']>;
   shortBio_contains?: InputMaybe<Scalars['String']['input']>;
   shortBio_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1669,6 +1832,13 @@ export type CfPersonNestedFilter = {
   shortBio_not?: InputMaybe<Scalars['String']['input']>;
   shortBio_not_contains?: InputMaybe<Scalars['String']['input']>;
   shortBio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  solidStartPortfolio?: InputMaybe<Scalars['String']['input']>;
+  solidStartPortfolio_contains?: InputMaybe<Scalars['String']['input']>;
+  solidStartPortfolio_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  solidStartPortfolio_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  solidStartPortfolio_not?: InputMaybe<Scalars['String']['input']>;
+  solidStartPortfolio_not_contains?: InputMaybe<Scalars['String']['input']>;
+  solidStartPortfolio_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
   title?: InputMaybe<Scalars['String']['input']>;
   title_contains?: InputMaybe<Scalars['String']['input']>;
