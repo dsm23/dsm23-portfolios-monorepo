@@ -6,7 +6,9 @@ import ArrowTopRightOnSquare from "~/components/svgs/arrow-top-right-on-square";
 import CodeSandbox from "~/components/svgs/code-sandbox";
 import Gatsby from "~/components/svgs/gatsby";
 import GitHub from "~/components/svgs/github";
+import Next from "~/components/svgs/next";
 import Nuxt from "~/components/svgs/nuxt";
+import Qwik from "~/components/svgs/qwik";
 import Solid from "~/components/svgs/solid";
 import type { Maybe, Person } from "@/generated";
 
@@ -22,6 +24,11 @@ const Home: FunctionComponent<Props> = ({ author, ...props }) => {
   const codesandbox = author?.codesandbox ?? "";
   const github = author?.github ?? "";
   const shortBio = author?.shortBio;
+  const gatsbyPortfolio = author?.gatsbyPortfolio ?? "";
+  const nextPortfolio = author?.nextPortfolio ?? "";
+  const nuxtPortfolio = author?.nuxtPortfolio ?? "";
+  const qwikCityPortfolio = author?.qwikCityPortfolio ?? "";
+  const solidStartPortfolio = author?.solidStartPortfolio ?? "";
 
   return (
     <Section {...props}>
@@ -59,7 +66,7 @@ const Home: FunctionComponent<Props> = ({ author, ...props }) => {
         </a>
 
         <a
-          href="https://react-david-murdoch-portfolio.netlify.com/"
+          href={gatsbyPortfolio}
           className="flex transform items-center justify-between gap-x-4 rounded-full bg-gray-900 p-2 px-4 text-white transition duration-500 ease-in-out hover:scale-125 hover:bg-sky-900 focus-visible:scale-125 focus-visible:bg-sky-900"
           rel="noopener noreferrer"
           target="_blank"
@@ -69,7 +76,17 @@ const Home: FunctionComponent<Props> = ({ author, ...props }) => {
           <ArrowTopRightOnSquare className="h-4 w-4" />
         </a>
         <a
-          href="https://dsm23-nuxt-portfolio.netlify.app/"
+          href={nextPortfolio}
+          className="hidden transform items-center justify-between gap-x-4 rounded-full bg-gray-900 p-2 px-4 text-white transition duration-500 ease-in-out hover:scale-125 hover:bg-sky-900 focus-visible:scale-125 focus-visible:bg-sky-900 print:flex"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Next className="h-6 w-6" />
+          Next portfolio
+          <ArrowTopRightOnSquare className="h-4 w-4" />
+        </a>
+        <a
+          href={nuxtPortfolio}
           className="flex transform items-center justify-between gap-x-4 rounded-full bg-gray-900 p-2 px-4 text-white transition duration-500 ease-in-out hover:scale-125 hover:bg-sky-900 focus-visible:scale-125 focus-visible:bg-sky-900"
           rel="noopener noreferrer"
           target="_blank"
@@ -79,7 +96,17 @@ const Home: FunctionComponent<Props> = ({ author, ...props }) => {
           <ArrowTopRightOnSquare className="h-4 w-4" />
         </a>
         <a
-          href="https://dsm23-solid-start-portfolio.netlify.app/"
+          href={qwikCityPortfolio}
+          className="flex transform items-center justify-between gap-x-4 rounded-full bg-gray-900 p-2 px-4 text-white transition duration-500 ease-in-out hover:scale-125 hover:bg-sky-900 focus-visible:scale-125 focus-visible:bg-sky-900"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Qwik className="h-6 w-6" />
+          Qwik City portfolio
+          <ArrowTopRightOnSquare className="h-4 w-4" />
+        </a>
+        <a
+          href={solidStartPortfolio}
           className="flex transform items-center justify-between gap-x-4 rounded-full bg-gray-900 p-2 px-4 text-white transition duration-500 ease-in-out hover:scale-125 hover:bg-sky-900 focus-visible:scale-125 focus-visible:bg-sky-900"
           rel="noopener noreferrer"
           target="_blank"

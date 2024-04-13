@@ -222,6 +222,9 @@ export const getHomePageQuery = async () => {
           phone
           github
           codesandbox
+          nextPortfolio
+          nuxtPortfolio
+          solidStartPortfolio
         }
       }
       educationSchoolCollection {
