@@ -245,10 +245,8 @@ const Page = () => {
               render={() => (
                 <FormItem>
                   <div className="mb-4">
-                    <FormLabel className="text-base">Sidebar</FormLabel>
-                    <FormDescription>
-                      Select the items you want to display in the sidebar.
-                    </FormDescription>
+                    <FormLabel className="text-base">Sauces</FormLabel>
+                    <FormDescription>Select any sauces</FormDescription>
                   </div>
                   {items.map((item) => (
                     <FormField
