@@ -75,9 +75,9 @@ const projects: Project[] = [
   },
   {
     title: "Todomvc with redux toolkit",
-    to: "https://todomvc-redux-toolkit.netlify.app/",
+    to: "https://todomvc-reduX.netlify.app/",
     description:
-      "The redux Todomvc example is quite old and states that it no longer uses recommended patterns. An example that converts to redux toolkit and uses open-props for styles",
+      "The redux Todomvc example is quite old and states that it no longer uses recommended patterns. An example that ports to redux toolkit",
   },
   {
     title: "GitHub search from redux",
