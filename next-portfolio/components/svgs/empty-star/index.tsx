@@ -12,9 +12,9 @@ const EmptyStar: FunctionComponent<Props> = ({ className, ...props }) => (
     className={cn("text-yellow-500", className)}
   >
     <path
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-miterlimit={10}
+      strokeLinejoin="round"
+      strokeLinecap="round"
+      strokeMiterlimit={10}
       stroke="currentColor"
       d="M12 2l3 7h7l-5 6 2 7-7-4-7 4 2-7-5-6h7l3-7z"
     />
