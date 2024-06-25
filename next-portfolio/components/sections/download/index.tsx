@@ -2,6 +2,7 @@
 
 import { Transition } from "@headlessui/react";
 import type { FunctionComponent, HTMLAttributes } from "react";
+import cx from "clsx";
 import { useAsyncFn } from "react-use";
 import Section from "~/components/section";
 import ArrowDownTray from "~/components/svgs/arrow-down-tray";
@@ -47,18 +48,17 @@ const Download: FunctionComponent<Props> = ({ className, ...props }) => {
       >
         <ArrowDownTray className="h-5 w-5" />
         Download this page as .pdf
-        <Transition
-          show={loading}
-          className="grid"
-          enter="transition-[grid-template-columns] motion-reduce:transition-none duration-150"
-          enterFrom="grid-cols-[0fr]"
-          enterTo="grid-cols-[1fr]"
-          leave="transition-[grid-template-columns] motion-reduce:transition-none duration-150"
-          leaveFrom="grid-cols-[1fr]"
-          leaveTo="grid-cols-[0fr]"
-        >
-          <div className="overflow-hidden">
-            <ThreeDots className="h-5 w-5" />
+        <Transition show={loading}>
+          <div
+            className={cx(
+              "grid transition-[grid-template-columns] duration-150 motion-reduce:transition-none",
+              "data-[enter]:data-[closed]:grid-cols-[0fr] data-[enter]:grid-cols-[1fr]",
+              "data-[leave]:data-[closed]:grid-cols-[0fr] data-[leave]:grid-cols-[1fr]",
+            )}
+          >
+            <div className="overflow-hidden">
+              <ThreeDots className="h-5 w-5" />
+            </div>
           </div>
         </Transition>
       </button>

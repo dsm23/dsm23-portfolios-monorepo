@@ -7,6 +7,7 @@ import type {
   HTMLAttributes,
   ReactNode,
 } from "react";
+import cx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
@@ -23,7 +24,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
   open: boolean;
   profilePic: Person;
   onClose: () => void;
-  onToggle: ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
+  onExpandCollapse: ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
 }
 
 const Nav: FunctionComponent<Props> = ({
@@ -31,7 +32,7 @@ const Nav: FunctionComponent<Props> = ({
   open,
   profilePic,
   onClose,
-  onToggle,
+  onExpandCollapse,
   ...props
 }) => {
   const id = useId();
@@ -69,7 +70,7 @@ const Nav: FunctionComponent<Props> = ({
         <DarkModeToggle align="end" />
         <button
           aria-label="Open the navigation menu"
-          onClick={onToggle}
+          onClick={onExpandCollapse}
           className="flex items-center justify-center rounded-md p-1 text-gray-400 hover:bg-gray-700 hover:text-white focus:bg-gray-700 focus:text-white focus:outline-none"
           aria-controls={id}
           aria-expanded={open}
@@ -79,20 +80,20 @@ const Nav: FunctionComponent<Props> = ({
       </div>
 
       <nav aria-label="Primary" className={styles.sections}>
-        <Transition
-          show={open}
-          className="grid md:hidden"
-          enter="transition-[grid-template-rows] motion-reduce:transition-none duration-150"
-          enterFrom="grid-rows-[0fr]"
-          enterTo="grid-rows-[1fr]"
-          leave="transition-[grid-template-rows] motion-reduce:transition-none duration-150"
-          leaveFrom="grid-rows-[1fr]"
-          leaveTo="grid-rows-[0fr]"
-        >
-          <div id={id} className="overflow-hidden">
-            {children}
+        <Transition show={open}>
+          <div
+            className={cx(
+              "grid transition-[grid-template-rows] duration-150 motion-reduce:transition-none md:hidden",
+              "data-[enter]:data-[closed]:grid-rows-[0fr] data-[enter]:grid-rows-[1fr]",
+              "data-[leave]:data-[closed]:grid-rows-[0fr] data-[leave]:grid-rows-[1fr]",
+            )}
+          >
+            <div id={id} className="overflow-hidden">
+              {children}
+            </div>
           </div>
         </Transition>
+
         <div className="hidden md:block">{children}</div>
       </nav>
     </div>

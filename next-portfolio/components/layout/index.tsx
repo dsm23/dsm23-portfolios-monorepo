@@ -42,10 +42,10 @@ const Layout: FunctionComponent<Props> = ({ children, profilePic }) => {
         <Nav
           open={open}
           profilePic={profilePic}
-          onToggle={handleToggle}
+          onExpandCollapse={handleToggle}
           onClose={handleClose}
         >
-          <div className="block w-full text-gray-400 md:ml-auto md:flex md:w-auto md:items-center lg:block ">
+          <div className="block w-full text-gray-400 md:ml-auto md:flex md:w-auto md:items-center lg:block">
             {items.map((label) => (
               <Link
                 href={`/#${label}`}
@@ -67,7 +67,7 @@ const Layout: FunctionComponent<Props> = ({ children, profilePic }) => {
               </Link>
             ))}
 
-            <div className="hidden w-full items-center rounded md:flex md:py-2 lg:justify-center ">
+            <div className="hidden w-full items-center rounded md:flex md:py-2 lg:justify-center">
               <DarkModeToggle />
             </div>
           </div>
