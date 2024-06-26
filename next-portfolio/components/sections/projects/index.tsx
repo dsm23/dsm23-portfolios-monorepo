@@ -90,6 +90,12 @@ const projects: Project[] = [
     to: "/simple-form",
     description: "A simple form example using react-hook-form",
   },
+  {
+    title: "Thorpe Bay Yacht Club",
+    to: "https://tbyc-astro-wordpress.netlify.app/",
+    description:
+      "An astro site that integrates with a wordpress backend used by a local yacht club",
+  },
 ];
 
 const Projects: FunctionComponent<Props> = async (props) => {
