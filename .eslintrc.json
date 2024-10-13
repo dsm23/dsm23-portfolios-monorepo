@@ -1,41 +1,25 @@
 {
+  "extends": ["plugin:@nx/react-typescript", "next", "next/core-web-vitals"],
   "root": true,
-  "ignorePatterns": ["**/*"],
+  "ignorePatterns": ["!**/*", ".next/**/*"],
   "plugins": ["@nx"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {
-        "@nx/enforce-module-boundaries": [
-          "error",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nx/typescript"],
-      "rules": {
-        "@typescript-eslint/no-extra-semi": "error",
-        "no-extra-semi": "off"
-      }
+      "rules": {}
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nx/javascript"],
-      "rules": {
-        "@typescript-eslint/no-extra-semi": "error",
-        "no-extra-semi": "off"
-      }
+      "rules": {}
     }
-  ]
+  ],
+  "rules": {
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-duplicate-head": "off"
+  },
+  "env": {
+    "jest": true
+  }
 }
