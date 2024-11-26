@@ -45,5 +45,11 @@ out/
 .env
 *.local
 
+# playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
 # turbo
 .turbo

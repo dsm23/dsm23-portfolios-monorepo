@@ -6,6 +6,7 @@
     "clean": "rm -rf .next",
     "dev": "next dev",
     "lint": "next lint",
+    "e2e": "playwright test",
     "typecheck": "tsc --noEmit",
     "start": "next start"
   },
