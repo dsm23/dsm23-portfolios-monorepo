@@ -4,7 +4,6 @@
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
     "joshbolduc.commitlint",
-    "ms-playwright.playwright",
-    "nrwl.angular-console"
+    "ms-playwright.playwright"
   ]
 }

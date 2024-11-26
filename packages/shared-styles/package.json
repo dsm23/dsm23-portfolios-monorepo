@@ -1,0 +1,16 @@
+{
+  "name": "@repo/shared-styles",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/config-typescript": "workspace:*",
+    "@types/node": "^20.11.24",
+    "typescript": "5.5.4"
+  }
+}

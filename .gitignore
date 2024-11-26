@@ -37,12 +37,13 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.nx/cache
-.nx/workspace-data
-
 # Next.js
-.next
+.next/
+out/
 
 # env
 .env
 *.local
+
+# turbo
+.turbo
