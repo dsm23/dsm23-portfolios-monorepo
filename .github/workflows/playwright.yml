@@ -47,6 +47,12 @@ jobs:
       - name: Run Playwright tests
         run: pnpm e2e -- --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
         env:
+          BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
+          CONTENTFUL_REVALIDATE_SECRET: ${{ vars.CONTENTFUL_REVALIDATE_SECRET }}
+          ORIGIN_URL: ${{ vars.VERCEL_URL }}
           # Required for firefox
           HOME: /root
       - name: Upload blob report to GitHub Actions Artifacts

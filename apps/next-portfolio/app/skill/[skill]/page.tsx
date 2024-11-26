@@ -14,7 +14,8 @@ type Props = {
   };
 };
 
-const Page: FunctionComponent<Props> = async ({ params }) => {
+const Page: FunctionComponent<Props> = async (props) => {
+  const params = await props.params;
   const [skill] = await Promise.all([getSkillBySlug(params.skill), sleep(300)]);
 
   const skillName = skill?.skillName;

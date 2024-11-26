@@ -6,8 +6,11 @@ type Params = {
 
 const isNumeric = (value: string) => /^-?\d+$/.test(value);
 
-export const GET = async (_: NextRequest, context: { params: Params }) => {
-  const dateParam = context.params.date;
+export const GET = async (
+  _: NextRequest,
+  context: { params: Promise<Params> },
+) => {
+  const dateParam = (await context.params).date;
 
   try {
     if (isNumeric(dateParam)) {
