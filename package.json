@@ -11,6 +11,7 @@
     "lint": "turbo lint",
     "test": "turbo test",
     "coverage": "turbo coverage",
+    "e2e": "turbo e2e",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check ."
   },
