@@ -1,4 +1,0 @@
-{
-  // This file is exclusively for shadcn/ui purposes
-  "extends": "./tsconfig.base.json"
-}

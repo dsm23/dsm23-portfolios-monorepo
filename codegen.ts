@@ -66,7 +66,7 @@ const config: CodegenConfig = {
   },
   require: ["ts-node/register"],
   generates: {
-    "./generated/src/index.ts": {
+    "./packages/generated/src/index.ts": {
       plugins: ["typescript", "typescript-operations"],
     },
   },

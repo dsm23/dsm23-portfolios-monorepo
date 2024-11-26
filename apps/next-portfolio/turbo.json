@@ -1,0 +1,60 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "env": [
+        "BROWSERLESS_TOKEN",
+        "CHROME_EXECUTABLE_PATH",
+        "CONTENTFUL_SPACE_ID",
+        "CONTENTFUL_ACCESS_TOKEN",
+        "CONTENTFUL_PREVIEW_TOKEN",
+        "CONTENTFUL_REVALIDATE_SECRET",
+        "ORIGIN_URL"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env.production.local",
+        ".env.local",
+        ".env.production",
+        ".env"
+      ],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "dev": {
+      "env": [
+        "BROWSERLESS_TOKEN",
+        "CHROME_EXECUTABLE_PATH",
+        "CONTENTFUL_SPACE_ID",
+        "CONTENTFUL_ACCESS_TOKEN",
+        "CONTENTFUL_PREVIEW_TOKEN",
+        "CONTENTFUL_REVALIDATE_SECRET",
+        "ORIGIN_URL"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env.development.local",
+        ".env.local",
+        ".env.development",
+        ".env"
+      ]
+    },
+    "start": {
+      "env": [
+        "BROWSERLESS_TOKEN",
+        "CHROME_EXECUTABLE_PATH",
+        "CONTENTFUL_SPACE_ID",
+        "CONTENTFUL_ACCESS_TOKEN",
+        "CONTENTFUL_PREVIEW_TOKEN",
+        "CONTENTFUL_REVALIDATE_SECRET",
+        "ORIGIN_URL"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env.development.local",
+        ".env.local",
+        ".env.development",
+        ".env"
+      ]
+    }
+  }
+}
