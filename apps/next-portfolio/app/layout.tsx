@@ -28,7 +28,11 @@ const RootLayout: FunctionComponent<Props> = async ({ children }) => {
   const profilePic = await getProfilePic();
 
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <StoreProvider>

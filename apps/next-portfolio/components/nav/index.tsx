@@ -66,7 +66,7 @@ const Nav: FunctionComponent<Props> = ({
         </span>
       </Link>
 
-      <div className={cn(styles.icon, "flex text-white")}>
+      <div className={cn(styles.icon, "flex text-white md:hidden")}>
         <DarkModeToggle align="end" />
         <button
           aria-label="Open the navigation menu"
