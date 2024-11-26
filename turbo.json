@@ -26,6 +26,9 @@
       "outputs": ["coverage/**"]
     },
     "lint": {},
+    "lint:lint-staged": {
+      "dependsOn": ["^lint"]
+    },
     "typecheck": {
       "dependsOn": ["^build"]
     },
