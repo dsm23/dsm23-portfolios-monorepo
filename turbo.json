@@ -26,6 +26,8 @@
       "outputs": ["coverage/**"]
     },
     "lint": {},
+    "lint:css": {},
+    "lint:js": {},
     "lint:lint-staged": {
       "dependsOn": ["^lint"]
     },
