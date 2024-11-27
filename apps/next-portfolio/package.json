@@ -1,6 +1,7 @@
 {
   "name": "next-portfolio",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "next build",
     "clean": "rm -rf .next",
