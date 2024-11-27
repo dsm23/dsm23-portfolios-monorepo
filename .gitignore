@@ -45,6 +45,9 @@ out/
 .env
 *.local
 
+# coverage
+coverage/
+
 # playwright
 test-results/
 playwright-report/

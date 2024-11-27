@@ -1,16 +1,31 @@
-// https://jestjs.io/docs/configuration
+import nextJest from "next/jest.js";
 import type { Config } from "jest";
 
-const config = {
-  displayName: "next-portfolio",
-  preset: "../jest.preset.js",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  transform: {
-    "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "@nx/react/plugins/jest",
-    "^.+\\.[tj]sx?$": ["babel-jest", { presets: ["@nx/next/babel"] }],
+const createJestConfig = nextJest({
+  dir: "./",
+});
+
+const customJestConfig = {
+  collectCoverageFrom: [
+    "**/src/**/*.{js,jsx,ts,tsx}",
+    "!**/src/**/*.stories.{js,jsx,ts,tsx}",
+  ],
+  coveragePathIgnorePatterns: [".next/", "dist/", "node_modules/", "stories/"],
+  coverageThreshold: {
+    global: {
+      branches: 10,
+      functions: 10,
+      lines: 10,
+      statements: 10,
+    },
   },
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  coverageDirectory: "../coverage/next-portfolio",
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  testEnvironment: "jest-environment-jsdom",
+  modulePathIgnorePatterns: ["<rootDir>/dist/"],
+  testPathIgnorePatterns: ["<rootDir>/playwright-tests"],
+  moduleNameMapper: {
+    "^~/(.*)$": "<rootDir>/src/$1",
+  },
 } satisfies Config;
 
-export default config;
+export default createJestConfig(customJestConfig);
