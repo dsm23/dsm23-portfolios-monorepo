@@ -14,10 +14,7 @@ const Divisor: FunctionComponent<Props> = (props) => {
 
   const [autoplay, setAutoplay] = useState<boolean>(false);
 
-  const callback = (
-    entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver,
-  ) => {
+  const callback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setAutoplay(true);

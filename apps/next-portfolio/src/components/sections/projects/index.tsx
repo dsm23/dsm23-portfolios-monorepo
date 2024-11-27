@@ -119,7 +119,7 @@ const Projects: FunctionComponent<Props> = async (props) => {
           ogImage: metadata["og:image"] ?? metadata["twitter:image"],
           alt: metadata["og:image:alt"],
         };
-      } catch (err) {
+      } catch {
         return {
           ...rest,
           to,

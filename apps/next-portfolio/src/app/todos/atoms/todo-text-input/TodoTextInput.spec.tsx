@@ -5,15 +5,15 @@ import { render } from "~/test-utils";
 
 import styles from "./styles.module.css";
 
-const setup = (props?: any) => {
-  const defaultProps = {
-    onSave: jest.fn(),
-    text: "Use Redux",
-    placeholder: "What needs to be done?",
-    editing: false,
-    newTodo: false,
-  };
+const defaultProps = {
+  onSave: jest.fn(),
+  text: "Use Redux",
+  placeholder: "What needs to be done?",
+  editing: false,
+  newTodo: false,
+};
 
+const setup = (props?: Partial<typeof defaultProps>) => {
   return {
     user: userEvent.setup(),
     // Import `render` from the framework library of your choice.

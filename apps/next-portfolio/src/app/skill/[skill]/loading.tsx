@@ -4,13 +4,7 @@ import GoBack from "~/components/styled-go-back";
 import EmptyStar from "~/components/svgs/empty-star";
 import ViewSource from "~/components/view-source";
 
-type Props = {
-  params: {
-    skill: string;
-  };
-};
-
-const Loading: FunctionComponent<Props> = async ({ params }) => {
+const Loading: FunctionComponent = async () => {
   return (
     <Main className="w-full px-6 py-8">
       <GoBack className="mb-4" href="/#skills" />
