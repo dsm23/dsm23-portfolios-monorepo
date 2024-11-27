@@ -2,13 +2,13 @@ import { screen } from "@testing-library/react";
 import Footer from ".";
 import { renderWithProviders } from "~/test-utils";
 
-const setup = (props?: any) => {
-  const defaultProps = {
-    completedCount: 0,
-    activeCount: 0,
-    onClearCompleted: jest.fn(),
-  };
+const defaultProps = {
+  completedCount: 0,
+  activeCount: 0,
+  onClearCompleted: jest.fn(),
+};
 
+const setup = (props?: Partial<typeof defaultProps>) => {
   // const renderer = createRenderer();
   return renderWithProviders(<Footer {...defaultProps} {...props} />);
 };

@@ -21,15 +21,15 @@ jest.mock("~/lib/features/todos/slice", () => {
   };
 });
 
-const setup = (props?: any) => {
-  const defaultProps = {
-    todo: {
-      id: 0,
-      text: "Use Redux",
-      completed: false,
-    },
-  };
+const defaultProps = {
+  todo: {
+    id: 0,
+    text: "Use Redux",
+    completed: false,
+  },
+};
 
+const setup = (props?: Partial<typeof defaultProps>) => {
   return renderWithProviders(<TodoItem {...defaultProps} {...props} />);
 };
 

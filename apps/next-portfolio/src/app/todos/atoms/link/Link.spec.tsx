@@ -1,6 +1,10 @@
+import type { ReactNode } from "react";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { setVisibilityFilter } from "~/lib/features/visibility-filter/slice";
+import {
+  setVisibilityFilter,
+  VisibilityFilter,
+} from "~/lib/features/visibility-filter/slice";
 import Link from ".";
 import { renderWithProviders } from "~/test-utils";
 
@@ -22,12 +26,17 @@ jest.mock("~/lib/features/visibility-filter/slice", () => {
   };
 });
 
-const setup = (props?: any) => {
-  const defaultProps = {
-    children: "All",
-    filter: "show_all",
-  };
+type Props = {
+  children: ReactNode;
+  filter: VisibilityFilter;
+};
 
+const defaultProps: Props = {
+  children: "All",
+  filter: "show_all",
+};
+
+const setup = (props?: Props) => {
   return renderWithProviders(<Link {...defaultProps} {...props} />, {
     preloadedState: {
       visibilityFilter: {
