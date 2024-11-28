@@ -45,6 +45,12 @@ out/
 .env
 *.local
 
+# cache files
+.eslintcache
+.eslintmdcache
+.stylelintcache
+.prettiercache
+
 # coverage
 coverage/
 
