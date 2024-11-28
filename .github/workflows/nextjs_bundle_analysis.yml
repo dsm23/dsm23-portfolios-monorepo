@@ -15,7 +15,7 @@ env:
 defaults:
   run:
     # change this if your nextjs app does not live at the root of the repo
-    working-directory: ./apps/next-portfolio
+    working-directory: ./apps/next-portfolio/
 
 jobs:
   analyze-bundle:
@@ -73,11 +73,14 @@ jobs:
       - name: Analyze bundle
         run: node ./scripts/report-bundle-size.js
 
+      - name: FooBar
+        run: echo ${{ github.workspace }}
+
       - name: Upload bundle
         uses: actions/upload-artifact@v4
         with:
           name: bundle
-          path: .next/analyze/__bundle_analysis.json
+          path: ./apps/next-portfolio/.next/analyze/__bundle_analysis.json
 
       - name: Download base branch bundle stats
         uses: dawidd6/action-download-artifact@v6
