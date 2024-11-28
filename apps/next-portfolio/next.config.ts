@@ -1,6 +1,8 @@
+import withBundleAnalyzer from "@next/bundle-analyzer";
 import type { NextConfig } from "next";
+import { env } from "./env";
 
-const config = {
+const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
@@ -26,4 +28,12 @@ const config = {
   },
 } satisfies NextConfig;
 
-export default config;
+export default () => {
+  const plugins = [withBundleAnalyzer({ enabled: env.ANALYZE })];
+
+  const config = plugins.reduce((acc, next) => next(acc), {
+    ...nextConfig,
+  });
+
+  return config;
+};
