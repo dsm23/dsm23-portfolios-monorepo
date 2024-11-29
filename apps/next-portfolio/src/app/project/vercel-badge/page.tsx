@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const Page = () => (
   <Main className="h-4/5 w-full px-6 pt-8">
     <GoBack className="mb-4" href="/#projects" />
-    <ViewSource pathname="app/clock/page.tsx" />
+    <ViewSource pathname="app/project/vercel-badge/page.tsx" />
 
     <h1 className="text-4xl uppercase tracking-widest text-sky-600">
       Vercel badge
