@@ -2,11 +2,7 @@ import type { FunctionComponent, HTMLAttributes } from "react";
 import Link from "next/link";
 import Anchor from "~/components/anchor";
 import Section from "~/components/section";
-import Help from "~/components/svgs/help";
-import NavRight from "~/components/svgs/nav-right";
 import { internal } from "~/utils";
-
-import { projectsStyles as styles } from "@repo/shared-styles";
 
 interface Project {
   title: string;
@@ -99,80 +95,40 @@ const projects: Project[] = [
 ];
 
 const Projects: FunctionComponent<Props> = async (props) => {
-  // server-only
-  const { default: urlMetadata } = await import("url-metadata");
-
-  const projectsWithMetadata = (await Promise.all(
-    projects.map(async ({ to, ...rest }) => {
-      try {
-        const websiteUrl = process.env.ORIGIN_URL as string;
-
-        const url = internal(to) ? websiteUrl + to : to;
-
-        const metadata = await urlMetadata(url, {
-          mode: "same-origin",
-        });
-
-        return {
-          ...rest,
-          to,
-          ogImage: metadata["og:image"] ?? metadata["twitter:image"],
-          alt: metadata["og:image:alt"],
-        };
-      } catch {
-        return {
-          ...rest,
-          to,
-        };
-      }
-    }),
-  )) as (Project & { ogImage?: string; alt?: string })[];
-
   return (
     <Section {...props}>
       <h2 className="text-5xl">Projects</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
-        {projectsWithMetadata.map(
-          ({ title, to, description, ogImage, alt }) => (
-            <div key={`project-${title}`}>
-              <div className={styles.imgContainer}>
-                {ogImage ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={ogImage}
-                    className="absolute h-full w-full rounded-lg object-contain p-4 shadow-md"
-                    alt={alt ?? "open graph image"}
-                  />
-                ) : (
-                  <Help className="absolute h-full w-full rounded-lg object-cover shadow-md" />
-                )}
-              </div>
-              <div className="isolate -mt-16 px-4 print:mt-0">
-                <div className="rounded-lg bg-white p-6 shadow-lg">
-                  <div className="flex items-baseline">
-                    <div className="text-xs font-semibold uppercase tracking-wide text-gray-600">
-                      {internal(to) ? "internal" : "external"}
-                    </div>
-                  </div>
-                  <Anchor
-                    as={Link}
-                    href={to}
-                    className="dar:hover:text-sky-600 mt-2 flex items-center gap-x-2 dark:text-sky-900"
-                  >
-                    <NavRight className="h-6 w-6" />
-                    <h3 className="truncate text-lg font-semibold leading-tight">
-                      {title}
-                    </h3>
-                  </Anchor>
-                  <div className="mt-3">
-                    <p className="text-sm text-gray-900">{description}</p>
-                  </div>
+      <div className="space-y-4">
+        <div>
+          PLEASE NOTE that following feedback from a recent potential employer,
+          this section is now under heavy development and will change
+          frequently.
+        </div>
+
+        {projects.map(({ title, to, description }) => (
+          <div key={`project-${title}`}>
+            <div className="rounded-lg bg-white p-6 shadow-lg">
+              <div className="flex items-baseline">
+                <div className="text-xs font-semibold uppercase tracking-wide text-gray-600">
+                  {internal(to) ? "internal" : "external"}
                 </div>
               </div>
+              <Anchor
+                as={Link}
+                href={to}
+                className="dar:hover:text-sky-600 mt-2 flex items-center gap-x-2 dark:text-sky-900"
+              >
+                <h3 className="truncate text-lg font-semibold leading-tight">
+                  {title}
+                </h3>
+              </Anchor>
+              <div className="mt-3">
+                <p className="text-sm text-gray-900">{description}</p>
+              </div>
             </div>
-          ),
-        )}
+          </div>
+        ))}
       </div>
     </Section>
   );
