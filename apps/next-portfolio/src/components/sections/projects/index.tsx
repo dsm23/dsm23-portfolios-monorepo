@@ -26,29 +26,47 @@ const projects: Project[] = [
   },
   {
     title: "Noughts and Crosses",
-    to: "/noughts-and-crosses",
+    to: "/project/noughts-and-crosses",
     description:
       "The tutorial example from the reactjs.org docs in tailwindcss stylings with TypeScript typings",
   },
   {
+    title: "Timestamp Microservice",
+    to: "/project/date",
+    description:
+      "This is an example backend microservice inspired by freeCodeCamp course but within Next.js",
+  },
+  {
+    title: "Animal Farm",
+    to: "/project/animal-farm",
+    description:
+      "The animal farm example from fireship pro reconfigured for Next.js and with TypeScript",
+  },
+  {
+    title: "Drag and Resize",
+    to: "/project/drag-and-resize",
+    description:
+      "Work in progess: attempting to re-create what Theo describes for the Twitch moderator panel",
+  },
+  {
     title: "FizzBuzz",
-    to: "/fizz-buzz",
+    to: "/project/fizz-buzz",
     description:
       'Numbers 1 to 100 where any number divisible by three is replaced with the word "fizz", and any number divisible by five is replaced with the word "buzz"',
   },
   {
     title: "Clock",
-    to: "/clock",
+    to: "/project/clock",
     description: "A SVG clock example cloned from svelte.dev",
   },
   {
     title: "Divisibles",
-    to: "/divisibles",
+    to: "/project/divisibles",
     description: "Hover over numbers to show their divisors",
   },
   {
     title: "MathML",
-    to: "/mathml",
+    to: "/project/mathml",
     description:
       "An example from MDN showing the new MathML support in browsers",
   },
@@ -66,7 +84,7 @@ const projects: Project[] = [
   },
   {
     title: "D3.js pie chart",
-    to: "/pie-chart",
+    to: "/project/pie-chart",
     description: "Pie chart in svg using D3.js",
   },
   {
@@ -83,7 +101,7 @@ const projects: Project[] = [
   },
   {
     title: "Simple form",
-    to: "/simple-form",
+    to: "/project/simple-form",
     description: "A simple form example using react-hook-form",
   },
   {

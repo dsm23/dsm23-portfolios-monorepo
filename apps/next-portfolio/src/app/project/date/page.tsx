@@ -38,18 +38,18 @@ const Page = () => (
       <h2>Example Usage:</h2>
       <ul>
         <li>
-          <Anchor as={Link} href="/date/2015-12-25">
-            [project url]/date/2015-12-25
+          <Anchor as={Link} href="/project/date/2015-12-25">
+            [project url]/project/date/2015-12-25
           </Anchor>
         </li>
         <li>
-          <Anchor as={Link} href="/date/1451001600000">
-            [project url]/date/1451001600000
+          <Anchor as={Link} href="/project/date/1451001600000">
+            [project url]/project/date/1451001600000
           </Anchor>
         </li>
         <li>
-          <Anchor as={Link} href="/date/now">
-            [project url]/date/now
+          <Anchor as={Link} href="/project/date/now">
+            [project url]/project/date/now
           </Anchor>
         </li>
       </ul>
