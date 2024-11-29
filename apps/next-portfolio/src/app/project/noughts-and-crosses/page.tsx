@@ -7,7 +7,7 @@ import Game from "./game";
 const NoughtsAndCrosses = () => (
   <Main className="w-full px-6 py-8">
     <GoBack className="mb-4" href="/#projects" />
-    <ViewSource pathname="app/noughts-and-crosses/page.tsx" />
+    <ViewSource pathname="app/project/noughts-and-crosses/page.tsx" />
 
     <h1 className="text-4xl uppercase tracking-widest text-sky-600">
       Noughts and Crosses

@@ -25,7 +25,7 @@ const Page: FunctionComponent<Props> = async (props) => {
   return (
     <Main className="w-full px-6 py-8">
       <GoBack className="mb-4" href="/#skills" />
-      <ViewSource pathname="app/skill/[skill]/page.tsx" />
+      <ViewSource pathname="app/project/skill/[skill]/page.tsx" />
 
       <h1 className="text-4xl text-sky-700">{skillName}</h1>
       <div className="mb-4">

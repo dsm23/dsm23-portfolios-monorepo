@@ -24,7 +24,7 @@ const PieChart: FunctionComponent = () => {
   return (
     <Main className="w-full px-6 py-8">
       <GoBack className="mb-4" href="/#projects" />
-      <ViewSource pathname="app/pie-chart/page.tsx" />
+      <ViewSource pathname="app/project/pie-chart/page.tsx" />
 
       <h1 className="text-4xl uppercase tracking-widest text-sky-600">
         Pie Chart

@@ -43,7 +43,7 @@ const Page = () => {
   return (
     <Main className="w-full px-6 py-8">
       <GoBack className="mb-4" href="/#projects" />
-      <ViewSource pathname="app/divisibles/page.tsx" />
+      <ViewSource pathname="app/project/divisibles/page.tsx" />
 
       <h1 className="text-4xl uppercase tracking-widest text-sky-600">
         Divisibles

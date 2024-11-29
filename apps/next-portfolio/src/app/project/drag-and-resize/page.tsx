@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <Main className="w-full px-6 py-8">
       <GoBack className="mb-4" href="/#projects" />
-      <ViewSource pathname="app/drag-and-resize/page.tsx" />
+      <ViewSource pathname="app/project/drag-and-resize/page.tsx" />
 
       <h1 className="text-4xl uppercase tracking-widest text-sky-600">
         Drag and Resize

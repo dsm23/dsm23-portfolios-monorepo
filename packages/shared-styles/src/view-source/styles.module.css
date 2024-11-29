@@ -1,7 +1,5 @@
 .container {
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  display: none;
 }
 
 .svg {
@@ -41,6 +39,7 @@
 
 @screen lg {
   .container {
+    display: block;
     position: absolute;
     top: 0;
     right: 0;

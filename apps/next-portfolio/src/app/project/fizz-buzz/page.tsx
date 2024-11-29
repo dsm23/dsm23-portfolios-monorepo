@@ -29,7 +29,7 @@ const listItems = Array.from({ length: 100 }, (_, i) => {
 const Page = () => (
   <Main className="w-full px-6 py-8">
     <GoBack className="mb-4" href="/#projects" />
-    <ViewSource pathname="app/fizz-buzz/page.tsx" />
+    <ViewSource pathname="app/project/fizz-buzz/page.tsx" />
 
     <h1 className="text-4xl uppercase tracking-widest text-sky-600">
       FizzBuzz
