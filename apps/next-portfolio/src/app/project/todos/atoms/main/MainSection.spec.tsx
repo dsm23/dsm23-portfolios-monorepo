@@ -1,3 +1,4 @@
+import { describe, expect, it } from "@jest/globals";
 import { screen } from "@testing-library/react";
 import { RootState } from "~/lib/store";
 import MainSection from ".";

@@ -2,6 +2,7 @@
  * @jest-environment node
  */
 
+import { describe, expect, it } from "@jest/globals";
 import type { NextRequest } from "next/server";
 import { GET } from "./route";
 

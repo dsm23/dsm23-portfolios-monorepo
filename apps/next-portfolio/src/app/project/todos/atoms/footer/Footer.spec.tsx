@@ -1,3 +1,4 @@
+import { describe, expect, it } from "@jest/globals";
 import { screen } from "@testing-library/react";
 import Footer from ".";
 import { renderWithProviders } from "~/test-utils";
