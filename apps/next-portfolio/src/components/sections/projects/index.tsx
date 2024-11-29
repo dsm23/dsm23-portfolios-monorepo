@@ -110,6 +110,12 @@ const projects: Project[] = [
     description:
       "An astro site that integrates with a wordpress backend used by a local yacht club",
   },
+  {
+    title: "Vercel Badge",
+    to: "/project/vercel-badge",
+    description:
+      "This is a @react-three/fiber example ported from a vercel blog post. This is more a reminder to myself about how to type some of the extra JSX tags when working with @react-three-fiber. For some reason, react-spring and react-three-fiber are almost impossible to type",
+  },
 ];
 
 const Projects: FunctionComponent<Props> = async (props) => {
