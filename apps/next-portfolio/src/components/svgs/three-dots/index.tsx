@@ -1,7 +1,6 @@
 import type { FunctionComponent, SVGAttributes } from "react";
-import { cn } from "~/utils";
-
 import { threeDotsStyles as styles } from "@repo/shared-styles";
+import { cn } from "~/utils";
 
 type Props = SVGAttributes<SVGSVGElement>;
 

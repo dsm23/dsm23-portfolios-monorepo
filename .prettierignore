@@ -1,8 +1,15 @@
-# Add files here to ignore them from prettier formatting
-/dist
-/coverage
-/.nx/cache
-/generated/src
-pnpm-lock.yaml
+__tmp__/
+.turbo
+.next/
+build/
+dist/
+node_modules/
+target/
+compiled/
+coverage
 
-/.nx/workspace-data
+generated/src/
+
+lerna.json
+test-timings.json
+pnpm-lock.yaml

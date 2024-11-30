@@ -1,11 +1,10 @@
+import Anchor from "~/components/anchor";
 import Main from "~/components/main";
 import GoBack from "~/components/styled-go-back";
 import ViewSource from "~/components/view-source";
 import Header from "./atoms/header";
 import MainSection from "./atoms/main";
-
 import styles from "./styles.module.css";
-import Anchor from "~/components/anchor";
 
 const Todos = () => (
   <Main className="w-full px-6 py-8">

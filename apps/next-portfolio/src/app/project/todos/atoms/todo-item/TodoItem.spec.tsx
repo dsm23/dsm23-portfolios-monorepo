@@ -1,9 +1,8 @@
 import { describe, expect, it } from "@jest/globals";
 import { fireEvent, screen } from "@testing-library/react";
 import { deleteTodo } from "~/lib/features/todos/slice";
-import TodoItem from ".";
 import { renderWithProviders } from "~/test-utils";
-
+import TodoItem from ".";
 import styles from "./styles.module.css";
 
 jest.mock("~/lib/store/hooks", () => {

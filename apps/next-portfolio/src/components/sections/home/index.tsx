@@ -1,4 +1,5 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
+import type { Maybe, Person } from "@repo/generated";
 import Anchor from "~/components/anchor";
 import Section from "~/components/section";
 import SectionHeader from "~/components/section-header";
@@ -10,7 +11,6 @@ import Next from "~/components/svgs/next";
 import Nuxt from "~/components/svgs/nuxt";
 import Qwik from "~/components/svgs/qwik";
 import Solid from "~/components/svgs/solid";
-import type { Maybe, Person } from "@repo/generated";
 
 interface Props extends HTMLAttributes<HTMLElement> {
   author?: Maybe<Person>;

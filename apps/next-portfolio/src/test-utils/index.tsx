@@ -1,7 +1,7 @@
 import type { PropsWithChildren, ReactElement } from "react";
 import { cleanup, render } from "@testing-library/react";
-import type { RenderOptions } from "@testing-library/react";
 import { Provider } from "react-redux";
+import type { RenderOptions } from "@testing-library/react";
 import { setupStore } from "~/lib/store";
 import type { AppStore, RootState } from "~/lib/store";
 

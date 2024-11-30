@@ -1,6 +1,5 @@
 // https://github.com/vercel/next.js/blob/canary/examples/image-component/components/view-source.tsx
 import type { FunctionComponent } from "react";
-
 import { viewSourceStyles as styles } from "@repo/shared-styles";
 
 type Props = {

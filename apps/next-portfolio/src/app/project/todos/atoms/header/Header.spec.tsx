@@ -1,9 +1,9 @@
 import { describe, expect, it } from "@jest/globals";
 import { fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import Header from ".";
 import { addTodo } from "~/lib/features/todos/slice";
 import { renderWithProviders } from "~/test-utils";
+import Header from ".";
 
 jest.mock("~/lib/store/hooks", () => {
   return {

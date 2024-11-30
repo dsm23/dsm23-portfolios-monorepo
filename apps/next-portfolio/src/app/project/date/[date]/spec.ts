@@ -2,8 +2,8 @@
  * @jest-environment node
  */
 
-import { describe, expect, it } from "@jest/globals";
 import type { NextRequest } from "next/server";
+import { describe, expect, it } from "@jest/globals";
 import { GET } from "./route";
 
 describe("[api: date]", () => {

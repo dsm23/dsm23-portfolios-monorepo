@@ -1,8 +1,7 @@
 "use client";
 
-import { ChangeEventHandler, useState } from "react";
+import { ChangeEventHandler, useId, useState } from "react";
 import { useAsync, useDebounce, useLocalStorage } from "react-use";
-import Input from "~/components/input";
 import {
   Card,
   CardContent,
@@ -10,11 +9,11 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/card";
+import Input from "~/components/input";
 import Label from "~/components/label";
-import { useId } from "react";
 import MagnifyingGlass from "~/components/svgs/magnifying-glass";
-import { cn, sleep } from "~/utils";
 import ThreeDots from "~/components/svgs/three-dots";
+import { cn, sleep } from "~/utils";
 
 type Animal = {
   id: number;

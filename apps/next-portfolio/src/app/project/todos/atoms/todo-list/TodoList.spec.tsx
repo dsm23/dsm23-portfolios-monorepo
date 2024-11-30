@@ -1,8 +1,8 @@
 import { describe, expect, it } from "@jest/globals";
 import { screen } from "@testing-library/react";
-import TodoList from ".";
-import { renderWithProviders } from "~/test-utils";
 import { RootState } from "~/lib/store";
+import { renderWithProviders } from "~/test-utils";
+import TodoList from ".";
 
 const setup = (preloadedState?: Partial<RootState>) =>
   renderWithProviders(<TodoList />, { preloadedState });

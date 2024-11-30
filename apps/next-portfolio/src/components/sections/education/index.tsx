@@ -1,10 +1,9 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { educationStyles as styles } from "@repo/shared-styles";
+import type { EducationSchool, Maybe } from "@repo/generated";
 import Section from "~/components/section";
 import { cn, contentfulOptions, formatYears } from "~/utils";
-import type { EducationSchool, Maybe } from "@repo/generated";
-
-import { educationStyles as styles } from "@repo/shared-styles";
 
 interface Props extends HTMLAttributes<HTMLElement> {
   education?: Maybe<EducationSchool>[];

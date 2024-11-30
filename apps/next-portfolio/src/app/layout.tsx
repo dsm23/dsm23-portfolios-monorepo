@@ -1,12 +1,13 @@
 import type { FunctionComponent, ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
-import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import Layout from "~/components/layout";
 import ThemeProvider from "~/components/theme-provider";
 import { getProfilePic } from "~/utils/api";
 
 import "./global.css";
+
 import StoreProvider from "~/components/store-provider";
 
 type Props = {

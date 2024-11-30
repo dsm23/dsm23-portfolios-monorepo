@@ -1,8 +1,8 @@
 "use client";
 
+import { addTodo } from "~/lib/features/todos/slice";
 import { useAppDispatch } from "~/lib/store/hooks";
 import TodoTextInput from "../todo-text-input";
-import { addTodo } from "~/lib/features/todos/slice";
 
 const Header = () => {
   const dispatch = useAppDispatch();
