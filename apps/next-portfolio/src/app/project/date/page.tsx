@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import Anchor from "~/components/anchor";
 import Main from "~/components/main";
+import { Link } from "~/components/progress-bar/next";
 import GoBack from "~/components/styled-go-back";
 import ViewSource from "~/components/view-source";
 

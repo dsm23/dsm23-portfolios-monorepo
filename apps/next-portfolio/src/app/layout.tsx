@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import Layout from "~/components/layout";
+import { ProgressBar, ProgressBarProvider } from "~/components/progress-bar";
 import ThemeProvider from "~/components/theme-provider";
 import { getProfilePic } from "~/utils/api";
 
@@ -36,9 +37,12 @@ const RootLayout: FunctionComponent<Props> = async ({ children }) => {
     >
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <StoreProvider>
-            <Layout profilePic={profilePic}>{children}</Layout>
-          </StoreProvider>
+          <ProgressBarProvider>
+            <StoreProvider>
+              <ProgressBar className="fixed top-0 z-50 h-1 bg-sky-500 shadow-lg shadow-sky-500/20" />
+              <Layout profilePic={profilePic}>{children}</Layout>
+            </StoreProvider>
+          </ProgressBarProvider>
         </ThemeProvider>
       </body>
     </html>
