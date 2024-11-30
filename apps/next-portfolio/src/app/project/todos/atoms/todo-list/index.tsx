@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useAppSelector } from "~/lib/store/hooks";
 import { getVisibleTodos } from "../../selectors";
 import TodoItem from "../todo-item";

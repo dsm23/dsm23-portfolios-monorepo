@@ -16,7 +16,7 @@ import {
   m,
   useMotionTemplate,
   useSpring,
-} from "framer-motion";
+} from "motion/react";
 
 /**
  * Internal context for the progress bar.
