@@ -1,9 +1,8 @@
 import { describe, expect, it } from "@jest/globals";
 import { fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import TodoTextInput from ".";
 import { render } from "~/test-utils";
-
+import TodoTextInput from ".";
 import styles from "./styles.module.css";
 
 const defaultProps = {

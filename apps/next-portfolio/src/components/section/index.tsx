@@ -1,7 +1,6 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
-import { cn } from "~/utils";
-
 import { sectionStyles as styles } from "@repo/shared-styles";
+import { cn } from "~/utils";
 
 type Props = HTMLAttributes<HTMLElement>;
 

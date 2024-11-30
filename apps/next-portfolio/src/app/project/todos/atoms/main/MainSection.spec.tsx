@@ -1,9 +1,9 @@
 import { describe, expect, it } from "@jest/globals";
 import { screen } from "@testing-library/react";
-import { RootState } from "~/lib/store";
-import MainSection from ".";
 import { clearCompleted } from "~/lib/features/todos/slice";
+import { RootState } from "~/lib/store";
 import { renderWithProviders } from "~/test-utils";
+import MainSection from ".";
 
 jest.mock("~/lib/store/hooks", () => {
   return {

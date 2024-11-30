@@ -1,8 +1,8 @@
 import Anchor from "~/components/anchor";
-import Animals from "./animals";
 import Main from "~/components/main";
 import GoBack from "~/components/styled-go-back";
 import ViewSource from "~/components/view-source";
+import Animals from "./animals";
 
 const Page = () => (
   <Main className="w-full px-6 py-8">

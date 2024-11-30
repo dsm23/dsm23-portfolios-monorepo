@@ -1,8 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import TodoItem from "../todo-item";
 import { useAppSelector } from "~/lib/store/hooks";
 import { getVisibleTodos } from "../../selectors";
-
+import TodoItem from "../todo-item";
 import styles from "./styles.module.css";
 
 const TodoList = () => {

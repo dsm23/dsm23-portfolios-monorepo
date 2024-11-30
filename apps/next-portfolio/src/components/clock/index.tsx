@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Marker from "./marker";
-
 import { clockStyles as styles } from "@repo/shared-styles";
+import Marker from "./marker";
 
 const Clock = () => {
   const [time, setTime] = useState(new Date());

@@ -1,16 +1,15 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { useAppDispatch, useAppSelector } from "~/lib/store/hooks";
-import Footer from "../footer";
-import VisibleTodoList from "../todo-list";
 import {
   clearCompleted,
   completeAllTodos,
   getTodos,
 } from "~/lib/features/todos/slice";
+import { useAppDispatch, useAppSelector } from "~/lib/store/hooks";
 import { getCompletedTodoCount } from "../../selectors";
-
+import Footer from "../footer";
+import VisibleTodoList from "../todo-list";
 import styles from "./styles.module.css";
 
 const MainSection = () => {

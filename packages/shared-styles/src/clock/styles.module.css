@@ -1,7 +1,7 @@
 .svg {
-  height: 50vmin;
-  width: 50vmin;
   aspect-ratio: 1;
+  width: 50vmin;
+  height: 50vmin;
 }
 
 .clockFace {

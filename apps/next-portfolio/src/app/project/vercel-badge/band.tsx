@@ -4,26 +4,22 @@
 
 "use client";
 
-import * as THREE from "three";
 import { useEffect, useRef, useState } from "react";
 import type { FunctionComponent } from "react";
-import {
-  extend,
-  useThree,
-  useFrame,
-  type EventHandlers,
-} from "@react-three/fiber";
 import { useGLTF, useTexture } from "@react-three/drei";
+import { extend, useFrame, useThree } from "@react-three/fiber";
 import {
   BallCollider,
   CuboidCollider,
   RapierRigidBody,
   RigidBody,
-  type RigidBodyOptions,
   useRopeJoint,
   useSphericalJoint,
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
+import * as THREE from "three";
+import type { EventHandlers } from "@react-three/fiber";
+import type { RigidBodyOptions } from "@react-three/rapier";
 import type { GLTF } from "three-stdlib";
 
 type Props = {

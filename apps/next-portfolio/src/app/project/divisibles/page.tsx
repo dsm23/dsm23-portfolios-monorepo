@@ -2,14 +2,13 @@
 
 import { useId, useMemo, useState } from "react";
 import type { ChangeEventHandler } from "react";
-import Label from "~/components/label";
+import { divisiblesStyles as styles } from "@repo/shared-styles";
 import Input from "~/components/input";
+import Label from "~/components/label";
 import Main from "~/components/main";
 import GoBack from "~/components/styled-go-back";
 import ViewSource from "~/components/view-source";
 import { cn } from "~/utils";
-
-import { divisiblesStyles as styles } from "@repo/shared-styles";
 
 const Page = () => {
   const id = useId();

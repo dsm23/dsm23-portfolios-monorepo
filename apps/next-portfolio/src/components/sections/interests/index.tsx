@@ -1,6 +1,6 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
-import Section from "~/components/section";
 import type { Maybe, Interests as TypeInterests } from "@repo/generated";
+import Section from "~/components/section";
 
 interface Props extends HTMLAttributes<HTMLElement> {
   interests?: Maybe<TypeInterests>[];

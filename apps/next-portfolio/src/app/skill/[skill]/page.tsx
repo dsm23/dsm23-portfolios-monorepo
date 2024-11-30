@@ -5,8 +5,8 @@ import GoBack from "~/components/styled-go-back";
 import EmptyStar from "~/components/svgs/empty-star";
 import FilledStar from "~/components/svgs/filled-star";
 import ViewSource from "~/components/view-source";
-import { getSkillBySlug } from "~/utils/api";
 import { contentfulOptions, sleep } from "~/utils";
+import { getSkillBySlug } from "~/utils/api";
 
 type Props = {
   params: {

@@ -1,5 +1,5 @@
-import type { Options } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
+import type { Options } from "@contentful/rich-text-react-renderer";
 import Anchor from "~/components/anchor";
 
 const options: Options = {

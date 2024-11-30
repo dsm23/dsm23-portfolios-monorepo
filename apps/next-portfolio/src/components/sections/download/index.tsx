@@ -1,8 +1,8 @@
 "use client";
 
-import { Transition } from "@headlessui/react";
 import type { FunctionComponent, HTMLAttributes } from "react";
 import cx from "clsx";
+import { Transition } from "@headlessui/react";
 import { useAsyncFn } from "react-use";
 import Section from "~/components/section";
 import ArrowDownTray from "~/components/svgs/arrow-down-tray";

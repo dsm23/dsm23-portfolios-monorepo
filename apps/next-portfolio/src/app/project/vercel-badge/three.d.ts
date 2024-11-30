@@ -1,5 +1,5 @@
-import type { ReactThreeFiber } from "@react-three/fiber";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
+import type { ReactThreeFiber } from "@react-three/fiber";
 
 // https://r3f.docs.pmnd.rs/api/objects#declaring-objects
 // https://r3f.docs.pmnd.rs/tutorials/typescript#typing-shorthand-props

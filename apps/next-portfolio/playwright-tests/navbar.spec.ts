@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 test.describe("[e2e: navbar]", () => {
   test("desktop, home link", async ({ page }) => {

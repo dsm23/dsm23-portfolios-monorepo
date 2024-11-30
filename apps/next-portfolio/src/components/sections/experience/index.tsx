@@ -1,10 +1,9 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { experienceStyles as styles } from "@repo/shared-styles";
+import type { ExperienceCompany, Maybe } from "@repo/generated";
 import Section from "~/components/section";
 import { cn, contentfulOptions, formatYears } from "~/utils";
-import type { ExperienceCompany, Maybe } from "@repo/generated";
-
-import { experienceStyles as styles } from "@repo/shared-styles";
 
 interface Props extends HTMLAttributes<HTMLElement> {
   experience?: Maybe<ExperienceCompany>[];

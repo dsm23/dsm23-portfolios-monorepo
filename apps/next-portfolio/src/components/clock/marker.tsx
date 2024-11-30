@@ -1,5 +1,4 @@
 import type { FunctionComponent } from "react";
-
 import { clockStyles as styles } from "@repo/shared-styles";
 
 type Props = {

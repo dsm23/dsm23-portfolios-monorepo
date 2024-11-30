@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import type { Metadata } from "next";
 import Anchor from "~/components/anchor";
 import Main from "~/components/main";
 import GoBack from "~/components/styled-go-back";

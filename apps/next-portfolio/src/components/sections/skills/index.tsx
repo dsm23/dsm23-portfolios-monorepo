@@ -1,11 +1,10 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
 import Link from "next/link";
+import { skillsStyles as styles } from "@repo/shared-styles";
+import type { Maybe, Skill } from "@repo/generated";
 import Section from "~/components/section";
 import Tooltip from "~/components/tooltip";
 import { cn } from "~/utils";
-import type { Maybe, Skill } from "@repo/generated";
-
-import { skillsStyles as styles } from "@repo/shared-styles";
 
 interface Props extends HTMLAttributes<HTMLElement> {
   skills: Maybe<

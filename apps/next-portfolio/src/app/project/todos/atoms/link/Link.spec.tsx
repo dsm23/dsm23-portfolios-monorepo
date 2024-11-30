@@ -1,14 +1,13 @@
-import { describe, expect, it } from "@jest/globals";
 import type { ReactNode } from "react";
+import { describe, expect, it } from "@jest/globals";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import {
   setVisibilityFilter,
   VisibilityFilter,
 } from "~/lib/features/visibility-filter/slice";
-import Link from ".";
 import { renderWithProviders } from "~/test-utils";
-
+import Link from ".";
 import styles from "./styles.module.css";
 
 jest.mock("~/lib/store/hooks", () => {

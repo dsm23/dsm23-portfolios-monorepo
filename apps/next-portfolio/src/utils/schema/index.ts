@@ -1,5 +1,5 @@
-import { z } from "zod";
 import { isValidPhoneNumber } from "libphonenumber-js/min";
+import { z } from "zod";
 
 const schema = z.object({
   firstName: z.string().min(1, {

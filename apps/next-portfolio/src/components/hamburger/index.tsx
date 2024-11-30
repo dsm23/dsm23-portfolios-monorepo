@@ -1,7 +1,6 @@
 import type { FunctionComponent, SVGAttributes } from "react";
-import { cn } from "~/utils";
-
 import { hamburgerStyles as styles } from "@repo/shared-styles";
+import { cn } from "~/utils";
 
 interface Props extends SVGAttributes<SVGSVGElement> {
   open: boolean;
