@@ -1,6 +1,6 @@
 import type { FunctionComponent, HTMLAttributes } from "react";
-import Link from "next/link";
 import Anchor from "~/components/anchor";
+import { Link } from "~/components/progress-bar/next";
 import Section from "~/components/section";
 import { internal } from "~/utils";
 

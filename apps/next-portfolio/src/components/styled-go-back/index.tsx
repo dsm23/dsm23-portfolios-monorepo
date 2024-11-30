@@ -1,7 +1,7 @@
 import type { AnchorHTMLAttributes, FunctionComponent } from "react";
-import Link from "next/link";
 import type { LinkProps } from "next/link";
 import { goBackStyles as styles } from "@repo/shared-styles";
+import { Link } from "~/components/progress-bar/next";
 import GoBack from "~/components/svgs/go-back";
 import { cn } from "~/utils";
 
