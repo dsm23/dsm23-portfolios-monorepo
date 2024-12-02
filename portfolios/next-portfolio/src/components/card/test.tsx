@@ -1,6 +1,6 @@
 import { describe, expect, it } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from ".";
 
 describe("components", () => {
   describe("Card", () => {
