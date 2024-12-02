@@ -10,7 +10,7 @@ const ViewSource: FunctionComponent<Props> = ({ pathname }) => (
   <div className={styles.container}>
     <a
       title="View Source"
-      href={`https://github.com/dsm23/dsm23-portfolios-monorepo/tree/main/apps/next-portfolio/src/${pathname}`}
+      href={`https://github.com/dsm23/dsm23-portfolios-monorepo/tree/main/portfolios/next-portfolio/src/${pathname}`}
       className="focus:outline-2 focus:outline-ring"
     >
       <svg
