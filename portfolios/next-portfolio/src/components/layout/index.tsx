@@ -31,6 +31,7 @@ const Layout: FunctionComponent<Props> = ({ children, profilePic }) => {
     "education",
     "skills",
     "projects",
+    "templates",
     "interests",
     "download",
   ];
