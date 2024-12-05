@@ -9,6 +9,7 @@ import {
   Interests,
   Projects,
   Skills,
+  Templates,
 } from "~/components/sections";
 import ViewSource from "~/components/view-source";
 import { getHomePageQuery } from "~/utils/api";
@@ -61,6 +62,9 @@ const Page = async () => {
 
       <Divisor />
       <Projects id="projects" />
+
+      <Divisor />
+      <Templates id="templates" />
 
       <Divisor />
       <Interests id="interests" interests={interests} />
