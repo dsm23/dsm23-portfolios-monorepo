@@ -38,7 +38,7 @@ const Home: FunctionComponent<Props> = ({ author, ...props }) => {
       </SectionHeader>
       <address>
         London-based · {phone} ·{" "}
-        <Anchor href="`mailto:${email}`">{email}</Anchor>
+        <Anchor href={`mailto:${email}`}>{email}</Anchor>
       </address>
       <p className="mt-4 text-gray-900 dark:text-white">{shortBio}</p>
       <div className="ml-6 mt-4 grid justify-start space-y-4">
