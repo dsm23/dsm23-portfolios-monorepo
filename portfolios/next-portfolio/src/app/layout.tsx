@@ -2,14 +2,14 @@ import type { FunctionComponent, ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import ContactForm from "~/components/contact-form";
 import Layout from "~/components/layout";
 import { ProgressBar, ProgressBarProvider } from "~/components/progress-bar";
+import StoreProvider from "~/components/store-provider";
 import ThemeProvider from "~/components/theme-provider";
 import { getProfilePic } from "~/utils/api";
 
 import "./global.css";
-
-import StoreProvider from "~/components/store-provider";
 
 type Props = {
   children: ReactNode;
@@ -42,6 +42,7 @@ const RootLayout: FunctionComponent<Props> = async ({ children }) => {
               <ProgressBar className="fixed top-0 z-50 h-1 bg-sky-500 shadow-lg shadow-sky-500/20" />
               <Layout profilePic={profilePic}>{children}</Layout>
             </StoreProvider>
+            <ContactForm />
           </ProgressBarProvider>
         </ThemeProvider>
       </body>
