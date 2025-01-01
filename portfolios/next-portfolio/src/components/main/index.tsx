@@ -18,7 +18,9 @@ const Main = forwardRef(
     ref: Ref<Element>,
   ) => (
     <Component
+      // @ts-expect-error The typings on this polymorphic component are not sufficient. This is now just a demo component. Use the pattern from button in the future
       className={cn("mt-20 lg:mt-0", className)}
+      // @ts-expect-error The typings on this polymorphic component are not sufficient. This is now just a demo component. Use the pattern from button in the future
       ref={ref}
       {...props}
     />

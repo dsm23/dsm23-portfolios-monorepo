@@ -19,19 +19,12 @@ const nextConfig = {
   },
   productionBrowserSourceMaps: true,
   serverExternalPackages: ["puppeteer-core"],
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true,
-  },
 } satisfies NextConfig;
 
 export default () => {
   const plugins = [withBundleAnalyzer({ enabled: env.ANALYZE })];
 
-  const config = plugins.reduce((acc, next) => next(acc), {
+  const config = plugins.reduce((acc: NextConfig, next) => next(acc), {
     ...nextConfig,
   });
 

@@ -27,7 +27,10 @@ function calculateWinner(squares: Squares) {
   ];
 
   for (const line of lines) {
-    const [a, b, c] = line;
+    const a = line[0] as number;
+    const b = line[1] as number;
+    const c = line[2] as number;
+
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
@@ -83,7 +86,7 @@ export default function Game() {
   const [history, setHistory] = useState<Squares[]>([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
-  const currentSquares = history[currentMove];
+  const currentSquares = history[currentMove] as Squares;
 
   const handlePlay = (nextSquares: Squares) => {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];

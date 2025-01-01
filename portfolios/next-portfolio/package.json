@@ -20,6 +20,7 @@
     "@contentful/rich-text-types": "^17.0.0",
     "@headlessui/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.1",
+    "@jest/types": "^29.6.3",
     "@nivo/core": "^0.88.0",
     "@nivo/generators": "^0.88.0",
     "@nivo/pie": "^0.88.0",

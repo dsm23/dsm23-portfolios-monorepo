@@ -52,8 +52,8 @@ const TodoTextInput: FunctionComponent<Props> = ({
     <input
       {...props}
       className={cx(styles.input, {
-        [styles.edit]: editing,
-        [styles.newTodo]: newTodo,
+        [styles.edit!]: editing,
+        [styles.newTodo!]: newTodo,
         className,
       })}
       type="text"

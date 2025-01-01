@@ -1,7 +1,12 @@
 import type { PropsWithChildren, ReactElement } from "react";
+import { afterEach } from "@jest/globals";
 import { cleanup, render } from "@testing-library/react";
 import { Provider } from "react-redux";
-import type { RenderOptions } from "@testing-library/react";
+import type {
+  Queries,
+  RenderOptions,
+  RenderResult,
+} from "@testing-library/react";
 import { setupStore } from "~/lib/store";
 import type { AppStore, RootState } from "~/lib/store";
 
@@ -25,10 +30,12 @@ function customRender(
   });
 }
 
-function renderWithProviders(
+function renderWithProviders<Q extends Queries>(
   ui: ReactElement,
   extendedRenderOptions: ExtendedRenderOptions = {},
-) {
+): RenderResult<Q> & {
+  store: AppStore;
+} {
   const {
     preloadedState = {},
     // Automatically create a store instance if no store was passed in
@@ -43,7 +50,7 @@ function renderWithProviders(
   // Return an object with the store and all of RTL's query functions
   return {
     store,
-    ...render(ui, { wrapper: Wrapper, ...renderOptions }),
+    ...render<Q>(ui, { wrapper: Wrapper, ...renderOptions }),
   };
 }
 

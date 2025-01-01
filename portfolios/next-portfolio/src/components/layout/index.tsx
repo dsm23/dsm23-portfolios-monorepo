@@ -3,8 +3,8 @@
 import { useState } from "react";
 import type { FunctionComponent, ReactNode } from "react";
 import Link from "next/link";
-import { Person } from "@repo/generated";
 import { layoutStyles as styles } from "@repo/shared-styles";
+import type { Person } from "@repo/generated";
 import DarkModeToggle from "~/components/dark-mode-toggle";
 import Nav from "~/components/nav";
 import { cn } from "~/utils";

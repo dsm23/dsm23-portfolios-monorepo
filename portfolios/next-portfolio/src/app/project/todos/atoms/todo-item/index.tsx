@@ -74,8 +74,8 @@ const TodoItem: FunctionComponent<Props> = ({ todo }) => {
   return (
     <li
       className={cx(styles.todoItem, {
-        [styles.completed]: todo.completed,
-        [styles.editing]: editing,
+        [styles.completed!]: todo.completed,
+        [styles.editing!]: editing,
       })}
     >
       {element}

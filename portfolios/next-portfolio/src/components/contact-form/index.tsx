@@ -142,7 +142,7 @@ const ContactForm: FunctionComponent = () => {
                           <Textarea
                             {...field}
                             className="mb-1 rounded-md border border-zinc-700 bg-zinc-800 px-2 py-1 text-zinc-400 placeholder:text-sm focus:border-gray-400 focus:outline-none"
-                            rows="3"
+                            rows={3}
                             placeholder="I'd love a compliment from you."
                           />
                         </FormControl>
