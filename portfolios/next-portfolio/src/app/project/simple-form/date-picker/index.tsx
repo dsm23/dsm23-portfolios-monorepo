@@ -1,7 +1,7 @@
 "use client";
 
 import type { FunctionComponent } from "react";
-import type { DayPickerSingleProps } from "react-day-picker";
+import type { PropsSingle } from "react-day-picker";
 import { format } from "date-fns";
 import Button from "~/components/button";
 import CalendarDays from "~/components/svgs/calendar-days";
@@ -9,7 +9,7 @@ import { cn } from "~/utils";
 import Calendar from "../calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "../popover";
 
-type Props = Omit<DayPickerSingleProps, "selected" | "mode"> & {
+type Props = Omit<PropsSingle, "selected" | "mode"> & {
   selected?: Date;
 };
 

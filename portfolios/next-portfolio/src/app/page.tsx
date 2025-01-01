@@ -1,4 +1,4 @@
-import { Maybe, Skill } from "@repo/generated";
+import type { Maybe, Skill } from "@repo/generated";
 import Divisor from "~/components/divisor";
 import Main from "~/components/main";
 import {

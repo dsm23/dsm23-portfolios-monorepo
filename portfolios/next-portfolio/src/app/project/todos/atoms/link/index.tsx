@@ -28,7 +28,7 @@ const Link: FunctionComponent<Props> = ({ children, filter }) => {
   return (
     // eslint-disable jsx-a11y/anchor-is-valid
     <a
-      className={cx(styles.link, { [styles.selected]: active })}
+      className={cx(styles.link, { [styles.selected!]: active })}
       style={{ cursor: "pointer" }}
       onClick={handleClick}
     >

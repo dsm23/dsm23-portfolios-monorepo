@@ -81,16 +81,16 @@ const Page = () => {
           >
             <div
               className={cn("col-[1_/_-1] row-[1_/_-1] bg-slate-700 p-3", {
-                [styles.unselectedGray]: !divisibleNumbers.includes(num),
-                [styles.selectedGray]: divisibleNumbers.includes(num),
+                [styles.unselectedGray!]: !divisibleNumbers.includes(num),
+                [styles.selectedGray!]: divisibleNumbers.includes(num),
               })}
             >
               <span className="block min-w-[2ch] text-center">{num}</span>
             </div>
             <div
               className={cn("col-[1_/_-1] row-[1_/_-1] bg-red-600 p-3", {
-                [styles.unselectedRed]: !divisibleNumbers.includes(num),
-                [styles.selectedRed]: divisibleNumbers.includes(num),
+                [styles.unselectedRed!]: !divisibleNumbers.includes(num),
+                [styles.selectedRed!]: divisibleNumbers.includes(num),
               })}
             >
               <span className="block min-w-[2ch] text-center">{num}</span>

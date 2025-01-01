@@ -1,6 +1,7 @@
 "use client";
 
-import { ChangeEventHandler, useId, useState } from "react";
+import { useId, useState } from "react";
+import type { ChangeEventHandler } from "react";
 import { useAsync, useDebounce, useLocalStorage } from "react-use";
 import {
   Card,

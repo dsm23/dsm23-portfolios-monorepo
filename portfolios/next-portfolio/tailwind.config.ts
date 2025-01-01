@@ -1,3 +1,4 @@
+import animate from "tailwindcss-animate";
 import defaultTheme from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 
@@ -74,7 +75,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;
 
 export default config;

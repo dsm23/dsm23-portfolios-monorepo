@@ -12,7 +12,7 @@ const Hamburger: FunctionComponent<Props> = ({ className, open, ...props }) => {
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
-      className={cn(styles.hamburger, { [styles.open]: open }, className)}
+      className={cn(styles.hamburger, { [styles.open!]: open }, className)}
       viewBox="0 0 100 100"
     >
       <rect

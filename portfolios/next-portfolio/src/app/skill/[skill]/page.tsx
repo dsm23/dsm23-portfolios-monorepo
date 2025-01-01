@@ -9,9 +9,9 @@ import { contentfulOptions, sleep } from "~/utils";
 import { getSkillBySlug } from "~/utils/api";
 
 type Props = {
-  params: {
+  params: Promise<{
     skill: string;
-  };
+  }>;
 };
 
 const Page: FunctionComponent<Props> = async (props) => {

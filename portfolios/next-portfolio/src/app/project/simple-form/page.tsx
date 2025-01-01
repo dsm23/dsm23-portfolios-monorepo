@@ -359,6 +359,7 @@ const Page = () => {
 
                   <DatePicker
                     selected={field.value}
+                    // @ts-expect-error datepicker issues related to shadcn lack of updating component
                     onDayClick={field.onChange}
                     disabled={(date: Date) =>
                       date > new Date() || date < new Date("1900-01-01")

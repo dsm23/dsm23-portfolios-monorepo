@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "~/lib/store";
+import type { RootState } from "~/lib/store";
 
 export const filters = {
   SHOW_ALL: "show_all",
@@ -10,13 +10,13 @@ export const filters = {
 
 export type VisibilityFilter = (typeof filters)[keyof typeof filters];
 
-interface VisibilityFilterState {
+export type VisibilityFilterState = {
   value: VisibilityFilter;
-}
+};
 
-const initialState = {
+const initialState: VisibilityFilterState = {
   value: "show_all",
-} satisfies VisibilityFilterState as VisibilityFilterState;
+};
 
 const visibilityFilterSlice = createSlice({
   name: "visibilityFilter",

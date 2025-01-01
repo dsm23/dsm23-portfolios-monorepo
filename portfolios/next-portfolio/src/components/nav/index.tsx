@@ -10,8 +10,8 @@ import type {
 import cx from "clsx";
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
-import { Person } from "@repo/generated";
 import { navStyles as styles } from "@repo/shared-styles";
+import type { Person } from "@repo/generated";
 import DarkModeToggle from "~/components/dark-mode-toggle";
 import Hamburger from "~/components/hamburger";
 import { Link } from "~/components/progress-bar/next";

@@ -1,4 +1,4 @@
-import { describe, expect, it } from "@jest/globals";
+import { describe, expect, it, jest } from "@jest/globals";
 import { fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { render } from "~/test-utils";
@@ -35,13 +35,15 @@ describe("components", () => {
     it("should render correctly when editing=true", () => {
       setup({ editing: true });
 
-      expect(screen.getByDisplayValue("Use Redux")).toHaveClass(styles.edit);
+      expect(screen.getByDisplayValue("Use Redux")).toHaveClass(styles.edit!);
     });
 
     it("should render correctly when newTodo=true", () => {
       setup({ newTodo: true });
 
-      expect(screen.getByDisplayValue("Use Redux")).toHaveClass(styles.newTodo);
+      expect(screen.getByDisplayValue("Use Redux")).toHaveClass(
+        styles.newTodo!,
+      );
     });
 
     it("should update value on change", async () => {

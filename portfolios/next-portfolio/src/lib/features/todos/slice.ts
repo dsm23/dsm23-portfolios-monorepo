@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "~/lib/store";
+import type { RootState } from "~/lib/store";
 
 export type Todo = {
   text: string;
@@ -8,11 +8,11 @@ export type Todo = {
   id: number;
 };
 
-interface TodoState {
+export type TodoState = {
   value: Todo[];
-}
+};
 
-const initialState = {
+const initialState: TodoState = {
   value: [
     {
       text: "Use Redux",
@@ -20,7 +20,7 @@ const initialState = {
       id: 0,
     },
   ],
-} satisfies TodoState as TodoState;
+};
 
 const todosSlice = createSlice({
   name: "todos",
