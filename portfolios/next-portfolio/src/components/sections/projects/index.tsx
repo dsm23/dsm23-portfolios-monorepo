@@ -25,6 +25,12 @@ const projects: Project[] = [
       "A website for my parent's company. Built with Tailwind and Next.js and uses Contentful as a CMS",
   },
   {
+    title: "Parkrun Organiser Pacer Events",
+    to: "https://parkrun.davidmurdochconsulting.site/",
+    description:
+      "A basic CRUD application with a supabase backend for individuals to declare they can volunteer as a pacer for a parkrun event",
+  },
+  {
     title: "Noughts and Crosses",
     to: "/project/noughts-and-crosses",
     description:
