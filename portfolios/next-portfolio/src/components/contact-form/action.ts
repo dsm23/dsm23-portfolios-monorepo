@@ -16,6 +16,6 @@ export async function send({
     from: `Acme <onboarding@resend.dev>`,
     to: ["dsmurdoch357@gmail.com"],
     subject: "From next portfolio",
-    react: EmailTemplate({ email, message }),
+    react: await EmailTemplate({ email, message }),
   });
 }
