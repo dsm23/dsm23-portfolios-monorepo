@@ -241,7 +241,7 @@ importers:
         version: 1.1.1(@types/react@19.0.4)(react@19.0.0)
       '@react-three/drei':
         specifier: ^9.120.5
-        version: 9.120.5(@react-three/fiber@9.0.0-rc.2(@types/react@19.0.4)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.172.0))(@types/react@19.0.4)(@types/three@0.172.0)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.172.0)(use-sync-external-store@1.4.0(react@19.0.0))
+        version: 9.120.6(@react-three/fiber@9.0.0-rc.2(@types/react@19.0.4)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.172.0))(@types/react@19.0.4)(@types/three@0.172.0)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.172.0)(use-sync-external-store@1.4.0(react@19.0.0))
       '@react-three/fiber':
         specifier: ^9.0.0-rc.1
         version: 9.0.0-rc.2(@types/react@19.0.4)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.172.0)
@@ -2856,8 +2856,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-three/drei@9.120.5':
-    resolution: {integrity: sha512-hSu3q+gq546Op4aihIkbdIsFfjrmOqcJyMPNGv/IqM0nycJtvv5IzL+MISLplFTNFI6xMBJ9ZwC+7dpq35/FOA==}
+  '@react-three/drei@9.120.6':
+    resolution: {integrity: sha512-ppq2efhLe3d0WY5/g7eH2ap0r8hbqop+NP5PL3VJ3zk3MZgNoqdYrf06r+TXur1RevCabX/UA0Nzb7C4hWt+Ow==}
     peerDependencies:
       '@react-three/fiber': ^8 || ^9.0.0-0
       react: ^18
@@ -9183,8 +9183,8 @@ packages:
       react:
         optional: true
 
-  zustand@5.0.2:
-    resolution: {integrity: sha512-8qNdnJVJlHlrKXi50LDqqUNmUbuBjoKLrYQBnoChIbVph7vni+sY+YpvdjXG9YLd/Bxr6scMcR+rm5H3aSqPaw==}
+  zustand@5.0.3:
+    resolution: {integrity: sha512-14fwWQtU3pH4dE0dOpdMiWjddcH+QzKIgk1cl8epwSE7yag43k/AD/m4L6+K7DytAOr9gGBe3/EXj9g7cdostg==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=18.0.0'
@@ -11831,7 +11831,7 @@ snapshots:
       '@swc/helpers': 0.5.15
       react: 19.0.0
 
-  '@react-three/drei@9.120.5(@react-three/fiber@9.0.0-rc.2(@types/react@19.0.4)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.172.0))(@types/react@19.0.4)(@types/three@0.172.0)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.172.0)(use-sync-external-store@1.4.0(react@19.0.0))':
+  '@react-three/drei@9.120.6(@react-three/fiber@9.0.0-rc.2(@types/react@19.0.4)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.172.0))(@types/react@19.0.4)(@types/three@0.172.0)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.172.0)(use-sync-external-store@1.4.0(react@19.0.0))':
     dependencies:
       '@babel/runtime': 7.26.0
       '@mediapipe/tasks-vision': 0.10.17
@@ -11858,7 +11858,7 @@ snapshots:
       tunnel-rat: 0.1.2(@types/react@19.0.4)(immer@10.1.1)(react@19.0.0)
       utility-types: 3.11.0
       uuid: 9.0.1
-      zustand: 5.0.2(@types/react@19.0.4)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
+      zustand: 5.0.3(@types/react@19.0.4)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
     optionalDependencies:
       react-dom: 19.0.0(react@19.0.0)
     transitivePeerDependencies:
@@ -19003,7 +19003,7 @@ snapshots:
       immer: 10.1.1
       react: 19.0.0
 
-  zustand@5.0.2(@types/react@19.0.4)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0)):
+  zustand@5.0.3(@types/react@19.0.4)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0)):
     optionalDependencies:
       '@types/react': 19.0.4
       immer: 10.1.1
