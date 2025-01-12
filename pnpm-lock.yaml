@@ -94,7 +94,7 @@ importers:
         version: 9.6.0
       pino-http:
         specifier: ^10.3.0
-        version: 10.3.0
+        version: 10.4.0
       socket.io:
         specifier: ^4.7.5
         version: 4.8.1
@@ -7206,8 +7206,8 @@ packages:
   pino-abstract-transport@2.0.0:
     resolution: {integrity: sha512-F63x5tizV6WCh4R6RHyi2Ml+M70DNRXt/+HANowMflpgGFMAym/VKm6G7ZOQRjqN7XbGxK1Lg9t6ZrtzOaivMw==}
 
-  pino-http@10.3.0:
-    resolution: {integrity: sha512-kaHQqt1i5S9LXWmyuw6aPPqYW/TjoDPizPs4PnDW4hSpajz2Uo/oisNliLf7We1xzpiLacdntmw8yaZiEkppQQ==}
+  pino-http@10.4.0:
+    resolution: {integrity: sha512-vjQsKBE+VN1LVchjbfLE7B6nBeGASZNRNKsR68VS0DolTm5R3zo+47JX1wjm0O96dcbvA7vnqt8YqOWlG5nN0w==}
 
   pino-pretty@13.0.0:
     resolution: {integrity: sha512-cQBBIVG3YajgoUjo1FdKVRX6t9XPxwB9lcNJVD5GCnNM4Y6T12YYx8c6zEejxQsU0wrg9TwmDulcE9LR7qcJqA==}
@@ -7435,6 +7435,9 @@ packages:
 
   process-warning@4.0.0:
     resolution: {integrity: sha512-/MyYDxttz7DfGMMHiysAsFE4qF+pQYAA8ziO/3NcRVrQ5fSk+Mns4QZA/oRPFzvcqNoVJXQNWNAsdwBXLUkQKw==}
+
+  process-warning@4.0.1:
+    resolution: {integrity: sha512-3c2LzQ3rY9d0hc1emcsHhfT9Jwz0cChib/QN89oME2R451w5fy3f0afAhERFZAwrbDU43wk12d0ORBpDVME50Q==}
 
   progress@2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
@@ -16823,12 +16826,12 @@ snapshots:
     dependencies:
       split2: 4.2.0
 
-  pino-http@10.3.0:
+  pino-http@10.4.0:
     dependencies:
       get-caller-file: 2.0.5
       pino: 9.6.0
       pino-std-serializers: 7.0.0
-      process-warning: 4.0.0
+      process-warning: 4.0.1
 
   pino-pretty@13.0.0:
     dependencies:
@@ -17001,6 +17004,8 @@ snapshots:
   process-nextick-args@2.0.1: {}
 
   process-warning@4.0.0: {}
+
+  process-warning@4.0.1: {}
 
   progress@2.0.3: {}
 
