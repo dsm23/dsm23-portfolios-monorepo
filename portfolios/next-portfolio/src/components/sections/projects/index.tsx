@@ -20,7 +20,7 @@ const projects: Project[] = [
   },
   {
     title: "IMH website",
-    to: "https://nextjs-imh.vercel.app/",
+    to: "https://imh.davidmurdochconsulting.site/",
     description:
       "A website for my parent's company. Built with Tailwind and Next.js and uses Contentful as a CMS",
   },
