@@ -298,7 +298,7 @@ importers:
         version: 19.0.0
       react-day-picker:
         specifier: ^9.5.0
-        version: 9.5.0(react@19.0.0)
+        version: 9.5.1(react@19.0.0)
       react-dom:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
@@ -7424,8 +7424,8 @@ packages:
     peerDependencies:
       react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
 
-  react-day-picker@9.5.0:
-    resolution: {integrity: sha512-WmJnPFVLnKh5Qscm7wavMNg86rqPverSWjx+zgK8/ZmGRSQ8c8OoqW10RI+AzAfT2atIxImpCUU2R9Z7Xb2SUA==}
+  react-day-picker@9.5.1:
+    resolution: {integrity: sha512-PxuK8inYLlYgM2zZUVBPsaBM5jI40suPeG+naKyx7kpyF032RRlEAUEjkpW9/poTASh/vyWAOVqjGuGw+47isw==}
     engines: {node: '>=18'}
     peerDependencies:
       react: '>=16.8.0'
@@ -16941,7 +16941,7 @@ snapshots:
       prop-types: 15.8.1
       react: 19.0.0
 
-  react-day-picker@9.5.0(react@19.0.0):
+  react-day-picker@9.5.1(react@19.0.0):
     dependencies:
       '@date-fns/tz': 1.2.0
       date-fns: 4.1.0
