@@ -282,8 +282,8 @@ importers:
         specifier: ^3.3.1
         version: 3.3.1(three@0.173.0)
       motion:
-        specifier: 12.4.0
-        version: 12.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 12.4.1
+        version: 12.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next:
         specifier: 15.1.6
         version: 15.1.6(@babel/core@7.26.7)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.81.0)
@@ -313,7 +313,7 @@ importers:
         version: 2.1.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react-transition-progress:
         specifier: ^0.0.4
-        version: 0.0.4(framer-motion@12.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.1.6(@babel/core@7.26.7)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.81.0))(react@19.0.0)
+        version: 0.0.4(framer-motion@12.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.1.6(@babel/core@7.26.7)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.81.0))(react@19.0.0)
       react-use:
         specifier: ^17.6.0
         version: 17.6.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -5075,8 +5075,8 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  framer-motion@12.4.0:
-    resolution: {integrity: sha512-QX92ThRniev3YTkjXOV/7m9fXBRQ5xDDRWDinuU//Xkjh+q9ppg3Nb0b95xgJYd2AE0rgJ7eoihY+Z+jjSv22w==}
+  framer-motion@12.4.1:
+    resolution: {integrity: sha512-5Ijbea3topSZjadQ0hgc/TcWj2ldMZmNREM7RvAhvsThYOA1HHOA8TT1yKvMu1YXP3jWaFwoZ6Vo9Nw+DUZrzA==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -6582,8 +6582,8 @@ packages:
   motion-utils@12.0.0:
     resolution: {integrity: sha512-MNFiBKbbqnmvOjkPyOKgHUp3Q6oiokLkI1bEwm5QA28cxMZrv0CbbBGDNmhF6DIXsi1pCQBSs0dX8xjeER1tmA==}
 
-  motion@12.4.0:
-    resolution: {integrity: sha512-5AlCJ5wrGIbxvPwR3R17/POKQH7JNHbLTwvbbj3adz63AZwuZx80i5b4eax4ED1l6fkYTQZo9sP2zAq3rdkUKQ==}
+  motion@12.4.1:
+    resolution: {integrity: sha512-TBnf5NyZVZFOHOc87fyC6qTSU+6LUe09LwxA1Sna35YL7qgOv1EZv96mu6o7uQ2Rl1GvTSQLeyfrQAEG+zlh+w==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -14324,7 +14324,7 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@12.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  framer-motion@12.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       motion-dom: 12.0.0
       motion-utils: 12.0.0
@@ -16056,9 +16056,9 @@ snapshots:
 
   motion-utils@12.0.0: {}
 
-  motion@12.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  motion@12.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
-      framer-motion: 12.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      framer-motion: 12.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       tslib: 2.8.1
     optionalDependencies:
       react: 19.0.0
@@ -16914,9 +16914,9 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.0.8
 
-  react-transition-progress@0.0.4(framer-motion@12.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.1.6(@babel/core@7.26.7)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.81.0))(react@19.0.0):
+  react-transition-progress@0.0.4(framer-motion@12.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.1.6(@babel/core@7.26.7)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.81.0))(react@19.0.0):
     dependencies:
-      framer-motion: 12.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      framer-motion: 12.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react: 19.0.0
     optionalDependencies:
       next: 15.1.6(@babel/core@7.26.7)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.81.0)
