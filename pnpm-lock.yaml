@@ -537,7 +537,7 @@ importers:
         version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
       autoprefixer:
         specifier: ^10.4.19
-        version: 10.4.20(postcss@8.5.2)
+        version: 10.4.20(postcss@8.5.3)
       eslint:
         specifier: ^9.17.0
         version: 9.20.1(jiti@2.4.2)
@@ -561,13 +561,13 @@ importers:
         version: 7.0.2
       postcss:
         specifier: ^8.4.38
-        version: 8.5.2
+        version: 8.5.3
       prettier-plugin-css-order:
         specifier: ^2.1.2
-        version: 2.1.2(postcss@8.5.2)(prettier@3.5.1)
+        version: 2.1.2(postcss@8.5.3)(prettier@3.5.1)
       prettier-plugin-tailwindcss:
         specifier: ^0.6.9
-        version: 0.6.11(@ianvs/prettier-plugin-sort-imports@4.4.1(prettier@3.5.1))(prettier-plugin-css-order@2.1.2(postcss@8.5.2)(prettier@3.5.1))(prettier@3.5.1)
+        version: 0.6.11(@ianvs/prettier-plugin-sort-imports@4.4.1(prettier@3.5.1))(prettier-plugin-css-order@2.1.2(postcss@8.5.3)(prettier@3.5.1))(prettier@3.5.1)
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17(ts-node@10.9.2(@swc/core@1.7.35(@swc/helpers@0.5.15))(@types/node@22.13.5)(typescript@5.7.3))
@@ -7270,10 +7270,6 @@ packages:
     resolution: {integrity: sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.2:
-    resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
-    engines: {node: ^10 || ^12 || >=14}
-
   postcss@8.5.3:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
@@ -12743,16 +12739,6 @@ snapshots:
 
   auto-bind@4.0.0: {}
 
-  autoprefixer@10.4.20(postcss@8.5.2):
-    dependencies:
-      browserslist: 4.24.2
-      caniuse-lite: 1.0.30001684
-      fraction.js: 4.3.7
-      normalize-range: 0.1.2
-      picocolors: 1.1.1
-      postcss: 8.5.2
-      postcss-value-parser: 4.2.0
-
   autoprefixer@10.4.20(postcss@8.5.3):
     dependencies:
       browserslist: 4.24.2
@@ -13453,10 +13439,6 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
-
-  css-declaration-sorter@7.2.0(postcss@8.5.2):
-    dependencies:
-      postcss: 8.5.2
 
   css-declaration-sorter@7.2.0(postcss@8.5.3):
     dependencies:
@@ -16993,10 +16975,6 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.5.3
 
-  postcss-less@6.0.0(postcss@8.5.2):
-    dependencies:
-      postcss: 8.5.2
-
   postcss-less@6.0.0(postcss@8.5.3):
     dependencies:
       postcss: 8.5.3
@@ -17037,10 +17015,6 @@ snapshots:
     dependencies:
       postcss: 8.5.1
 
-  postcss-scss@4.0.9(postcss@8.5.2):
-    dependencies:
-      postcss: 8.5.2
-
   postcss-scss@4.0.9(postcss@8.5.3):
     dependencies:
       postcss: 8.5.3
@@ -17079,12 +17053,6 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.2:
-    dependencies:
-      nanoid: 3.3.8
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
   postcss@8.5.3:
     dependencies:
       nanoid: 3.3.8
@@ -17095,15 +17063,6 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-css-order@2.1.2(postcss@8.5.2)(prettier@3.5.1):
-    dependencies:
-      css-declaration-sorter: 7.2.0(postcss@8.5.2)
-      postcss-less: 6.0.0(postcss@8.5.2)
-      postcss-scss: 4.0.9(postcss@8.5.2)
-      prettier: 3.5.1
-    transitivePeerDependencies:
-      - postcss
-
   prettier-plugin-css-order@2.1.2(postcss@8.5.3)(prettier@3.5.1):
     dependencies:
       css-declaration-sorter: 7.2.0(postcss@8.5.3)
@@ -17112,13 +17071,6 @@ snapshots:
       prettier: 3.5.1
     transitivePeerDependencies:
       - postcss
-
-  prettier-plugin-tailwindcss@0.6.11(@ianvs/prettier-plugin-sort-imports@4.4.1(prettier@3.5.1))(prettier-plugin-css-order@2.1.2(postcss@8.5.2)(prettier@3.5.1))(prettier@3.5.1):
-    dependencies:
-      prettier: 3.5.1
-    optionalDependencies:
-      '@ianvs/prettier-plugin-sort-imports': 4.4.1(prettier@3.5.1)
-      prettier-plugin-css-order: 2.1.2(postcss@8.5.2)(prettier@3.5.1)
 
   prettier-plugin-tailwindcss@0.6.11(@ianvs/prettier-plugin-sort-imports@4.4.1(prettier@3.5.1))(prettier-plugin-css-order@2.1.2(postcss@8.5.3)(prettier@3.5.1))(prettier@3.5.1):
     dependencies:
