@@ -1,6 +1,6 @@
 services:
   mongo:
-    image: mongo:latest
+    image: mongo:latest@sha256:961312ca9515df749899104fc85900918f0601f371f4f0816cf20d594c9773e1
     ports:
       - "27017:27017"
     command:
