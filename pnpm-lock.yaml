@@ -382,13 +382,13 @@ importers:
         specifier: ^0.12.0
         version: 0.12.0(typescript@5.7.3)(zod@3.24.2)
       '@testing-library/jest-dom':
-        specifier: ^6.5.0
+        specifier: 6.6.3
         version: 6.6.3
       '@testing-library/react':
         specifier: 16.2.0
         version: 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@testing-library/user-event':
-        specifier: ^14.5.2
+        specifier: 14.6.1
         version: 14.6.1(@testing-library/dom@10.4.0)
       '@types/chance':
         specifier: ^1.1.6
@@ -454,13 +454,13 @@ importers:
         specifier: ^9.1.7
         version: 9.1.7
       jest:
-        specifier: ^29.4.1
+        specifier: 29.7.0
         version: 29.7.0(@types/node@22.13.5)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.7.35(@swc/helpers@0.5.15))(@types/node@22.13.5)(typescript@5.7.3))
       jest-environment-jsdom:
-        specifier: ^29.4.1
+        specifier: 29.7.0
         version: 29.7.0
       jest-environment-node:
-        specifier: ^29.4.1
+        specifier: 29.7.0
         version: 29.7.0
       jsdom:
         specifier: ~25.0.1
