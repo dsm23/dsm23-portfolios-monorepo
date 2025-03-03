@@ -71,7 +71,7 @@ jobs:
       # Here's the first place where next-bundle-analysis' own script is used
       # This step pulls the raw bundle stats for the current bundle
       - name: Analyze bundle
-        run: node ./scripts/report-bundle-size.js
+        run: node ./scripts/reportBundleSize.js
 
       - name: FooBar
         run: echo ${{ github.workspace }}
