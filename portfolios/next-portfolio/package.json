@@ -93,7 +93,7 @@
     "@types/three": "0.174.0",
     "@typescript-eslint/eslint-plugin": "8.26.0",
     "@typescript-eslint/parser": "8.26.0",
-    "autoprefixer": "10.4.20",
+    "autoprefixer": "10.4.21",
     "babel-jest": "29.7.0",
     "dotenv": "16.4.7",
     "eslint": "9.21.0",
