@@ -69,8 +69,8 @@ importers:
         specifier: 4.21.2
         version: 4.21.2
       express-http-context:
-        specifier: 1.2.4
-        version: 1.2.4
+        specifier: 1.2.5
+        version: 1.2.5
       express-rate-limit:
         specifier: 7.5.0
         version: 7.5.0(express@4.21.2)
@@ -4585,8 +4585,8 @@ packages:
     resolution: {integrity: sha512-2Zks0hf1VLFYI1kbh0I5jP3KHHyCHpkfyHBzsSXRFgl/Bg9mWYfMW8oD+PdMPlEwy5HNsR9JutYy6pMeOh61nw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
-  express-http-context@1.2.4:
-    resolution: {integrity: sha512-jPpBbF1MWWdRcUU1rxsX0CPnA8ueEj8xgWvpRGHoXWGI4l5KqhPY4Bq+Gt6s2IhqHQQ0g0wIvJ3jFfbUuJJycQ==}
+  express-http-context@1.2.5:
+    resolution: {integrity: sha512-3wH4zvH7hkD/b0EJfAM7fafMzPqr7tKqWaVXJrEt6GH+U1a0WykIjoFY3pJbAke9Z78q6znz1Cpgm+Q5VsQsmw==}
     engines: {node: '>=8.0.0 <10.0.0 || >=10.4.0'}
 
   express-rate-limit@7.5.0:
@@ -13536,7 +13536,7 @@ snapshots:
       jest-message-util: 29.7.0
       jest-util: 29.7.0
 
-  express-http-context@1.2.4:
+  express-http-context@1.2.5:
     dependencies:
       '@types/cls-hooked': 4.3.9
       '@types/express': 4.17.21
