@@ -78,7 +78,7 @@
     "@ianvs/prettier-plugin-sort-imports": "4.4.1",
     "@jest/globals": "29.7.0",
     "@next/bundle-analyzer": "15.2.3",
-    "@playwright/test": "1.51.0",
+    "@playwright/test": "1.51.1",
     "@repo/config-stylelint": "workspace:*",
     "@repo/config-typescript": "workspace:*",
     "@t3-oss/env-nextjs": "0.12.0",
