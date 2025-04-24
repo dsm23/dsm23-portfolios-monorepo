@@ -84,8 +84,8 @@ importers:
         specifier: 9.0.2
         version: 9.0.2
       mongoose:
-        specifier: 8.13.2
-        version: 8.13.2(socks@2.8.3)
+        specifier: 8.13.3
+        version: 8.13.3(socks@2.8.3)
       multer:
         specifier: 1.4.5-lts.2
         version: 1.4.5-lts.2
@@ -6483,8 +6483,8 @@ packages:
       socks:
         optional: true
 
-  mongoose@8.13.2:
-    resolution: {integrity: sha512-riCBqZmNkYBWjXpM3qWLDQw7QmTKsVZDPhLXFJqC87+OjocEVpvS3dA2BPPUiLAu+m0/QmEj5pSXKhH+/DgerQ==}
+  mongoose@8.13.3:
+    resolution: {integrity: sha512-85S6AOABJcgn77ZKFZKOQkWID69vvtv0YFOk+mMOUrq/7+ziIyybWGZSGQRxN9M41Ehe6a9ug41nV13uJFB9Pw==}
     engines: {node: '>=16.20.1'}
 
   morgan@1.10.0:
@@ -15862,7 +15862,7 @@ snapshots:
     optionalDependencies:
       socks: 2.8.3
 
-  mongoose@8.13.2(socks@2.8.3):
+  mongoose@8.13.3(socks@2.8.3):
     dependencies:
       bson: 6.10.3
       kareem: 2.6.3
