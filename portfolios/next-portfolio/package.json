@@ -81,7 +81,7 @@
     "@playwright/test": "1.52.0",
     "@repo/config-stylelint": "workspace:*",
     "@repo/config-typescript": "workspace:*",
-    "@t3-oss/env-nextjs": "0.13.0",
+    "@t3-oss/env-nextjs": "0.13.4",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
