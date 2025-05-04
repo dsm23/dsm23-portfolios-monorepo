@@ -199,7 +199,7 @@ importers:
         version: 2.2.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@hookform/resolvers':
         specifier: 3.10.0
-        version: 3.10.0(react-hook-form@7.56.1(react@19.1.0))
+        version: 3.10.0(react-hook-form@7.56.2(react@19.1.0))
       '@jest/types':
         specifier: 29.6.3
         version: 29.6.3
@@ -303,8 +303,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-hook-form:
-        specifier: 7.56.1
-        version: 7.56.1(react@19.1.0)
+        specifier: 7.56.2
+        version: 7.56.2(react@19.1.0)
       react-redux:
         specifier: 9.2.0
         version: 9.2.0(@types/react@19.1.2)(react@19.1.0)(redux@5.0.1)
@@ -7439,8 +7439,8 @@ packages:
     peerDependencies:
       react: ^19.1.0
 
-  react-hook-form@7.56.1:
-    resolution: {integrity: sha512-qWAVokhSpshhcEuQDSANHx3jiAEFzu2HAaaQIzi/r9FNPm1ioAvuJSD4EuZzWd7Al7nTRKcKPnBKO7sRn+zavQ==}
+  react-hook-form@7.56.2:
+    resolution: {integrity: sha512-vpfuHuQMF/L6GpuQ4c3ZDo+pRYxIi40gQqsCmmfUBwm+oqvBhKhwghCuj2o00YCgSfU6bR9KC/xnQGWm3Gr08A==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
@@ -10407,9 +10407,9 @@ snapshots:
       react-dom: 19.1.0(react@19.1.0)
       use-sync-external-store: 1.5.0(react@19.1.0)
 
-  '@hookform/resolvers@3.10.0(react-hook-form@7.56.1(react@19.1.0))':
+  '@hookform/resolvers@3.10.0(react-hook-form@7.56.2(react@19.1.0))':
     dependencies:
-      react-hook-form: 7.56.1(react@19.1.0)
+      react-hook-form: 7.56.2(react@19.1.0)
 
   '@humanfs/core@0.19.1': {}
 
@@ -17049,7 +17049,7 @@ snapshots:
       react: 19.1.0
       scheduler: 0.26.0
 
-  react-hook-form@7.56.1(react@19.1.0):
+  react-hook-form@7.56.2(react@19.1.0):
     dependencies:
       react: 19.1.0
 
