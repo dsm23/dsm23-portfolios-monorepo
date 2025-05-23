@@ -48,8 +48,8 @@ importers:
   apps/chat-app-server:
     dependencies:
       '@asteasolutions/zod-to-openapi':
-        specifier: 7.3.0
-        version: 7.3.0(zod@3.25.23)
+        specifier: 7.3.2
+        version: 7.3.2(zod@3.25.23)
       bcrypt:
         specifier: 5.1.1
         version: 5.1.1
@@ -612,8 +612,8 @@ packages:
   '@asamuzakjp/css-color@2.8.3':
     resolution: {integrity: sha512-GIc76d9UI1hCvOATjZPyHFmE5qhRccp3/zGfMPapK3jBi+yocEzp6BBB0UnfRYP9NP4FANqUZYb0hnfs3TM3hw==}
 
-  '@asteasolutions/zod-to-openapi@7.3.0':
-    resolution: {integrity: sha512-7tE/r1gXwMIvGnXVUdIqUhCU1RevEFC4Jk6Bussa0fk1ecbnnINkZzj1EOAJyE/M3AI25DnHT/zKQL1/FPFi8Q==}
+  '@asteasolutions/zod-to-openapi@7.3.2':
+    resolution: {integrity: sha512-Wvl+jHwSgYrRc3tQLMG7Qxq6wn0WjDk8E9ZA0lAyW73FqK18XPHVIKpk0lA6L0S+zmzzNKTndeV2v/Or0LyfHQ==}
     peerDependencies:
       zod: ^3.20.2
 
@@ -8872,7 +8872,7 @@ snapshots:
       '@csstools/css-tokenizer': 3.0.3
       lru-cache: 10.4.3
 
-  '@asteasolutions/zod-to-openapi@7.3.0(zod@3.25.23)':
+  '@asteasolutions/zod-to-openapi@7.3.2(zod@3.25.23)':
     dependencies:
       openapi3-ts: 4.4.0
       zod: 3.25.23
