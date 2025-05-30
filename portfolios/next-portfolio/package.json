@@ -62,7 +62,7 @@
     "redux": "5.0.1",
     "reselect": "5.1.1",
     "resend": "4.5.1",
-    "sonner": "2.0.3",
+    "sonner": "2.0.4",
     "tailwind-merge": "2.6.0",
     "tailwindcss-animate": "1.0.7",
     "three": "0.176.0",
