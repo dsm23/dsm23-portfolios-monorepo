@@ -73,7 +73,7 @@
   "devDependencies": {
     "@babel/core": "7.27.4",
     "@babel/preset-react": "7.27.1",
-    "@graphql-codegen/cli": "5.0.6",
+    "@graphql-codegen/cli": "5.0.7",
     "@graphql-codegen/typescript-operations": "4.6.1",
     "@ianvs/prettier-plugin-sort-imports": "4.4.2",
     "@jest/globals": "29.7.0",
