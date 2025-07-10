@@ -71,7 +71,7 @@
     "zod": "3.25.76"
   },
   "devDependencies": {
-    "@babel/core": "7.27.4",
+    "@babel/core": "7.28.0",
     "@babel/preset-react": "7.27.1",
     "@graphql-codegen/cli": "5.0.7",
     "@graphql-codegen/typescript-operations": "4.6.1",
