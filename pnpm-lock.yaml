@@ -519,7 +519,7 @@ importers:
         version: 4.4.2(prettier@3.5.3)
       '@react-router/dev':
         specifier: 7.7.0
-        version: 7.7.0(@react-router/serve@7.7.0(react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.16.5)(babel-plugin-macros@3.1.0)(jiti@2.4.2)(less@4.1.3)(react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(typescript@5.8.3)(vite@6.3.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0))(yaml@2.7.0)
+        version: 7.7.0(@react-router/serve@7.7.0(react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.16.5)(babel-plugin-macros@3.1.0)(jiti@2.4.2)(less@4.1.3)(react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(typescript@5.8.3)(vite@7.0.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0))(yaml@2.7.0)
       '@types/react':
         specifier: 19.1.8
         version: 19.1.8
@@ -575,11 +575,11 @@ importers:
         specifier: 8.38.0
         version: 8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
       vite:
-        specifier: 6.3.5
-        version: 6.3.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)
+        specifier: 7.0.5
+        version: 7.0.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)
       vite-tsconfig-paths:
         specifier: 5.1.4
-        version: 5.1.4(typescript@5.8.3)(vite@6.3.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0))
+        version: 5.1.4(typescript@5.8.3)(vite@7.0.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0))
 
 packages:
 
@@ -4879,6 +4879,14 @@ packages:
       picomatch:
         optional: true
 
+  fdir@6.4.6:
+    resolution: {integrity: sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+
   fetch-blob@3.2.0:
     resolution: {integrity: sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==}
     engines: {node: ^12.20 || >= 14.13}
@@ -8566,19 +8574,19 @@ packages:
       vite:
         optional: true
 
-  vite@6.3.5:
-    resolution: {integrity: sha512-cZn6NDFE7wdTpINgs++ZJ4N49W2vRp8LCKrn3Ob1kYNtOo21vfDoaV5GzBfLU4MovSAB8uNRm4jgzVQZ+mBzPQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
+  vite@7.0.5:
+    resolution: {integrity: sha512-1mncVwJxy2C9ThLwz0+2GKZyEXuC3MyWtAAlNftlZZXZDP3AJt5FmwcMit/IGGaNZ8ZOB2BNO/HFUB+CpN0NQw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
+      '@types/node': ^20.19.0 || >=22.12.0
       jiti: '>=1.21.0'
-      less: '*'
+      less: ^4.0.0
       lightningcss: ^1.21.0
-      sass: '*'
-      sass-embedded: '*'
-      stylus: '*'
-      sugarss: '*'
+      sass: ^1.70.0
+      sass-embedded: ^1.70.0
+      stylus: '>=0.54.8'
+      sugarss: ^5.0.0
       terser: ^5.16.0
       tsx: ^4.8.1
       yaml: ^2.4.2
@@ -11170,7 +11178,7 @@ snapshots:
       react-dom: 19.1.0(react@19.1.0)
       react-promise-suspense: 0.3.4
 
-  '@react-router/dev@7.7.0(@react-router/serve@7.7.0(react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.16.5)(babel-plugin-macros@3.1.0)(jiti@2.4.2)(less@4.1.3)(react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(typescript@5.8.3)(vite@6.3.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0))(yaml@2.7.0)':
+  '@react-router/dev@7.7.0(@react-router/serve@7.7.0(react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.16.5)(babel-plugin-macros@3.1.0)(jiti@2.4.2)(less@4.1.3)(react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(typescript@5.8.3)(vite@7.0.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0))(yaml@2.7.0)':
     dependencies:
       '@babel/core': 7.28.0
       '@babel/generator': 7.28.0
@@ -11199,7 +11207,7 @@ snapshots:
       set-cookie-parser: 2.7.1
       tinyglobby: 0.2.14
       valibot: 0.41.0(typescript@5.8.3)
-      vite: 6.3.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)
+      vite: 7.0.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)
       vite-node: 3.2.4(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)
     optionalDependencies:
       '@react-router/serve': 7.7.0(react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
@@ -14099,6 +14107,10 @@ snapshots:
       pend: 1.2.0
 
   fdir@6.4.4(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
+
+  fdir@6.4.6(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
 
@@ -18214,7 +18226,7 @@ snapshots:
       debug: 4.4.1
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 6.3.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)
+      vite: 7.0.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -18229,25 +18241,25 @@ snapshots:
       - tsx
       - yaml
 
-  vite-tsconfig-paths@5.1.4(typescript@5.8.3)(vite@6.3.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)):
+  vite-tsconfig-paths@5.1.4(typescript@5.8.3)(vite@7.0.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)):
     dependencies:
       debug: 4.4.0
       globrex: 0.1.2
       tsconfck: 3.1.4(typescript@5.8.3)
     optionalDependencies:
-      vite: 6.3.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)
+      vite: 7.0.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@6.3.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0):
+  vite@7.0.5(@types/node@22.16.5)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.3)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.0
-      fdir: 6.4.4(picomatch@4.0.2)
+      fdir: 6.4.6(picomatch@4.0.2)
       picomatch: 4.0.2
       postcss: 8.5.6
       rollup: 4.40.0
-      tinyglobby: 0.2.13
+      tinyglobby: 0.2.14
     optionalDependencies:
       '@types/node': 22.16.5
       fsevents: 2.3.3
