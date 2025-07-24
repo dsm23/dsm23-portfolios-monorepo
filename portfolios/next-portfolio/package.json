@@ -18,7 +18,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "16.1.0",
     "@contentful/rich-text-types": "17.1.0",
-    "@headlessui/react": "2.2.5",
+    "@headlessui/react": "2.2.6",
     "@hookform/resolvers": "3.10.0",
     "@jest/types": "29.6.3",
     "@nivo/core": "0.99.0",
