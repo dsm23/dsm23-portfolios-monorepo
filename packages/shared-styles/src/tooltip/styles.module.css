@@ -111,21 +111,21 @@
 
 /* top tooltip styles */
 .tooltip:is(
-    [data-tip-position="top"],
-    [data-tip-position="block-start"],
-    :not([data-tip-position]),
-    [data-tip-position="bottom"],
-    [data-tip-position="block-end"]
-  ) {
+  [data-tip-position="top"],
+  [data-tip-position="block-start"],
+  :not([data-tip-position]),
+  [data-tip-position="bottom"],
+  [data-tip-position="block-end"]
+) {
   text-align: center;
 }
 
 /* TOP || BLOCK START */
 .tooltip:is(
-    [data-tip-position="top"],
-    [data-tip-position="block-start"],
-    :not([data-tip-position])
-  ) {
+  [data-tip-position="top"],
+  [data-tip-position="block-start"],
+  :not([data-tip-position])
+) {
   inset-block-end: calc(100% + var(--_p-block) + var(--_triangle-size));
   inset-inline-start: 50%;
   --_x: calc(50% * var(--isRTL));
