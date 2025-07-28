@@ -35,7 +35,7 @@ const schema = z.object({
     .min(1),
   stooge: z.literal("larry").or(z.literal("moe")).or(z.literal("curly")),
   dob: z.date({
-    required_error: "A date of birth is required.",
+    error: "A date of birth is required.",
   }),
   phoneNumber: z.string().transform((value, ctx) => {
     if (isValidPhoneNumber(value, "GB")) {
