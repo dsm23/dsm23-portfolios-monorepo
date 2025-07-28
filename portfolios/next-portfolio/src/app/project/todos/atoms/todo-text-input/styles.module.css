@@ -1,4 +1,6 @@
 .input::placeholder {
+  /* TODO: remove the stylelint disable statement after upgrade to tailwind v4 */
+  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   color: theme(colors.foreground);
   font-style: italic;
   font-weight: 400;
@@ -13,7 +15,7 @@
   margin: 0;
   padding: 6px;
   border: 1px solid #999;
-  box-shadow: inset 0 -1px 5px 0 rgba(0 0 0 / 20%);
+  box-shadow: inset 0 -1px 5px 0 rgb(0 0 0 / 20%);
   color: inherit;
   font-weight: inherit;
   font-size: 24px;
@@ -27,6 +29,6 @@
   height: 65px;
   padding: 16px 16px 16px 60px;
   border: none;
-  background: rgba(0 0 0 / 0.3%);
-  box-shadow: inset 0 -2px 1px rgba(0 0 0 / 3%);
+  background: rgb(0 0 0 / 0.3%);
+  box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
 }
