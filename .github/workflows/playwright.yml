@@ -12,8 +12,11 @@ on:
 env:
   HUSKY: 0
 
+permissions:
+  contents: read
+
 jobs:
-  playwright-tests:
+  playwright-test-shard:
     timeout-minutes: 60
     runs-on: ubuntu-24.04
     strategy:
@@ -28,22 +31,15 @@ jobs:
         uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
         with:
           egress-policy: audit
+
       - name: Git Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          fetch-depth: 0
-      - name: Install pnpm
-        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
-        with:
-          run_install: false
-      - name: Set up Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
-        with:
-          # We want to ensure that the Node.js version running here respects our supported versions
-          node-version-file: ".nvmrc"
-          cache: "pnpm"
-      - name: Install dependencies
-        run: pnpm install
+          persist-credentials: false
+
+      - name: Node setup
+        uses: ./.github/actions/setup
+
       - name: Run Playwright tests
         run: pnpm e2e -- --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
         env:
@@ -55,6 +51,7 @@ jobs:
           ORIGIN_URL: ${{ vars.VERCEL_URL }}
           # Required for firefox
           HOME: /root
+
       - name: Upload blob report to GitHub Actions Artifacts
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -62,3 +59,11 @@ jobs:
           name: playwright-report-${{ matrix.shardIndex }}
           path: portfolios/**/playwright-report
           retention-days: 1
+
+  playwright-tests:
+    runs-on: ubuntu-24.04
+    needs:
+      - playwright-test-shard
+    steps:
+      - if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
+        run: exit 1
