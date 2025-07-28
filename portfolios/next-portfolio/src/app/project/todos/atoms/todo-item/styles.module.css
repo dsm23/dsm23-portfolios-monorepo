@@ -58,6 +58,9 @@
   padding: 15px 15px 15px 60px;
 
   /* color: #484848; */
+
+  /* TODO: remove the stylelint disable statement after upgrade to tailwind v4 */
+  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   color: theme(colors.foreground);
   font-weight: 400;
   line-height: 1.2;

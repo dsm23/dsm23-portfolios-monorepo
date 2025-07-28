@@ -4,11 +4,16 @@ import type { Config } from "stylelint";
 const CUSTOM_AT_RULES = [
   // Tailwind-specific at-rules
   "apply",
+  "config",
+  "custom-variant",
   "layer",
+  "plugin",
+  "reference",
   "responsive",
-  "screen",
   "tailwind",
-  "variants",
+  "theme",
+  "utility",
+  "variant",
   // PostCSS-specific at-rules
   "define-mixin",
   "mixin",
@@ -18,13 +23,13 @@ const CUSTOM_AT_RULES = [
 // We use these for id selectors and classname selectors
 const ONLY_ALLOW_KEBAB_CASE_SELECTORS = [
   /^(?:[a-z]+(?:-[a-z]+)*)$/,
-  { message: (s) => `Expected '${s}' to be in kebab-case` },
+  { message: (s: string) => `Expected '${s}' to be in kebab-case` },
 ];
 
 // Enforces certain selectors to be camelCase in module.css files
 const ONLY_ALLOW_CAMELCASE_SELECTORS = [
   /^[a-z]+([A-Z][a-z]*)*$/,
-  { message: (s) => `Expected '${s}' to be in camelCase` },
+  { message: (s: string) => `Expected '${s}' to be in camelCase` },
 ];
 
 const config = {
@@ -37,19 +42,30 @@ const config = {
     "selector-id-pattern": ONLY_ALLOW_KEBAB_CASE_SELECTORS,
     // Allow Tailwind-based CSS Rules
     "at-rule-no-unknown": [true, { ignoreAtRules: CUSTOM_AT_RULES }],
-    // Ignore Tailwind's theme and screen functions
-    "function-no-unknown": [true, { ignoreFunctions: ["theme", "screen"] }],
+    "declaration-property-value-no-unknown": [
+      true,
+      {
+        ignoreProperties: {
+          "/.+/": ["/^--spacing/"],
+        },
+      },
+    ],
+    // Ignore Tailwind's theme function
+    "function-no-unknown": [true, { ignoreFunctions: ["theme"] }],
+    "unit-no-unknown": [true, { ignoreFunctions: ["theme"] }],
+    "value-keyword-case": ["lower", { ignoreFunctions: ["theme"] }],
     // Allow the Global CSS Selector
     "selector-pseudo-class-no-unknown": [
       true,
       { ignorePseudoClasses: ["global"] },
     ],
+    "media-query-no-invalid": [true, { ignoreFunctions: ["theme"] }],
     // cssDeclarationSorterOrder: smacss
     "order/properties-order": [
       {
         properties: [
-          "z-index",
           "display",
+          "z-index",
           "position",
           "top",
           "right",
