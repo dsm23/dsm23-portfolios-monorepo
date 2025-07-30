@@ -309,8 +309,8 @@ importers:
         specifier: 9.2.0
         version: 9.2.0(@types/react@19.1.9)(react@19.1.1)(redux@5.0.1)
       react-resizable-panels:
-        specifier: 3.0.3
-        version: 3.0.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        specifier: 3.0.4
+        version: 3.0.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       react-transition-progress:
         specifier: 0.0.4
         version: 0.0.4(framer-motion@12.15.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(next@15.4.4(@babel/core@7.28.0)(@playwright/test@1.54.1)(babel-plugin-macros@3.1.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.81.0))(react@19.1.1)
@@ -7304,8 +7304,8 @@ packages:
       '@types/react':
         optional: true
 
-  react-resizable-panels@3.0.3:
-    resolution: {integrity: sha512-7HA8THVBHTzhDK4ON0tvlGXyMAJN1zBeRpuyyremSikgYh2ku6ltD7tsGQOcXx4NKPrZtYCm/5CBr+dkruTGQw==}
+  react-resizable-panels@3.0.4:
+    resolution: {integrity: sha512-8Y4KNgV94XhUvI2LeByyPIjoUJb71M/0hyhtzkHaqpVHs+ZQs8b627HmzyhmVYi3C9YP6R+XD1KmG7hHjEZXFQ==}
     peerDependencies:
       react: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
       react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
@@ -16697,7 +16697,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.1.9
 
-  react-resizable-panels@3.0.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+  react-resizable-panels@3.0.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
