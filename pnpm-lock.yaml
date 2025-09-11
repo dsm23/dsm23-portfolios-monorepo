@@ -49,7 +49,7 @@ importers:
     dependencies:
       '@asteasolutions/zod-to-openapi':
         specifier: 7.3.4
-        version: 7.3.4(zod@4.1.7)
+        version: 7.3.4(zod@4.1.8)
       bcrypt:
         specifier: 5.1.1
         version: 5.1.1
@@ -102,8 +102,8 @@ importers:
         specifier: 5.0.1
         version: 5.0.1(express@4.21.2)
       zod:
-        specifier: 4.1.7
-        version: 4.1.7
+        specifier: 4.1.8
+        version: 4.1.8
     devDependencies:
       '@ianvs/prettier-plugin-sort-imports':
         specifier: 4.7.0
@@ -345,8 +345,8 @@ importers:
         specifier: 2.8.1
         version: 2.8.1
       zod:
-        specifier: 4.1.7
-        version: 4.1.7
+        specifier: 4.1.8
+        version: 4.1.8
     devDependencies:
       '@babel/core':
         specifier: 7.28.4
@@ -380,7 +380,7 @@ importers:
         version: link:../../packages/config-typescript
       '@t3-oss/env-nextjs':
         specifier: 0.13.8
-        version: 0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.1.7)
+        version: 0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.1.8)
       '@testing-library/jest-dom':
         specifier: 6.8.0
         version: 6.8.0
@@ -9049,8 +9049,8 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.1.7:
-    resolution: {integrity: sha512-6qi6UYyzAl7W9uV29KvcSFXqK4QCYNYUz2YASPNBWpJE1RY6R1nArmmFPgGY/CBYWzpeMw3EOER+DR9a05O4IA==}
+  zod@4.1.8:
+    resolution: {integrity: sha512-5R1P+WwQqmmMIEACyzSvo4JXHY5WiAFHRMg+zBZKgKS+Q1viRa0C1hmUKtHltoIFKtIdki3pRxkmpP74jnNYHQ==}
 
   zustand@4.5.6:
     resolution: {integrity: sha512-ibr/n1hBzLLj5Y+yUcU7dYw8p6WnIVzdJbnX+1YpaScvZVF2ziugqHs+LAmHw4lWO9c/zRj+K1ncgWDQuthEdQ==}
@@ -9123,10 +9123,10 @@ snapshots:
       '@csstools/css-tokenizer': 3.0.4
       lru-cache: 10.4.3
 
-  '@asteasolutions/zod-to-openapi@7.3.4(zod@4.1.7)':
+  '@asteasolutions/zod-to-openapi@7.3.4(zod@4.1.8)':
     dependencies:
       openapi3-ts: 4.4.0
-      zod: 4.1.7
+      zod: 4.1.8
 
   '@babel/code-frame@7.27.1':
     dependencies:
@@ -11796,19 +11796,19 @@ snapshots:
       '@swc/counter': 0.1.3
     optional: true
 
-  '@t3-oss/env-core@0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.1.7)':
+  '@t3-oss/env-core@0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.1.8)':
     optionalDependencies:
       arktype: 2.1.20
       typescript: 5.8.3
-      zod: 4.1.7
+      zod: 4.1.8
 
-  '@t3-oss/env-nextjs@0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.1.7)':
+  '@t3-oss/env-nextjs@0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.1.8)':
     dependencies:
-      '@t3-oss/env-core': 0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.1.7)
+      '@t3-oss/env-core': 0.13.8(arktype@2.1.20)(typescript@5.8.3)(zod@4.1.8)
     optionalDependencies:
       arktype: 2.1.20
       typescript: 5.8.3
-      zod: 4.1.7
+      zod: 4.1.8
 
   '@tanstack/react-virtual@3.13.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18857,7 +18857,7 @@ snapshots:
 
   zod@3.25.76: {}
 
-  zod@4.1.7: {}
+  zod@4.1.8: {}
 
   zustand@4.5.6(@types/react@19.1.12)(immer@10.1.1)(react@19.1.1):
     dependencies:
