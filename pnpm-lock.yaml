@@ -493,11 +493,11 @@ importers:
   portfolios/remix-portfolio:
     dependencies:
       '@react-router/node':
-        specifier: 7.8.2
-        version: 7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
+        specifier: 7.9.1
+        version: 7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
       '@react-router/serve':
-        specifier: 7.8.2
-        version: 7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
+        specifier: 7.9.1
+        version: 7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
       isbot:
         specifier: 5.1.30
         version: 5.1.30
@@ -518,8 +518,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(prettier@3.6.2)
       '@react-router/dev':
-        specifier: 7.8.2
-        version: 7.8.2(@react-router/serve@7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3))(@types/node@24.3.3)(babel-plugin-macros@3.1.0)(jiti@2.4.2)(less@4.1.3)(react-dom@19.1.1(react@19.1.1))(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(typescript@5.8.3)(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1))(yaml@2.8.1)
+        specifier: 7.9.1
+        version: 7.9.1(@react-router/serve@7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3))(@types/node@24.3.3)(@vitejs/plugin-rsc@0.4.11(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1)))(babel-plugin-macros@3.1.0)(jiti@2.4.2)(less@4.1.3)(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(typescript@5.8.3)(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1))(yaml@2.8.1)
       '@types/react':
         specifier: 19.1.13
         version: 19.1.13
@@ -2456,51 +2456,54 @@ packages:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
       react-dom: ^18.0 || ^19.0 || ^19.0.0-rc
 
-  '@react-router/dev@7.8.2':
-    resolution: {integrity: sha512-9ilgQoNhvgvUyQKDapALt9qVO3GpSw9ng5X2BwIhLIwqh8CTyRM/jz5cK53p5yzGiVeyx9njXXfeuxUlvQgJuA==}
+  '@react-router/dev@7.9.1':
+    resolution: {integrity: sha512-fW/qubsdHq1nsufHPLpXa6hiNvXXV9JBtWqRlJ02OOhFeaWERZw4rGoHjG1DCg8/QTTadgbzplmP97ZnzWPkcA==}
     engines: {node: '>=20.0.0'}
     hasBin: true
     peerDependencies:
-      '@react-router/serve': ^7.8.2
-      react-router: ^7.8.2
+      '@react-router/serve': ^7.9.1
+      '@vitejs/plugin-rsc': '*'
+      react-router: ^7.9.1
       typescript: ^5.1.0
       vite: ^5.1.0 || ^6.0.0 || ^7.0.0
       wrangler: ^3.28.2 || ^4.0.0
     peerDependenciesMeta:
       '@react-router/serve':
         optional: true
+      '@vitejs/plugin-rsc':
+        optional: true
       typescript:
         optional: true
       wrangler:
         optional: true
 
-  '@react-router/express@7.8.2':
-    resolution: {integrity: sha512-AJUNsE5Q+vD8TsNlKTw2MGUUnp/QJGlRV1jG2ItV30lwIx2wE7d4NHx/jWkGZIEblHQBTpodcp6MFirZXbisJw==}
+  '@react-router/express@7.9.1':
+    resolution: {integrity: sha512-d1sfsD3AJXZj+C5k3jAmxAD3vJXGfoh3lNmtSwxp0NdZFHI54zPC5S9o80cy3P8p6Gc7XzSEQJYk9k7fAM/AIw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       express: ^4.17.1 || ^5
-      react-router: 7.8.2
+      react-router: 7.9.1
       typescript: ^5.1.0
     peerDependenciesMeta:
       typescript:
         optional: true
 
-  '@react-router/node@7.8.2':
-    resolution: {integrity: sha512-FNepNg4Aya6V0ZxD/+uObtqxtMXcsBGa0ax9PznUh5qr8g4M6Xo9IN+soLb1tghz6iS/F9djFyhJ/lDkF77dEw==}
+  '@react-router/node@7.9.1':
+    resolution: {integrity: sha512-XfyVLM+sDUDB1frGNr7iqaKNglrPwBiUp8+sFdL4///bngy49pUb2RuEtn2J2Cy5yjL+IlKbjJFrsmfimLBmeg==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
-      react-router: 7.8.2
+      react-router: 7.9.1
       typescript: ^5.1.0
     peerDependenciesMeta:
       typescript:
         optional: true
 
-  '@react-router/serve@7.8.2':
-    resolution: {integrity: sha512-1AwKjBWmyWWA7dGCRjn2glWwO6cA7dDX7roP1tosFi5cu1EvqHaqelRH6K6MZSV10Tv6oPtFG7rgV+rCafJvyw==}
+  '@react-router/serve@7.9.1':
+    resolution: {integrity: sha512-yVBSb5KsNCdkSoOk186/M5GJtcIvKE32Ax9LhXySVpM+suCSjucI+p2TXDOJIYsBqr2aKcBl/bNBm5sIJxG/HA==}
     engines: {node: '>=20.0.0'}
     hasBin: true
     peerDependencies:
-      react-router: 7.8.2
+      react-router: 7.9.1
 
   '@react-spring/animated@9.7.5':
     resolution: {integrity: sha512-Tqrwz7pIlsSDITzxoLS3n/v/YCUHQdOIKtOJf4yL6kYVSDTSmVK1LI1Q3M/uu2Sx4X3pIWF3xLUhlsA6SPNTNg==}
@@ -9094,7 +9097,7 @@ snapshots:
   '@ardatan/relay-compiler@12.0.2(graphql@16.9.0)':
     dependencies:
       '@babel/generator': 7.28.3
-      '@babel/parser': 7.28.3
+      '@babel/parser': 7.28.4
       '@babel/runtime': 7.26.9
       chalk: 4.1.2
       fb-watchman: 2.0.2
@@ -9178,7 +9181,7 @@ snapshots:
 
   '@babel/helper-annotate-as-pure@7.27.3':
     dependencies:
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.4
 
   '@babel/helper-compilation-targets@7.27.2':
     dependencies:
@@ -9196,7 +9199,7 @@ snapshots:
       '@babel/helper-optimise-call-expression': 7.27.1
       '@babel/helper-replace-supers': 7.27.1(@babel/core@7.28.4)
       '@babel/helper-skip-transparent-expression-wrappers': 7.27.1
-      '@babel/traverse': 7.28.3
+      '@babel/traverse': 7.28.4
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -9205,8 +9208,8 @@ snapshots:
 
   '@babel/helper-member-expression-to-functions@7.27.1':
     dependencies:
-      '@babel/traverse': 7.28.3
-      '@babel/types': 7.28.2
+      '@babel/traverse': 7.28.4
+      '@babel/types': 7.28.4
     transitivePeerDependencies:
       - supports-color
 
@@ -9228,7 +9231,7 @@ snapshots:
 
   '@babel/helper-optimise-call-expression@7.27.1':
     dependencies:
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.4
 
   '@babel/helper-plugin-utils@7.26.5': {}
 
@@ -9239,14 +9242,14 @@ snapshots:
       '@babel/core': 7.28.4
       '@babel/helper-member-expression-to-functions': 7.27.1
       '@babel/helper-optimise-call-expression': 7.27.1
-      '@babel/traverse': 7.28.3
+      '@babel/traverse': 7.28.4
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-skip-transparent-expression-wrappers@7.27.1':
     dependencies:
-      '@babel/traverse': 7.28.3
-      '@babel/types': 7.28.2
+      '@babel/traverse': 7.28.4
+      '@babel/types': 7.28.4
     transitivePeerDependencies:
       - supports-color
 
@@ -10693,7 +10696,8 @@ snapshots:
 
   '@mjackson/node-fetch-server@0.2.0': {}
 
-  '@mjackson/node-fetch-server@0.7.0': {}
+  '@mjackson/node-fetch-server@0.7.0':
+    optional: true
 
   '@mongodb-js/saslprep@1.2.0':
     dependencies:
@@ -11383,18 +11387,17 @@ snapshots:
       react-promise-suspense: 0.3.4
     optional: true
 
-  '@react-router/dev@7.8.2(@react-router/serve@7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3))(@types/node@24.3.3)(babel-plugin-macros@3.1.0)(jiti@2.4.2)(less@4.1.3)(react-dom@19.1.1(react@19.1.1))(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(typescript@5.8.3)(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1))(yaml@2.8.1)':
+  '@react-router/dev@7.9.1(@react-router/serve@7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3))(@types/node@24.3.3)(@vitejs/plugin-rsc@0.4.11(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1)))(babel-plugin-macros@3.1.0)(jiti@2.4.2)(less@4.1.3)(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(typescript@5.8.3)(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1))(yaml@2.8.1)':
     dependencies:
       '@babel/core': 7.28.4
       '@babel/generator': 7.28.3
-      '@babel/parser': 7.28.3
+      '@babel/parser': 7.28.4
       '@babel/plugin-syntax-jsx': 7.27.1(@babel/core@7.28.4)
       '@babel/preset-typescript': 7.27.1(@babel/core@7.28.4)
-      '@babel/traverse': 7.28.3
-      '@babel/types': 7.28.2
+      '@babel/traverse': 7.28.4
+      '@babel/types': 7.28.4
       '@npmcli/package-json': 4.0.1
-      '@react-router/node': 7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
-      '@vitejs/plugin-rsc': 0.4.11(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1))
+      '@react-router/node': 7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
       arg: 5.0.2
       babel-dead-code-elimination: 1.0.9
       chokidar: 4.0.3
@@ -11411,12 +11414,13 @@ snapshots:
       react-router: 7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       semver: 7.7.2
       set-cookie-parser: 2.7.1
-      tinyglobby: 0.2.14
+      tinyglobby: 0.2.15
       valibot: 0.41.0(typescript@5.8.3)
       vite: 7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1)
       vite-node: 3.2.4(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1)
     optionalDependencies:
-      '@react-router/serve': 7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
+      '@react-router/serve': 7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
+      '@vitejs/plugin-rsc': 0.4.11(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1))
       typescript: 5.8.3
     transitivePeerDependencies:
       - '@types/node'
@@ -11425,8 +11429,6 @@ snapshots:
       - jiti
       - less
       - lightningcss
-      - react
-      - react-dom
       - sass
       - sass-embedded
       - stylus
@@ -11436,25 +11438,25 @@ snapshots:
       - tsx
       - yaml
 
-  '@react-router/express@7.8.2(express@4.21.2)(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)':
+  '@react-router/express@7.9.1(express@4.21.2)(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)':
     dependencies:
-      '@react-router/node': 7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
+      '@react-router/node': 7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
       express: 4.21.2
       react-router: 7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
     optionalDependencies:
       typescript: 5.8.3
 
-  '@react-router/node@7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)':
+  '@react-router/node@7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)':
     dependencies:
       '@mjackson/node-fetch-server': 0.2.0
       react-router: 7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
     optionalDependencies:
       typescript: 5.8.3
 
-  '@react-router/serve@7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)':
+  '@react-router/serve@7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)':
     dependencies:
-      '@react-router/express': 7.8.2(express@4.21.2)(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
-      '@react-router/node': 7.8.2(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
+      '@react-router/express': 7.9.1(express@4.21.2)(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
+      '@react-router/node': 7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.8.3)
       compression: 1.8.0
       express: 4.21.2
       get-port: 5.1.1
@@ -12297,6 +12299,7 @@ snapshots:
       turbo-stream: 3.1.0
       vite: 7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1)
       vitefu: 1.1.1(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1))
+    optional: true
 
   '@webgpu/types@0.1.52': {}
 
@@ -12602,9 +12605,9 @@ snapshots:
   babel-dead-code-elimination@1.0.9:
     dependencies:
       '@babel/core': 7.28.4
-      '@babel/parser': 7.28.3
-      '@babel/traverse': 7.28.3
-      '@babel/types': 7.28.2
+      '@babel/parser': 7.28.4
+      '@babel/traverse': 7.28.4
+      '@babel/types': 7.28.4
     transitivePeerDependencies:
       - supports-color
 
@@ -14205,6 +14208,7 @@ snapshots:
   estree-walker@3.0.3:
     dependencies:
       '@types/estree': 1.0.8
+    optional: true
 
   esutils@2.0.3: {}
 
@@ -15198,6 +15202,7 @@ snapshots:
   is-reference@3.0.3:
     dependencies:
       '@types/estree': 1.0.8
+    optional: true
 
   is-regex@1.1.4:
     dependencies:
@@ -15321,7 +15326,7 @@ snapshots:
   istanbul-lib-instrument@6.0.1:
     dependencies:
       '@babel/core': 7.28.4
-      '@babel/parser': 7.28.3
+      '@babel/parser': 7.28.4
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.2
       semver: 7.7.2
@@ -16663,6 +16668,7 @@ snapshots:
       '@types/estree': 1.0.8
       is-reference: 3.0.3
       zimmerframe: 1.1.2
+    optional: true
 
   picocolors@1.1.1: {}
 
@@ -18276,7 +18282,8 @@ snapshots:
   turbo-linux-arm64@2.5.6:
     optional: true
 
-  turbo-stream@3.1.0: {}
+  turbo-stream@3.1.0:
+    optional: true
 
   turbo-windows-64@2.5.6:
     optional: true
@@ -18578,6 +18585,7 @@ snapshots:
   vitefu@1.1.1(vite@7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1)):
     optionalDependencies:
       vite: 7.1.5(@types/node@24.3.3)(jiti@2.4.2)(less@4.1.3)(sass@1.81.0)(terser@5.36.0)(tsx@4.20.5)(yaml@2.8.1)
+    optional: true
 
   w3c-xmlserializer@4.0.0:
     dependencies:
@@ -18853,7 +18861,8 @@ snapshots:
 
   yocto-queue@1.1.1: {}
 
-  zimmerframe@1.1.2: {}
+  zimmerframe@1.1.2:
+    optional: true
 
   zod@3.25.76: {}
 
