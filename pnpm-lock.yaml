@@ -84,8 +84,8 @@ importers:
         specifier: 9.0.2
         version: 9.0.2
       mongoose:
-        specifier: 8.18.1
-        version: 8.18.1(socks@2.8.3)
+        specifier: 8.18.2
+        version: 8.18.2(socks@2.8.3)
       multer:
         specifier: 2.0.2
         version: 2.0.2
@@ -1464,6 +1464,7 @@ packages:
   '@graphql-tools/prisma-loader@8.0.17':
     resolution: {integrity: sha512-fnuTLeQhqRbA156pAyzJYN0KxCjKYRU5bz1q/SKOwElSnAU4k7/G1kyVsWLh7fneY78LoMNH5n+KlFV8iQlnyg==}
     engines: {node: '>=16.0.0'}
+    deprecated: 'This package was intended to be used with an older versions of Prisma.\nThe newer versions of Prisma has a different approach to GraphQL integration.\nTherefore, this package is no longer needed and has been deprecated and removed.\nLearn more: https://www.prisma.io/graphql'
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
 
@@ -6592,8 +6593,8 @@ packages:
       socks:
         optional: true
 
-  mongoose@8.18.1:
-    resolution: {integrity: sha512-K0RfrUXXufqNRZZjvAGdyjydB91SnbWxlwFYi5t7zN2DxVWFD3c6puia0/7xfBwZm6RCpYOVdYFlRFpoDWiC+w==}
+  mongoose@8.18.2:
+    resolution: {integrity: sha512-gA6GFlshOHUdNyw9OQTmMLSGzVOPbcbjaSZ1dvR5iMp668N2UUznTuzgTY6V6Q41VtBc4kmL/qqML1RNgXB5Fg==}
     engines: {node: '>=16.20.1'}
 
   moo@0.5.2:
@@ -16183,7 +16184,7 @@ snapshots:
     optionalDependencies:
       socks: 2.8.3
 
-  mongoose@8.18.1(socks@2.8.3):
+  mongoose@8.18.2(socks@2.8.3):
     dependencies:
       bson: 6.10.4
       kareem: 2.6.3
@@ -16232,7 +16233,7 @@ snapshots:
 
   mquery@5.0.0:
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
