@@ -16,8 +16,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "16.1.4",
-    "@contentful/rich-text-types": "17.2.3",
+    "@contentful/rich-text-react-renderer": "16.1.5",
+    "@contentful/rich-text-types": "17.2.4",
     "@headlessui/react": "2.2.8",
     "@hookform/resolvers": "5.2.2",
     "@jest/types": "29.6.3",
