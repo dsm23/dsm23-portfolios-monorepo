@@ -1,9 +1,9 @@
 /**
- * @jest-environment node
+ * @vitest-environment node
  */
 
 import type { NextRequest } from "next/server";
-import { describe, expect, it } from "@jest/globals";
+import { describe, expect, it, vi } from "vitest";
 import { GET } from "./route";
 
 describe("[api: date]", () => {
@@ -65,7 +65,7 @@ describe("[api: date]", () => {
   });
 
   it("Date now, ", async () => {
-    jest.useFakeTimers().setSystemTime(new Date("1970-01-01T00:00:01+0000"));
+    vi.useFakeTimers().setSystemTime(new Date("1970-01-01T00:00:01+0000"));
 
     const res = await GET(
       // unused

@@ -1,21 +1,21 @@
-import { describe, expect, it } from "@jest/globals";
 import { fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { describe, expect, it, vi } from "vitest";
 import { addTodo } from "~/lib/features/todos/slice";
 import { renderWithProviders } from "~/test-utils";
 import Header from ".";
 
-jest.mock("~/lib/store/hooks", () => {
+vi.mock("~/lib/store/hooks", async () => {
   return {
-    ...jest.requireActual("~/lib/store/hooks"),
-    useAppDispatch: jest.fn(() => jest.fn()),
+    ...(await vi.importActual("~/lib/store/hooks")),
+    useAppDispatch: vi.fn(() => vi.fn()),
   };
 });
 
-jest.mock("~/lib/features/todos/slice", () => {
+vi.mock("~/lib/features/todos/slice", async () => {
   return {
-    ...jest.requireActual("~/lib/features/todos/slice"),
-    addTodo: jest.fn(),
+    ...(await vi.importActual("~/lib/features/todos/slice")),
+    addTodo: vi.fn(),
   };
 });
 

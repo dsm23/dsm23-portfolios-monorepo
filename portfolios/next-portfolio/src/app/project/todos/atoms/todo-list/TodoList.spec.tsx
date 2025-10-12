@@ -1,5 +1,5 @@
-import { describe, expect, it } from "@jest/globals";
 import { screen } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
 import { renderWithProviders } from "~/test-utils";
 import type { RootState } from "~/lib/store";
 import TodoList from ".";
