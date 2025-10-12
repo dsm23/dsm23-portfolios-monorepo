@@ -1,12 +1,12 @@
-import { describe, expect, it, jest } from "@jest/globals";
 import { fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { describe, expect, it, vi } from "vitest";
 import { render } from "~/test-utils";
 import TodoTextInput from ".";
 import styles from "./styles.module.css";
 
 const defaultProps = {
-  onSave: jest.fn(),
+  onSave: vi.fn(),
   text: "Use Redux",
   placeholder: "What needs to be done?",
   editing: false,
@@ -62,7 +62,7 @@ describe("components", () => {
     });
 
     it("should call onSave on return key press", async () => {
-      const mockFn = jest.fn();
+      const mockFn = vi.fn();
 
       const { user } = setup({ editing: true, onSave: mockFn });
 
@@ -96,7 +96,7 @@ describe("components", () => {
     // });
 
     it("should call onSave on blur", () => {
-      const mockFn = jest.fn();
+      const mockFn = vi.fn();
 
       setup({ onSave: mockFn });
 
@@ -106,7 +106,7 @@ describe("components", () => {
     });
 
     it("shouldnt call onSave on blur if newTodo", () => {
-      const mockFn = jest.fn();
+      const mockFn = vi.fn();
 
       setup({ newTodo: true, onSave: mockFn });
 

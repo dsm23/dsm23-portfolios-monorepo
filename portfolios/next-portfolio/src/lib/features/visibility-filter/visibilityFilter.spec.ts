@@ -1,3 +1,4 @@
+import { describe, expect, it } from "vitest";
 import reducer, { setVisibilityFilter } from "./slice";
 
 describe("visbilityFilter reducer", () => {

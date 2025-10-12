@@ -1,26 +1,26 @@
 import type { ReactNode } from "react";
-import { describe, expect, it } from "@jest/globals";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { describe, expect, it, vi } from "vitest";
 import { setVisibilityFilter } from "~/lib/features/visibility-filter/slice";
 import { renderWithProviders } from "~/test-utils";
 import type { VisibilityFilter } from "~/lib/features/visibility-filter/slice";
 import Link from ".";
 import styles from "./styles.module.css";
 
-jest.mock("~/lib/store/hooks", () => {
+vi.mock("~/lib/store/hooks", async () => {
   return {
     __esModule: true,
-    ...jest.requireActual("~/lib/store/hooks"),
-    useAppDispatch: jest.fn(() => jest.fn()),
+    ...(await vi.importActual("~/lib/store/hooks")),
+    useAppDispatch: vi.fn(() => vi.fn()),
   };
 });
 
-jest.mock("~/lib/features/visibility-filter/slice", () => {
+vi.mock("~/lib/features/visibility-filter/slice", async () => {
   return {
     __esModule: true,
-    ...jest.requireActual("~/lib/features/visibility-filter/slice"),
-    setVisibilityFilter: jest.fn(),
+    ...(await vi.importActual("~/lib/features/visibility-filter/slice")),
+    setVisibilityFilter: vi.fn(),
   };
 });
 

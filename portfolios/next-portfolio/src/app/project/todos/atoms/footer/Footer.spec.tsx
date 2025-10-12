@@ -1,12 +1,12 @@
-import { describe, expect, it, jest } from "@jest/globals";
 import { screen } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import { renderWithProviders } from "~/test-utils";
 import Footer from ".";
 
 const defaultProps = {
   completedCount: 0,
   activeCount: 0,
-  onClearCompleted: jest.fn(),
+  onClearCompleted: vi.fn(),
 };
 
 const setup = (props?: Partial<typeof defaultProps>) => {
@@ -65,7 +65,7 @@ describe("components", () => {
     });
 
     it("should call onClearCompleted on clear button click", () => {
-      const mockFn = jest.fn();
+      const mockFn = vi.fn();
 
       setup({ completedCount: 1, onClearCompleted: mockFn });
 
