@@ -17,16 +17,16 @@ export async function GET() {
   try {
     await page.goto(websiteUrl, { waitUntil: "networkidle0" });
 
-    const pdf = await page.pdf({
+    const pdf = (await page.pdf({
       displayHeaderFooter: true,
       margin: { top: "50px", right: "50px", bottom: "50px", left: "50px" },
       printBackground: true,
       format: "A4",
-    });
+    })) as Uint8Array<ArrayBuffer>;
 
     await browser.close();
 
-    return new Response(new Blob([pdf], { type: "application/pdf" }));
+    return new Response(new Blob([pdf.buffer], { type: "application/pdf" }));
   } catch {
     return new Response(new Blob([], { type: "application/pdf" }));
   }

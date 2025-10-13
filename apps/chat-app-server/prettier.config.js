@@ -12,5 +12,5 @@ export default {
     "^[.]",
     "<TYPES>",
   ],
-  importOrderTypeScriptVersion: "5.7.2",
+  importOrderTypeScriptVersion: "5.9.3",
 };
