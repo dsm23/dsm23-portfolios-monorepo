@@ -288,8 +288,8 @@ importers:
         specifier: 0.4.6
         version: 0.4.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       puppeteer-core:
-        specifier: 24.24.1
-        version: 24.24.1
+        specifier: 24.25.0
+        version: 24.25.0
       react:
         specifier: 19.2.0
         version: 19.2.0
@@ -6990,8 +6990,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@24.24.1:
-    resolution: {integrity: sha512-4R9/hCjmyUBbQqjrCa+y4Pzgl3LneLfqB+Whh2JujA5Wzg+prnO60GxDPjAJmM+uirYxDx/8jIm0hGu8yDTyiA==}
+  puppeteer-core@24.25.0:
+    resolution: {integrity: sha512-8Xs6q3Ut+C8y7sAaqjIhzv1QykGWG4gc2mEZ2mYE7siZFuRp4xQVehOf8uQKSQAkeL7jXUs3mknEeiqnRqUKvQ==}
     engines: {node: '>=18'}
 
   qs@6.13.0:
@@ -15436,7 +15436,7 @@ snapshots:
 
   npm-install-checks@6.3.0:
     dependencies:
-      semver: 7.7.2
+      semver: 7.7.3
 
   npm-normalize-package-bin@3.0.1: {}
 
@@ -15446,7 +15446,7 @@ snapshots:
     dependencies:
       hosted-git-info: 6.1.3
       proc-log: 3.0.0
-      semver: 7.7.2
+      semver: 7.7.3
       validate-npm-package-name: 5.0.1
 
   npm-pick-manifest@8.0.2:
@@ -15454,7 +15454,7 @@ snapshots:
       npm-install-checks: 6.3.0
       npm-normalize-package-bin: 3.0.1
       npm-package-arg: 10.1.0
-      semver: 7.7.2
+      semver: 7.7.3
 
   npm-run-all2@8.0.4:
     dependencies:
@@ -15960,7 +15960,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@24.24.1:
+  puppeteer-core@24.25.0:
     dependencies:
       '@puppeteer/browsers': 2.10.12
       chromium-bidi: 9.1.0(devtools-protocol@0.0.1508733)
