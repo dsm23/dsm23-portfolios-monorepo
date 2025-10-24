@@ -18,8 +18,8 @@ importers:
         specifier: 20.0.0
         version: 20.0.0
       '@graphql-codegen/cli':
-        specifier: 6.0.0
-        version: 6.0.0(@parcel/watcher@2.5.0)(@types/node@24.9.1)(graphql-sock@1.0.1(graphql@16.9.0))(graphql@16.9.0)(typescript@5.9.3)
+        specifier: 6.0.1
+        version: 6.0.1(@parcel/watcher@2.5.0)(@types/node@24.9.1)(graphql-sock@1.0.1(graphql@16.9.0))(graphql@16.9.0)(typescript@5.9.3)
       '@graphql-codegen/typescript-operations':
         specifier: 5.0.2
         version: 5.0.2(graphql-sock@1.0.1(graphql@16.9.0))(graphql@16.9.0)
@@ -352,8 +352,8 @@ importers:
         specifier: 7.27.1
         version: 7.27.1(@babel/core@7.28.4)
       '@graphql-codegen/cli':
-        specifier: 6.0.0
-        version: 6.0.0(@parcel/watcher@2.5.0)(@types/node@24.9.1)(graphql-sock@1.0.1(graphql@16.9.0))(graphql@16.9.0)(typescript@5.9.3)
+        specifier: 6.0.1
+        version: 6.0.1(@parcel/watcher@2.5.0)(@types/node@24.9.1)(graphql-sock@1.0.1(graphql@16.9.0))(graphql@16.9.0)(typescript@5.9.3)
       '@graphql-codegen/typescript-operations':
         specifier: 5.0.2
         version: 5.0.2(graphql-sock@1.0.1(graphql@16.9.0))(graphql@16.9.0)
@@ -1226,8 +1226,8 @@ packages:
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  '@graphql-codegen/cli@6.0.0':
-    resolution: {integrity: sha512-tvchLVCMtorDE+UwgQbrjyaQK16GCZA+QomTxZazRx64ixtgmbEiQV7GhCBy0y0Bo7/tcTJb6sy9G/TL/BgiOg==}
+  '@graphql-codegen/cli@6.0.1':
+    resolution: {integrity: sha512-6iP91joxb7phdicDrIF8Cv9ah2QpPVXUUu7rbOaQKvqey+QKYmHcxGCi9r5/7p4lUiHZPQvfB7xDHURHQca1SA==}
     engines: {node: '>=16'}
     hasBin: true
     peerDependencies:
@@ -5965,10 +5965,6 @@ packages:
     engines: {node: '>=20.17'}
     hasBin: true
 
-  listr2@9.0.4:
-    resolution: {integrity: sha512-1wd/kpAdKRLwv7/3OKC8zZ5U8e/fajCfWMxacUvB79S5nLrYGPtUI/8chMQhn3LQjsRVErTb9i1ECAwW0ZIHnQ==}
-    engines: {node: '>=20.0.0'}
-
   listr2@9.0.5:
     resolution: {integrity: sha512-ME4Fb83LgEgwNw96RKNvKV4VTLuXfoKudAmm2lP8Kk87KaMK0/Xrx/aAkMWmT8mDb+3MlFDspfbCs7adjRxA2g==}
     engines: {node: '>=20.0.0'}
@@ -9462,7 +9458,7 @@ snapshots:
       graphql: 16.9.0
       tslib: 2.6.3
 
-  '@graphql-codegen/cli@6.0.0(@parcel/watcher@2.5.0)(@types/node@24.9.1)(graphql-sock@1.0.1(graphql@16.9.0))(graphql@16.9.0)(typescript@5.9.3)':
+  '@graphql-codegen/cli@6.0.1(@parcel/watcher@2.5.0)(@types/node@24.9.1)(graphql-sock@1.0.1(graphql@16.9.0))(graphql@16.9.0)(typescript@5.9.3)':
     dependencies:
       '@babel/generator': 7.28.3
       '@babel/template': 7.27.2
@@ -9490,7 +9486,7 @@ snapshots:
       is-glob: 4.0.3
       jiti: 2.4.2
       json-to-pretty-yaml: 1.2.2
-      listr2: 9.0.4
+      listr2: 9.0.5
       log-symbols: 4.1.0
       micromatch: 4.0.8
       shell-quote: 1.8.2
@@ -15040,15 +15036,6 @@ snapshots:
       pidtree: 0.6.0
       string-argv: 0.3.2
       yaml: 2.8.1
-
-  listr2@9.0.4:
-    dependencies:
-      cli-truncate: 5.1.0
-      colorette: 2.0.20
-      eventemitter3: 5.0.1
-      log-update: 6.1.0
-      rfdc: 1.4.1
-      wrap-ansi: 9.0.0
 
   listr2@9.0.5:
     dependencies:
