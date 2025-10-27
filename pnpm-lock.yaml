@@ -112,8 +112,8 @@ importers:
         specifier: 5.0.2
         version: 5.0.2
       '@types/cookie-parser':
-        specifier: 1.4.9
-        version: 1.4.9(@types/express@5.0.1)
+        specifier: 1.4.10
+        version: 1.4.10(@types/express@5.0.1)
       '@types/cors':
         specifier: 2.8.19
         version: 2.8.19
@@ -3063,8 +3063,8 @@ packages:
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
 
-  '@types/cookie-parser@1.4.9':
-    resolution: {integrity: sha512-tGZiZ2Gtc4m3wIdLkZ8mkj1T6CEHb35+VApbL2T14Dew8HA7c+04dmKqsKRNC+8RJPm16JEK0tFSwdZqubfc4g==}
+  '@types/cookie-parser@1.4.10':
+    resolution: {integrity: sha512-B4xqkqfZ8Wek+rCOeRxsjMS9OgvzebEzzLYw7NHYuvzb7IdxOkI0ZHGgeEBX4PUM7QGVvNSK60T3OvWj3YfBRg==}
     peerDependencies:
       '@types/express': '*'
 
@@ -11470,7 +11470,7 @@ snapshots:
     dependencies:
       '@types/node': 24.9.1
 
-  '@types/cookie-parser@1.4.9(@types/express@5.0.1)':
+  '@types/cookie-parser@1.4.10(@types/express@5.0.1)':
     dependencies:
       '@types/express': 5.0.1
 
