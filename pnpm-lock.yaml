@@ -189,11 +189,11 @@ importers:
   portfolios/next-portfolio:
     dependencies:
       '@contentful/rich-text-react-renderer':
-        specifier: 16.1.5
-        version: 16.1.5(babel-plugin-macros@3.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: 16.1.6
+        version: 16.1.6(babel-plugin-macros@3.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@contentful/rich-text-types':
-        specifier: 17.2.4
-        version: 17.2.4(babel-plugin-macros@3.1.0)
+        specifier: 17.2.5
+        version: 17.2.5(babel-plugin-macros@3.1.0)
       '@headlessui/react':
         specifier: 2.2.9
         version: 2.2.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -936,15 +936,15 @@ packages:
     resolution: {integrity: sha512-bVUNBqG6aznYcYjTjnc3+Cat/iBgbgpflxbIBTnsHTX0YVpnmINPEkSRWymT2Q8aSH3Y7aKnEbunilkYe8TybA==}
     engines: {node: '>=v18'}
 
-  '@contentful/rich-text-react-renderer@16.1.5':
-    resolution: {integrity: sha512-5iGG70YVH1f0zcsG7zKOCHdF5zHo38dpCXdAw5gjPpJkI5MTI200KUKU+q0B55Bdp4PzFQr6EcTSUI+k6jluyw==}
+  '@contentful/rich-text-react-renderer@16.1.6':
+    resolution: {integrity: sha512-Pt0KfEnB7UP53gUKupUZjsUCHR7CiDbVyMdMmuyzYT6lNvjR7+KKYWP9eU2TOfVaXy7PxF1XEpBjSALDOHUNKQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
       react: ^16.8.6 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^16.8.6 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  '@contentful/rich-text-types@17.2.4':
-    resolution: {integrity: sha512-3y456l+x5aPzqcvjpG6L66sIkfH66rBl1QtGKexgJ3Nvd6k4ORvpAJ6gMDBz3WMAYvXGrVZMyhlFE0e6UdHngA==}
+  '@contentful/rich-text-types@17.2.5':
+    resolution: {integrity: sha512-EA5vTfROZePoPmSlqLVd+luL/ev8CjnI20y6vWFVPlLRxQbv4XytXRzatydPE63CqfsPylF7NCn2z8rTLhnWfg==}
     engines: {node: '>=6.0.0'}
 
   '@cspotcode/source-map-support@0.8.1':
@@ -9262,16 +9262,16 @@ snapshots:
       '@types/conventional-commits-parser': 5.0.0
       chalk: 5.6.0
 
-  '@contentful/rich-text-react-renderer@16.1.5(babel-plugin-macros@3.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@contentful/rich-text-react-renderer@16.1.6(babel-plugin-macros@3.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@contentful/rich-text-types': 17.2.4(babel-plugin-macros@3.1.0)
+      '@contentful/rich-text-types': 17.2.5(babel-plugin-macros@3.1.0)
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
     transitivePeerDependencies:
       - '@lingui/babel-plugin-lingui-macro'
       - babel-plugin-macros
 
-  '@contentful/rich-text-types@17.2.4(babel-plugin-macros@3.1.0)':
+  '@contentful/rich-text-types@17.2.5(babel-plugin-macros@3.1.0)':
     dependencies:
       '@lingui/core': 5.4.1(babel-plugin-macros@3.1.0)
       is-plain-obj: 3.0.0
