@@ -73,7 +73,7 @@
     "@babel/core": "7.28.5",
     "@babel/preset-react": "7.28.5",
     "@graphql-codegen/cli": "6.0.2",
-    "@graphql-codegen/typescript-operations": "5.0.3",
+    "@graphql-codegen/typescript-operations": "5.0.4",
     "@ianvs/prettier-plugin-sort-imports": "4.7.0",
     "@next/bundle-analyzer": "15.5.6",
     "@playwright/test": "1.56.1",
