@@ -105,7 +105,7 @@
     "eslint-plugin-react-hooks": "6.1.0",
     "gzip-size": "7.0.0",
     "husky": "9.1.7",
-    "jsdom": "27.1.0",
+    "jsdom": "27.2.0",
     "npm-run-all2": "8.0.4",
     "postcss": "8.5.6",
     "prettier-plugin-css-order": "2.1.2",
