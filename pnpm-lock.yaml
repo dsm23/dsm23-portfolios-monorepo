@@ -273,8 +273,8 @@ importers:
         specifier: 11.11.1
         version: 11.11.1
       libphonenumber-js:
-        specifier: 1.12.26
-        version: 1.12.26
+        specifier: 1.12.28
+        version: 1.12.28
       meshline:
         specifier: 3.3.1
         version: 3.3.1(three@0.181.1)
@@ -6174,8 +6174,8 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
-  libphonenumber-js@1.12.26:
-    resolution: {integrity: sha512-MagMOuqEXB2Pa90cWE+BoCmcKJx+de5uBIicaUkQ+uiEslZ0OBMNOkSZT/36syXNHu68UeayTxPm3DYM2IHoLQ==}
+  libphonenumber-js@1.12.28:
+    resolution: {integrity: sha512-sDB+nY8l1d2SHC0TnBat4uovsx1EjrkesK9U8Arl2/LQluXn3OQczwqr2M/1V2Lo0ajnaY/nZjvacg6vmbqWUQ==}
 
   lie@3.3.0:
     resolution: {integrity: sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ==}
@@ -15533,7 +15533,7 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  libphonenumber-js@1.12.26: {}
+  libphonenumber-js@1.12.28: {}
 
   lie@3.3.0:
     dependencies:
