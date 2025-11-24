@@ -321,8 +321,8 @@ importers:
         specifier: 5.1.1
         version: 5.1.1
       resend:
-        specifier: 6.3.0
-        version: 6.3.0(@react-email/render@1.1.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
+        specifier: 6.5.2
+        version: 6.5.2(@react-email/render@1.1.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
       sonner:
         specifier: 2.0.7
         version: 2.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -7494,9 +7494,9 @@ packages:
   reselect@5.1.1:
     resolution: {integrity: sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==}
 
-  resend@6.3.0:
-    resolution: {integrity: sha512-Nmg5cFojC2E07gQ/RnlcroXpclFnlr05yQP2QNbbAhfX1Q4LBqiSd6/0t/fq95MvcuP8EDbb+Eyw1NG2P0OWgw==}
-    engines: {node: '>=18'}
+  resend@6.5.2:
+    resolution: {integrity: sha512-Yl83UvS8sYsjgmF8dVbNPzlfpmb3DkLUk3VwsAbkaEFo9UMswpNuPGryHBXGk+Ta4uYMv5HmjVk3j9jmNkcEDg==}
+    engines: {node: '>=20'}
     peerDependencies:
       '@react-email/render': '*'
     peerDependenciesMeta:
@@ -16777,7 +16777,7 @@ snapshots:
 
   reselect@5.1.1: {}
 
-  resend@6.3.0(@react-email/render@1.1.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)):
+  resend@6.5.2(@react-email/render@1.1.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)):
     dependencies:
       svix: 1.76.1
     optionalDependencies:
