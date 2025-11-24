@@ -288,8 +288,8 @@ importers:
         specifier: 0.4.6
         version: 0.4.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       puppeteer-core:
-        specifier: 24.30.0
-        version: 24.30.0
+        specifier: 24.31.0
+        version: 24.31.0
       react:
         specifier: 19.2.0
         version: 19.2.0
@@ -7248,8 +7248,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@24.30.0:
-    resolution: {integrity: sha512-2S3Smy0t0W4wJnNvDe7W0bE7wDmZjfZ3ljfMgJd6hn2Hq/f0jgN+x9PULZo2U3fu5UUIJ+JP8cNUGllu8P91Pg==}
+  puppeteer-core@24.31.0:
+    resolution: {integrity: sha512-pnAohhSZipWQoFpXuGV7xCZfaGhqcBR9C4pVrU0QSrcMi7tQMH9J9lDBqBvyMAHQqe8HCARuREqFuVKRQOgTvg==}
     engines: {node: '>=18'}
 
   qs@6.13.0:
@@ -8670,8 +8670,8 @@ packages:
     resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
     engines: {node: '>= 8'}
 
-  webdriver-bidi-protocol@0.3.8:
-    resolution: {integrity: sha512-21Yi2GhGntMc671vNBCjiAeEVknXjVRoyu+k+9xOMShu+ZQfpGQwnBqbNz/Sv4GXZ6JmutlPAi2nIJcrymAWuQ==}
+  webdriver-bidi-protocol@0.3.9:
+    resolution: {integrity: sha512-uIYvlRQ0PwtZR1EzHlTMol1G0lAlmOe6wPykF9a77AK3bkpvZHzIVxRE2ThOx5vjy2zISe0zhwf5rzuUfbo1PQ==}
 
   webgl-constants@1.1.1:
     resolution: {integrity: sha512-LkBXKjU5r9vAW7Gcu3T5u+5cvSvh5WwINdr0C+9jpzVB41cjQAP5ePArDtk/WHYdVj0GefCgM73BA7FlIiNtdg==}
@@ -16522,14 +16522,14 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@24.30.0:
+  puppeteer-core@24.31.0:
     dependencies:
       '@puppeteer/browsers': 2.10.13
       chromium-bidi: 11.0.0(devtools-protocol@0.0.1521046)
       debug: 4.4.3
       devtools-protocol: 0.0.1521046
       typed-query-selector: 2.12.0
-      webdriver-bidi-protocol: 0.3.8
+      webdriver-bidi-protocol: 0.3.9
       ws: 8.18.3
     transitivePeerDependencies:
       - bare-buffer
@@ -18228,7 +18228,7 @@ snapshots:
 
   web-streams-polyfill@3.3.3: {}
 
-  webdriver-bidi-protocol@0.3.8: {}
+  webdriver-bidi-protocol@0.3.9: {}
 
   webgl-constants@1.1.1: {}
 
