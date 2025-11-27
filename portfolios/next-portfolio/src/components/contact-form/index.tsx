@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
+import type { Variants } from "motion/react";
 import {
   FormControl,
   FormField,
@@ -41,7 +42,7 @@ const ContactForm: FunctionComponent = () => {
         ? {}
         : {
             duration: 0.2,
-            type: "stiff",
+            type: "tween",
             damping: 25,
           },
     },
@@ -49,7 +50,7 @@ const ContactForm: FunctionComponent = () => {
       y: prefersReducedMotion ? "0" : "4vh",
       opacity: 0,
     },
-  } as const;
+  } satisfies Variants;
 
   const schema = z.object({
     email: z
