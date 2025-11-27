@@ -1,19 +1,37 @@
 {
   "extends": ["//"],
-  "globalEnv": [
-    "BROWSERLESS_TOKEN",
-    "CHROME_EXECUTABLE_PATH",
-    "CONTENTFUL_SPACE_ID",
-    "CONTENTFUL_ACCESS_TOKEN",
-    "CONTENTFUL_PREVIEW_TOKEN",
-    "CONTENTFUL_REVALIDATE_SECRET",
-    "ORIGIN_URL"
-  ],
   "tasks": {
     "build": {
+      "env": [
+        "CONTENTFUL_SPACE_ID",
+        "CONTENTFUL_ACCESS_TOKEN",
+        "CONTENTFUL_PREVIEW_TOKEN",
+        "CONTENTFUL_REVALIDATE_SECRET",
+        "ORIGIN_URL"
+      ],
       "outputs": [".next/**", "!.next/cache/**"]
     },
-    "dev": {},
+    "dev": {
+      "env": [
+        "CONTENTFUL_SPACE_ID",
+        "CONTENTFUL_ACCESS_TOKEN",
+        "CONTENTFUL_PREVIEW_TOKEN",
+        "CONTENTFUL_REVALIDATE_SECRET",
+        "ORIGIN_URL"
+      ]
+    },
+    "e2e": {
+      "env": [
+        "PLAYWRIGHT_BROWSERS_PATH",
+        "BROWSERLESS_TOKEN",
+        "CHROME_EXECUTABLE_PATH",
+        "CONTENTFUL_SPACE_ID",
+        "CONTENTFUL_ACCESS_TOKEN",
+        "CONTENTFUL_PREVIEW_TOKEN",
+        "CONTENTFUL_REVALIDATE_SECRET",
+        "ORIGIN_URL"
+      ]
+    },
     "start": {}
   }
 }

@@ -1,15 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
-  "globalPassThroughEnv": [
-    "BROWSERLESS_TOKEN",
-    "CHROME_EXECUTABLE_PATH",
-    "CONTENTFUL_SPACE_ID",
-    "CONTENTFUL_ACCESS_TOKEN",
-    "CONTENTFUL_PREVIEW_TOKEN",
-    "CONTENTFUL_REVALIDATE_SECRET",
-    "ORIGIN_URL"
-  ],
   "tasks": {
     "build": {
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
