@@ -1,35 +1,33 @@
-import { FlatCompat } from "@eslint/eslintrc";
+import next from "@next/eslint-plugin-next";
 import eslint from "@eslint/js";
+import reactHooks from "eslint-plugin-react-hooks";
+import { defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
-const compat = new FlatCompat();
-
-const compatConfig = compat.config({
-  extends: [
-    "plugin:@next/eslint-plugin-next/core-web-vitals",
-    "plugin:react-hooks/recommended",
-  ],
-});
-
 /** @type {import("eslint").FlatConfig[]} */
-export default tseslint.config(
-  {
-    ignores: [
-      "node_modules",
-      ".turbo",
-      ".next",
-      "build",
-      "coverage",
-      "global.d.ts",
-      "junit.xml",
-      "storybook-static/**",
-    ],
-  },
+export default defineConfig(
+  globalIgnores([
+    "node_modules",
+    ".turbo",
+    ".next",
+    "out",
+    "build",
+    "coverage",
+    "global.d.ts",
+    "next-env.d.ts",
+    "junit.xml",
+    "storybook-static/**",
+  ]),
   eslint.configs.recommended,
   tseslint.configs.recommended,
+  // reactHooks.configs.flat["recommended-latest"],
+  next.configs["core-web-vitals"],
   {
-    files: ["**/*"],
-    extends: [...compatConfig],
+    files: ["src/**/*.{js,jsx,ts,tsx}"],
+    plugins: {
+      "react-hooks": reactHooks,
+    },
+    extends: ["react-hooks/recommended"],
   },
   {
     files: ["*.ts", "*.tsx", "*.js", "*.jsx"],

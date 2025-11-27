@@ -1,6 +1,4 @@
-import withBundleAnalyzer from "@next/bundle-analyzer";
 import type { NextConfig } from "next";
-import { env } from "./env";
 
 const nextConfig = {
   reactStrictMode: true,
@@ -14,19 +12,9 @@ const nextConfig = {
       },
     ],
   },
-  devIndicators: {
-    appIsrStatus: !process.env.CI,
-  },
+  devIndicators: !process.env.CI ? undefined : false,
   productionBrowserSourceMaps: true,
   serverExternalPackages: ["puppeteer-core"],
 } satisfies NextConfig;
 
-export default () => {
-  const plugins = [withBundleAnalyzer({ enabled: env.ANALYZE })];
-
-  const config = plugins.reduce((acc: NextConfig, next) => next(acc), {
-    ...nextConfig,
-  });
-
-  return config;
-};
+export default nextConfig;
