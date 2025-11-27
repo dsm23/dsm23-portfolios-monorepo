@@ -8,21 +8,18 @@ import {
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  // TODO: remove this line once vitest is updated to v4
-  // @ts-expect-error - vitest is outdated
   plugins: [react(), tsconfigPaths()],
   test: {
     globals: false,
     environment: "jsdom",
     setupFiles: "./vitest.setup.js",
     coverage: {
-      all: true,
       include: ["src/**/*.[jt]s?(x)"],
       exclude: [
         "src/**/*.stories.[jt]s?(x)",
         "src/test-utils/**",
         "src/mocks/**",
-        "**/playwright-tests/**",
+        "**/*.d.ts",
         ...coverageConfigDefaults.exclude,
       ],
       thresholds: {
