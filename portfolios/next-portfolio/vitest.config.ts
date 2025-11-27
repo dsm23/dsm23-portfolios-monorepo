@@ -8,6 +8,8 @@ import {
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
+  // TODO: remove this line once vitest is updated to v4
+  // @ts-expect-error - vitest is outdated
   plugins: [react(), tsconfigPaths()],
   test: {
     globals: false,
