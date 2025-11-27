@@ -20,14 +20,18 @@ export default defineConfig(
   ]),
   eslint.configs.recommended,
   tseslint.configs.recommended,
-  // reactHooks.configs.flat["recommended-latest"],
+  reactHooks.configs.flat.recommended,
   next.configs["core-web-vitals"],
   {
-    files: ["src/**/*.{js,jsx,ts,tsx}"],
-    plugins: {
-      "react-hooks": reactHooks,
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    // TODO: re-write code to not require disabling these rules
+    rules: {
+      "react-hooks/immutability": "off",
+      "react-hooks/incompatible-library": "off",
+      "react-hooks/purity": "off",
+      "react-hooks/refs": "off",
+      "react-hooks/set-state-in-effect": "off",
     },
-    extends: ["react-hooks/recommended"],
   },
   {
     files: ["*.ts", "*.tsx", "*.js", "*.jsx"],
