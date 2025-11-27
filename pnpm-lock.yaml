@@ -447,9 +447,6 @@ importers:
       gzip-size:
         specifier: 7.0.0
         version: 7.0.0
-      husky:
-        specifier: 9.1.7
-        version: 9.1.7
       jsdom:
         specifier: 27.2.0
         version: 27.2.0(postcss@8.5.6)
