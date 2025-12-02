@@ -264,7 +264,10 @@ const Page = () => {
                                 checked={field.value?.includes(item.id)}
                                 onCheckedChange={(checked) => {
                                   return checked != null
-                                    ? field.onChange([...field.value, item.id])
+                                    ? field.onChange([
+                                        ...(field.value ?? []),
+                                        item.id,
+                                      ])
                                     : field.onChange(
                                         field.value?.filter(
                                           (value) => value !== item.id,
@@ -338,7 +341,7 @@ const Page = () => {
                       onChange={(e: ChangeEvent<HTMLInputElement>) =>
                         field.onChange(e.target.value.replace(/\s/g, ""))
                       }
-                      value={new AsYouType("GB").input(field.value)}
+                      value={new AsYouType("GB").input(field.value ?? "")}
                     />
                   </FormControl>
                   <FormDescription>
