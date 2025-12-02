@@ -16,22 +16,20 @@ export const contentType = "image/jpg";
 // Image generation
 const Image = () => {
   return new ImageResponse(
-    (
-      // ImageResponse JSX element
-      <div
-        style={{
-          fontSize: 128,
-          background: "white",
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Divisibles / 1
-      </div>
-    ),
+    // ImageResponse JSX element
+    <div
+      style={{
+        fontSize: 128,
+        background: "white",
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      Divisibles / 1
+    </div>,
     // ImageResponse options
     {
       // For convenience, we can re-use the exported opengraph-image
