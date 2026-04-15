@@ -61,8 +61,3 @@ pull_request_rules:
       merge:
         method: merge
   # delete
-  - name: automatic deletion of head branch after merge
-    conditions:
-      - merged
-    actions:
-      delete_head_branch:
